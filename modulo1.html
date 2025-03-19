@@ -1,0 +1,635 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Curso Modulo 1</title>
+    <link rel="stylesheet" href="modulo.css">
+    <link rel="icon" href="/img/img1.png" type="img/png">
+</head>
+<body>
+    <!--Encabezado-->
+    <header class="header">
+        <!--Barra de navegación-->
+        <input type="checkbox" id="open-menu" class="header__checkbox">
+        <label for="open-menu" class="header__open-nav-button" role="button">=</label>
+        <div class="header__title-container">
+            <h1>Física en contexto</h1>
+        </div>
+        <nav class="header__nav">
+            <ul class="header__nav-list">
+                <li class="header__nav-item"><img src="icons/icon0.png" alt=""><a href="index.html">Inicio</a></li>
+                <li class="header__nav-item"><img src="icons/icon1.png" alt=""><a href="contacto.html">Contacto</a></li>
+                <li class="header__nav-item"><img src="icons/icon2.png" alt=""><a href="recursos.html">Recursos</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <main class="container__content">
+        <section class="modal__container">
+            <!------ Sección de contenido por ventana modal-->
+            <div class="menu">
+                <h2>Introducción a la Física</h2>
+                <!------ Abrir la ventana modal ------>
+                <input type="checkbox" id="menu" class="menu__checkbox">
+                <label for="menu" class="equal-button" role="button"><h2>Presiona aquí</h2></label>
+                <div class="modal">
+                    <div class="modal__content-menu">
+                        <!------ Menú de temas de la ventana modal-->
+                        <div class="modal__menu">
+                            <h3>Modulo 1: Introducción a la Física</h3>
+                            <a onclick="changeContent('Concepto 1')">¿Qué es y por qué es importante la física?</a>
+                            <a onclick="changeContent('Concepto 2')">La física en la vida cotidiana</a>
+                            <a onclick="changeContent('Concepto 3')">Método científico aplicado a la física</a>
+                            <a href="#" onclick="changeContent('Concepto 4')">Unidades de medida y Conversión de unidades</a>
+                        </div>
+                        <!--Cerrar ventana modal-->
+                        <span class="modal__close-button">&times;</span>
+                        <!--Función para abrir y cerrar la ventana modal-->
+                        <script>
+                            document.addEventListener("DOMContentLoaded", () => {  
+                                document.querySelector(".modal").style.display = "none"; 
+
+                                document.querySelector(".equal-button").addEventListener("click", () => {
+                                    document.querySelector(".modal").style.display = "flex";
+                                });
+
+                                document.querySelector(".modal__close-button").addEventListener("click", () => {
+                                    document.querySelector(".modal").style.display = "none";
+                                });
+                            });
+                        </script>
+                    </div>
+                </div>
+            </div>
+            <div class="modal__content">
+                <!------ Tema 1 ------>
+                <div id="Concepto 1" class="description">
+                    <h2>¿Qué es y por qué es importante?</h2>
+                    <p>La palabra <strong>"física"</strong> viene del griego <strong>"fisis",</strong> que significa <strong>"naturaleza"</strong>. La física es la ciencia que estudia cómo funciona el <strong>universo,</strong> analizando <strong>la energía, la materia, el tiempo y el espacio</strong>. Antes del siglo XVII, no existía como una ciencia separada; era parte de la <strong>"Filosofía Natural"</strong>, junto con la química, la biología y las matemáticas. Fue en la <strong>Revolución Científica</strong> cuando la física se convirtió en una disciplina independiente, separándose de la <strong>química</strong> y otras ciencias.</p>
+
+                    <p>Hoy en día, la física se define como la ciencia que estudia las <strong>interacciones</strong> entre la materia, la energía, el espacio y el tiempo. <strong>La Real Academia Española</strong> la describe como la "ciencia que estudia las <strong>propiedades</strong> de la materia y la energía", pero esta definición es un poco <strong>limitada</strong>. En realidad, la física busca explicar los <strong>principios</strong> más <strong>básicos</strong> de la naturaleza con <strong>precisión</strong> y <strong>rigor matemático.</strong></p>
+
+                    <div class="description__list">
+                        <div class="description__item"><strong>Mecánica:</strong> estudia el movimiento de los objetos y las fuerzas que los afectan.<img src="img/img2.jpg"></div>
+                        <div class="description__item"><strong>Termodinámica:</strong> analiza el calor, la temperatura y la energía.<img src="img/img3.jpg"></div>
+                        <div class="description__item"><strong>Óptica:</strong> investiga la luz y sus propiedades.<img src="img/img4.jpg"></div>
+                        <div class="description__item"><strong>Acústica:</strong> estudia el sonido y su propagación.<img src="img/img5.jpg"></div>
+                        <div class="description__item"><strong>Electromagnetismo:</strong> analiza los fenómenos eléctricos y magnéticos.<img src="img/img6.jpg"></div>
+                        <div class="description__item"><strong>Mecánica de Fluidos:</strong> explora el comportamiento de líquidos y gases.<img src="img/img7.jpg"></div>
+                        <div class="description__item"><strong>Mecánica Cuántica:</strong> examina el mundo de los átomos y partículas subatómicas.<img src="img/img8.jpg"></div>
+                        <div class="description__item"><strong>Astrofísica:</strong> aplica la física para entender los cuerpos celestes.<img src="img/img9.jpg"></div>
+                        <div class="description__item"><strong>Biofísica:</strong> estudia procesos biológicos con principios de física.<img src="img/img10.jpg"></div>
+                    </div>
+
+                    <p>Para entender mejor, imagina la física como un libro de instrucciones del <strong>universo</strong>. La <strong>mecánica</strong> es como aprender a andar en <strong>bicicleta</strong>: necesitas conocer las <strong>fuerzas</strong> que te mantienen en <strong>equilibrio</strong>. La <strong>termodinámica</strong> es como aprender por qué se <strong>enfría</strong> tu <strong>café</strong>. La <strong>óptica</strong> te explica por qué vemos <strong>colores</strong>, y el <strong>electromagnetismo</strong> nos dice cómo funcionan los <strong>imanes</strong> o cómo llega la <strong>señal</strong> de tu <strong>teléfono</strong>.</p>
+
+                    <p>La <strong>física</strong> es fundamental para la ciencia y la tecnología. Sin ella, no existirían computadoras, celulares, televisores o <strong>internet</strong>. También ha permitido avances en medicina, como los <strong>rayos X</strong> y la <strong>resonancia magnética</strong>. La física está en el diseño de autos, aviones y barcos, así como en la generación de <strong>energía eléctrica</strong> y el aprovechamiento de la <strong>energía solar</strong> y eólica. Las telecomunicaciones dependen de <strong>ondas electromagnéticas</strong>, y los ingenieros usan la física para resolver problemas del mundo real.</p>
+
+                    <p>La <strong>física</strong> no solo mejora la tecnología, también nos ayuda a entender el mundo. Nos permite descubrir desde los secretos del <strong>átomo</strong> hasta el origen del <strong>universo</strong>. Es una ciencia que despierta la <strong>curiosidad</strong> y fomenta el <strong>pensamiento lógico</strong>, habilidades clave en la vida diaria y en el desarrollo profesional. En definitiva, la <strong>física</strong> es una herramienta poderosa que ha cambiado el mundo y seguirá haciéndolo en el futuro.</p>
+                    <img src="img/img11.png" alt="">
+                    <button class="next"><a onclick="changeContent('Concepto 2')">Siguiente tema</a></button>
+                </div>
+                <!------ Tema 2 ------>
+                <div id="Concepto 2" class="description">
+                    <h2>La física en la vida cotidiana</h2>
+                    p>La <strong>física</strong> no es solo algo que estudian los <strong>científicos</strong> en <strong>laboratorios</strong>; ¡está ocurriendo a tu alrededor todo el tiempo!</p>
+
+                    <p>Los principios fundamentales de la <strong>física</strong> están presentes en todas las cosas que suceden a nuestro alrededor, y nos ayudan a entender cómo funcionan muchas de las cosas que vemos y experimentamos. Por ejemplo, la <strong>tercera ley de Newton</strong> nos dice que "a toda acción corresponde una reacción igual y opuesta". Esto significa que cuando empujas algo, como a una persona en una piscina, tu cuerpo también se mueve hacia atrás. Lo mismo sucede cuando saltas: empujas el suelo hacia abajo, y el suelo te empuja hacia arriba. Es como cuando te impulsas en un <strong>trampolín</strong>: mientras empujas el trampolín hacia abajo, este te lanza hacia arriba.</p>
+
+                    <p>La <strong>primera ley de Newton</strong>, o la ley de la <strong>inercia</strong>, nos explica por qué una pelota sigue rodando hasta que algo la detiene. Imagina que vas en <strong>patineta</strong>, si no chocas con algo, vas a seguir moviéndote hasta que la <strong>fricción</strong> o el <strong>viento</strong> te frenen. La <strong>gravedad</strong> es la fuerza que hace que todos los objetos tengan <strong>peso</strong>, y es la razón por la que cuando lanzas algo hacia arriba, como una pelota, esta se desacelera y luego cae. Lo mismo pasa con un huevo: si lo dejas caer, la <strong>gravedad</strong> lo hace descender, y si no tiene nada que lo frene, se rompe.</p>
+
+                    <p>El <strong>segundo principio de la termodinámica</strong> se aplica a los <strong>refrigeradores</strong>, que usan electricidad para sacar el <strong>calor</strong> de los alimentos y mantenerlos fríos. De manera parecida, si en invierno tienes una bebida fría afuera, se calienta porque el <strong>calor</strong> pasa de un lugar más caliente a un lugar más frío. El <strong>principio de Arquímedes</strong> explica por qué los objetos en el agua parecen más livianos. Cuando metes un objeto en el agua, el agua empuja hacia arriba al objeto, ayudando a que flote. Este principio es el que hace que los <strong>barcos</strong> floten en el mar. La <strong>presión atmosférica</strong> también afecta cosas como el <strong>punto de ebullición</strong> del agua. Cuando estás en una altitud más alta, como en una montaña, el agua hierve a una temperatura más baja, lo que puede hacer que las comidas tarden más en cocinarse. Finalmente, el <strong>efecto Doppler</strong> explica por qué el sonido de una <strong>ambulancia</strong> cambia cuando pasa cerca de ti y luego se aleja. Cuando la ambulancia se acerca, el sonido de su sirena suena más agudo, pero cuando se aleja, se vuelve más grave. Esto sucede porque las <strong>ondas sonoras</strong> se comprimen o estiran dependiendo del movimiento de la fuente de sonido.</p>
+                    <img src="img/img12.png">
+
+                    <p>La Física también está presente en la <strong>tecnología</strong> que usamos todos los días, aunque muchas veces no la notamos. Por ejemplo, los <strong>rayos X</strong> que se usan en los hospitales o los <strong>lásers</strong> en cirugías están basados en principios de la física. Los <strong>teléfonos</strong>, <strong>televisores</strong> y casi todos los dispositivos electrónicos funcionan gracias a la física. Los <strong>aviones</strong> pueden volar, los <strong>autos</strong> se mueven y los <strong>edificios</strong> se mantienen firmes porque la física lo permite. El <strong>electromagnetismo</strong> es la base de muchos dispositivos eléctricos, como los <strong>hornos microondas</strong>, <strong>ventiladores</strong> y <strong>timbres</strong>. Incluso el sistema <strong>GPS</strong> que usamos en los coches depende de la <strong>teoría de la relatividad</strong> para funcionar correctamente. Los <strong>lásers</strong>, que usan <strong>luz</strong> para hacer cosas como cortar materiales o realizar cirugías, también son un ejemplo de cómo los principios de la física se aplican en la vida diaria. La <strong>física nuclear</strong>, que estudia cómo funcionan los <strong>átomos</strong>, nos ha dado descubrimientos importantes en áreas como la <strong>energía nuclear</strong>, la <strong>medicina nuclear</strong> y la <strong>agricultura</strong>. La <strong>aerodinámica</strong>, que estudia cómo se mueven los <strong>fluidos</strong> como el aire, es clave para el diseño de <strong>aviones</strong>, <strong>cohetes</strong>, <strong>coches</strong> y <strong>puentes</strong> que pueden resistir vientos fuertes. La <strong>teoría de la relatividad</strong>, aunque suena complicada, ha sido importante para el desarrollo de la tecnología que permite que los <strong>GPS</strong> en los coches funcionen correctamente.</p>
+
+                    <p>La física está en todos lados, desde el <strong>transporte</strong> hasta la <strong>comunicación</strong>. En el diseño de los <strong>motores</strong> de los <strong>autos</strong> y <strong>aviones</strong>, se aplica la <strong>termodinámica</strong> para aprovechar la <strong>energía</strong>, la <strong>mecánica</strong> para entender cómo se mueve el vehículo y la <strong>aerodinámica</strong> para reducir la <strong>resistencia del aire</strong>. Las tecnologías de <strong>comunicación</strong>, como la <strong>radio</strong>, <strong>televisión</strong> e <strong>internet</strong>, funcionan gracias al <strong>electromagnetismo</strong>, que estudia las <strong>ondas de energía</strong>. La <strong>fibra óptica</strong>, que se usa para transmitir internet a alta velocidad, también se basa en principios de la <strong>luz</strong>. En la <strong>medicina</strong>, los <strong>rayos X</strong>, las <strong>resonancias magnéticas</strong>, los <strong>escáneres PET</strong> y los <strong>ultrasonidos</strong> permiten hacer diagnósticos de manera no invasiva y se basan en diferentes principios físicos. La <strong>cirugía láser</strong> y la <strong>radioterapia</strong>, que se usan para tratar enfermedades como el <strong>cáncer</strong>, también aplican conceptos de la física. En casa, usamos <strong>electrodomésticos</strong> como los <strong>refrigeradores</strong>, <strong>microondas</strong> y <strong>luces</strong>, todos basados en principios físicos. La construcción de nuestros <strong>hogares</strong> y <strong>edificios</strong> también se asegura mediante la aplicación de la física, utilizando materiales adecuados para resistir las fuerzas que actúan sobre ellos. En los <strong>deportes</strong>, las <strong>leyes de la física</strong> nos ayudan a entender cómo se mueve una <strong>pelota</strong>, cómo el <strong>viento</strong> afecta al <strong>casco</strong> de un ciclista o cómo las <strong>fuerzas</strong> actúan cuando nadas. La física no solo está en los grandes descubrimientos, sino también en las cosas más simples y cotidianas que</p>
+                    <img src="img/img13.png">
+                    <button class="next"><a onclick="changeContent('Concepto 3')">Siguiente tema</a></button>
+                </div>
+                <!------ Tema 3 ------>
+                <div id="Concepto 3" class="description">
+                    <h2>Método científico aplicado a la física</h2>
+                    <p>¿Alguna vez te has preguntado cómo los <strong>científicos</strong> descubren cosas sobre la <strong>física</strong>? Utilizan un proceso especial llamado <strong>método científico</strong>, que es como una guía paso a paso para resolver misterios sobre el mundo, ¡igual que un <strong>detective</strong>! Imagina que ves una huella extraña en el jardín. El <strong>método científico</strong> es como seguir pistas para descubrir qué animal la hizo.</p>
+
+                    <p>El <strong>método científico</strong> es un proceso sistemático y riguroso que guía a los investigadores en el descubrimiento y comprensión de los fenómenos naturales y los procesos complejos. Este enfoque se compone de varias etapas ordenadas: <strong>observación</strong>, formulación de una <strong>pregunta</strong> o definición del <strong>problema</strong>, formulación de una <strong>hipótesis</strong>, <strong>experimentación</strong>, análisis de los <strong>datos</strong> y elaboración de <strong>conclusiones</strong>. Además, incluye un paso de <strong>retroalimentación</strong> que permite revisar las hipótesis con base en los resultados obtenidos. Las características clave del <strong>método científico</strong> son la <strong>objetividad</strong> (evitar sesgos personales), la <strong>reproducibilidad</strong> (los experimentos pueden repetirse para verificar los resultados), la <strong>verificabilidad</strong> (los hallazgos se apoyan en <strong>evidencia empírica</strong>) y la <strong>falsabilidad</strong> (las hipótesis pueden demostrarse incorrectas mediante pruebas). Este método busca minimizar la influencia de la subjetividad del investigador, lo que refuerza la validez de los resultados y el <strong>conocimiento</strong> adquirido. Aunque los pasos generales son los mismos, la aplicación del método puede variar según la disciplina científica o área de investigación. Por ejemplo, en la <strong>física teórica</strong>, la <strong>experimentación</strong> no siempre es factible.</p>
+
+                    <p>En el ámbito de la <strong>física</strong>, el <strong>método científico</strong> comienza con la <strong>observación</strong> de fenómenos naturales o patrones que despiertan el interés científico. A partir de estas observaciones, se plantea una <strong>pregunta</strong> o <strong>problema</strong> específico que sea comprobable. Luego, se formula una <strong>hipótesis</strong>, una explicación tentativa que puede responder a la pregunta, basándose en el conocimiento existente y el razonamiento lógico. Posteriormente, se diseñan y realizan <strong>experimentos controlados</strong> para obtener <strong>datos</strong> que validen o refuten la hipótesis. Es crucial seguir protocolos rigurosos y registrar los resultados con precisión. Los <strong>datos</strong> obtenidos se analizan utilizando herramientas <strong>estadísticas</strong> y metodologías específicas para determinar si respaldan la hipótesis inicial. Finalmente, se elaboran <strong>conclusiones</strong> basadas en los resultados, evaluando si la hipótesis fue confirmada o refutada. Además, se discuten las <strong>implicaciones</strong> de los hallazgos y se sugieren posibles áreas para futuras investigaciones.</p>
+
+                    <p>La <strong>observación</strong> es el primer paso crucial en el proceso de <strong>investigación científica</strong>, y nos lleva a formular preguntas sobre el mundo natural. Una <strong>hipótesis</strong> bien formulada ofrece una explicación comprobable que orienta el diseño de <strong>experimentos</strong> en <strong>física</strong>. La <strong>experimentación</strong> es esencial para obtener <strong>datos empíricos</strong> que prueben las hipótesis y ayuden a entender las relaciones entre <strong>variables físicas</strong>. El <strong>análisis</strong> de los <strong>datos experimentales</strong> nos permite interpretar los resultados y determinar si nuestras hipótesis son válidas, refinando nuestras <strong>teorías</strong> existentes o desarrollando nuevas. La naturaleza <strong>iterativa</strong> del <strong>método científico</strong>, con sus ciclos de retroalimentación, permite una mejora continua de nuestra comprensión del mundo <strong>físico</strong>.</p>
+
+                    <p>El método científico puede explicarse de forma sencilla como si fuéramos detectives resolviendo un misterio. Los pasos serían:</p>
+
+                    <img src="img/img14.png">
+                    <h4>Experimentos sencillos para practicar el método científico</h4>
+
+                    <ul><strong>🔵 El misterio de la pelota que rebota</strong>
+                        <li><strong>Observación:</strong> Las pelotas rebotan</li>
+                        <li><strong>Pregunta:</strong> ¿La altura desde la que cae una pelota afecta la altura a la que rebota?</li>
+                        <li><strong>Hipótesis:</strong> Si dejo caer la pelota desde más alto, rebotará más alto.</li>
+                        <li><strong>Experimento:</strong> Deja caer la misma pelota desde diferentes alturas y mide la altura de cada rebote.</li>
+                        <li><strong>Análisis:</strong> Compara las alturas de los rebotes.</li>
+                        <li><strong>Conclusión:</strong> ¿Tu hipótesis fue correcta?</li>
+                    </ul>
+
+                    <ul><strong>🚗 La carrera rodante</strong>
+                        <li><strong>Observación:</strong> Los coches de juguete ruedan por las rampas.</li>
+                        <li><strong>Pregunta:</strong> ¿Añadir peso a un coche de juguete lo hace rodar más rápido?</li>
+                        <li><strong>Hipótesis:</strong> Si añado peso al coche, rodará más rápido.</li>
+                        <li><strong>Experimento:</strong> Cronometra cuánto tarda un coche normal y otro con peso extra en rodar por la misma rampa.</li>
+                        <li><strong>Análisis:</strong> Compara los tiempos.</li>
+                        <li><strong>Conclusión:</strong> ¿El coche pesado realmente fue más rápido?</li>
+                    </ul>
+                    
+                    <p>El <strong>método científico</strong> no solo se usa en la <strong>física</strong>, sino en muchas áreas de la <strong>vida</strong>. Nos ayuda a tomar decisiones basadas en <strong>pruebas</strong>, a pensar de forma <strong>lógica</strong> y a resolver problemas de manera <strong>organizada</strong>.</p>
+
+                    <p>Incluso si una <strong>hipótesis</strong> no es correcta, sigue siendo un paso importante en la <strong>ciencia</strong>. A veces, un <strong>resultado inesperado</strong> nos lleva a hacer nuevas preguntas y descubrir cosas aún más <strong>interesantes</strong>. ¡Así es como avanza el <strong>conocimiento</strong>!</p>
+                    <button class="next"><a onclick="changeContent('Concepto 4')">Siguiente tema</a></button>
+                </div>
+                <!------ Tema 4 ------>
+                <div id="Concepto 4" class="description">
+                    <h2>Unidades de medida y Conversión de unidades</h2>
+                    <p>Una <strong>magnitud física</strong> es cualquier cosa que podamos <strong>medir</strong>, como la <strong>longitud</strong>, el <strong>peso</strong> o el <strong>tiempo</strong>. Estas magnitudes se dividen en dos tipos: <strong>fundamentales</strong> y <strong>derivadas</strong>. Las <strong>fundamentales</strong> son aquellas que no dependen de otras magnitudes para ser definidas. Por ejemplo, el <strong>metro</strong> mide la <strong>longitud</strong>, el <strong>kilogramo</strong> mide la <strong>masa</strong>, y el <strong>segundo</strong> mide el <strong>tiempo</strong>. Son las bases para medir cualquier otra cosa.</p>
+
+                    <p>Por otro lado, las <strong>magnitudes derivadas</strong> se obtienen combinando las <strong>magnitudes fundamentales</strong>. Por ejemplo, la <strong>velocidad</strong> se calcula dividiendo la <strong>longitud</strong> entre el <strong>tiempo</strong> (como decir cuántos metros recorres por segundo).</p>
+
+                    <p>El <strong>Sistema Internacional de Unidades (SI)</strong> es un conjunto de reglas para medir todas estas magnitudes, usando las <strong>unidades fundamentales</strong> como el <strong>metro</strong> y el <strong>kilogramo</strong>. Este sistema ayuda a que los científicos de todo el mundo puedan entenderse entre sí, ya que todos usan las mismas unidades.</p>
+
+                    <p>Por ejemplo, si un científico de Japón dice que midió algo en <strong>metros</strong>, alguien de México sabe exactamente a qué se refiere. El SI también tiene <strong>prefijos</strong> como "<strong>kilo-</strong>" (1000) o "<strong>centi-</strong>" (0.01) que ayudan a hacer las medidas más grandes o más pequeñas sin cambiar de unidad.</p>
+
+                    <p>A veces, necesitamos convertir una medida a otra. Por ejemplo, si tienes <strong>8 metros</strong> y quieres saber cuántos <strong>centímetros</strong> son, multiplicas <strong>8 por 100</strong> (porque un metro tiene <strong>100 centímetros</strong>), y así obtienes <strong>800 centímetros</strong>. De igual forma, si necesitas convertir entre <strong>kilogramos</strong> y <strong>libras</strong>, usarías un <strong>factor de conversión</strong>, como multiplicar por <strong>2.2</strong>.</p>
+
+                    <p>Las <strong>unidades estandarizadas</strong> son esenciales para que todos comprendan lo mismo cuando se habla de medidas. Sin ellas, sería muy difícil <strong>comparar los resultados</strong> de experimentos o entender avances tecnológicos de otros países.</p>
+
+                    <h2>Unidades Fundamentales del SI</h2>
+                    <div class="table-container">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Magnitud</th>
+                                    <th>Unidad Base SI</th>
+                                    <th>Símbolo</th>
+                                    <th>Definición</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Longitud</td>
+                                    <td>metro</td>
+                                    <td>m</td>
+                                    <td>Distancia recorrida por la luz en el vacío en 1/299,792,458 de segundo</td>
+                                </tr>
+                                <tr>
+                                    <td>Masa</td>
+                                    <td>kilogramo</td>
+                                    <td>kg</td>
+                                    <td>Definido en términos de la constante de Planck</td>
+                                </tr>
+                                <tr>
+                                    <td>Tiempo</td>
+                                    <td>segundo</td>
+                                    <td>s</td>
+                                    <td>Duración de 9,192,631,770 períodos de la radiación del cesio-133</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <h2>Unidades Derivadas Comunes del SI</h2>
+                    <div class="table-container">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Magnitud</th>
+                                    <th>Unidad SI Derivada</th>
+                                    <th>Símbolo</th>
+                                    <th>Expresión en Unidades Base SI</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Área</td>
+                                    <td>metro cuadrado</td>
+                                    <td>m²</td>
+                                    <td>m × m</td>
+                                </tr>
+                                <tr>
+                                    <td>Volumen</td>
+                                    <td>metro cúbico</td>
+                                    <td>m³</td>
+                                    <td>m × m × m</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    
+                    <h2>Factores de Conversión Comunes</h2>
+                    <div class="table-container">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Unidad</th>
+                                    <th>Factor de Conversión</th>
+                                    <th>Otra Unidad</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>1 metro (m)</td>
+                                    <td>100</td>
+                                    <td>centímetros (cm)</td>
+                                </tr>
+                                <tr>
+                                    <td>1 kilogramo (kg)</td>
+                                    <td>1000</td>
+                                    <td>gramos (g)</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <button class="next"><a onclick="changeContent('Concepto 1')">Siguiente tema</a></button>
+                </div>
+            </div>
+        </section>
+
+        <!------ Sección de contenido y menu fijo ------>
+        <section class="fixed__container">
+            <!------ Menú ------>
+            <div class="fixed__menu">
+                <h2>Introducción a la Física</h2>
+                <a href="#" onclick="changeContent('Concepto 1.1')">¿Qué es y por qué es importante la física?</a>
+                <a href="#" onclick="changeContent('Concepto 2.2')">La física en la vida cotidiana</a>
+                <a href="#" onclick="changeContent('Concepto 3.3')">Método científico aplicado a la física</a>
+                <a href="#" onclick="changeContent('Concepto 4.4')">Unidades de medida y Conversión de unidades</a>
+            </div>
+            <!------ Temas ------>
+            <div class="fixed__content">
+                <!------ Tema 1 ------>
+                <div id="Concepto 1.1" class="description">
+                    <h2>¿Qué es y por qué es importante?</h2>
+                    <p>La palabra <strong>"física"</strong> viene del griego <strong>"fisis",</strong> que significa <strong>"naturaleza"</strong>. La física es la ciencia que estudia cómo funciona el <strong>universo,</strong> analizando <strong>la energía, la materia, el tiempo y el espacio</strong>. Antes del siglo XVII, no existía como una ciencia separada; era parte de la <strong>"Filosofía Natural"</strong>, junto con la química, la biología y las matemáticas. Fue en la <strong>Revolución Científica</strong> cuando la física se convirtió en una disciplina independiente, separándose de la <strong>química</strong> y otras ciencias.</p>
+
+                    <p>Hoy en día, la física se define como la ciencia que estudia las <strong>interacciones</strong> entre la materia, la energía, el espacio y el tiempo. <strong>La Real Academia Española</strong> la describe como la "ciencia que estudia las <strong>propiedades</strong> de la materia y la energía", pero esta definición es un poco <strong>limitada</strong>. En realidad, la física busca explicar los <strong>principios</strong> más <strong>básicos</strong> de la naturaleza con <strong>precisión</strong> y <strong>rigor matemático.</strong></p>
+
+                    <div class="description__list">
+                        <div class="description__item"><strong>Mecánica:</strong> estudia el movimiento de los objetos y las fuerzas que los afectan.<img src="img/img2.jpg"></div>
+                        <div class="description__item"><strong>Termodinámica:</strong> analiza el calor, la temperatura y la energía.<img src="img/img3.jpg"></div>
+                        <div class="description__item"><strong>Óptica:</strong> investiga la luz y sus propiedades.<img src="img/img4.jpg"></div>
+                        <div class="description__item"><strong>Acústica:</strong> estudia el sonido y su propagación.<img src="img/img5.jpg"></div>
+                        <div class="description__item"><strong>Electromagnetismo:</strong> analiza los fenómenos eléctricos y magnéticos.<img src="img/img6.jpg"></div>
+                        <div class="description__item"><strong>Mecánica de Fluidos:</strong> explora el comportamiento de líquidos y gases.<img src="img/img7.jpg"></div>
+                        <div class="description__item"><strong>Mecánica Cuántica:</strong> examina el mundo de los átomos y partículas subatómicas.<img src="img/img8.jpg"></div>
+                        <div class="description__item"><strong>Astrofísica:</strong> aplica la física para entender los cuerpos celestes.<img src="img/img9.jpg"></div>
+                        <div class="description__item"><strong>Biofísica:</strong> estudia procesos biológicos con principios de física.<img src="img/img10.jpg"></div>
+                    </div>
+
+                    <p>Para entender mejor, imagina la física como un libro de instrucciones del <strong>universo</strong>. La <strong>mecánica</strong> es como aprender a andar en <strong>bicicleta</strong>: necesitas conocer las <strong>fuerzas</strong> que te mantienen en <strong>equilibrio</strong>. La <strong>termodinámica</strong> es como aprender por qué se <strong>enfría</strong> tu <strong>café</strong>. La <strong>óptica</strong> te explica por qué vemos <strong>colores</strong>, y el <strong>electromagnetismo</strong> nos dice cómo funcionan los <strong>imanes</strong> o cómo llega la <strong>señal</strong> de tu <strong>teléfono</strong>.</p>
+
+                    <p>La <strong>física</strong> es fundamental para la ciencia y la tecnología. Sin ella, no existirían computadoras, celulares, televisores o <strong>internet</strong>. También ha permitido avances en medicina, como los <strong>rayos X</strong> y la <strong>resonancia magnética</strong>. La física está en el diseño de autos, aviones y barcos, así como en la generación de <strong>energía eléctrica</strong> y el aprovechamiento de la <strong>energía solar</strong> y eólica. Las telecomunicaciones dependen de <strong>ondas electromagnéticas</strong>, y los ingenieros usan la física para resolver problemas del mundo real.</p>
+
+                    <p>La <strong>física</strong> no solo mejora la tecnología, también nos ayuda a entender el mundo. Nos permite descubrir desde los secretos del <strong>átomo</strong> hasta el origen del <strong>universo</strong>. Es una ciencia que despierta la <strong>curiosidad</strong> y fomenta el <strong>pensamiento lógico</strong>, habilidades clave en la vida diaria y en el desarrollo profesional. En definitiva, la <strong>física</strong> es una herramienta poderosa que ha cambiado el mundo y seguirá haciéndolo en el futuro.</p>
+                    <img src="img/img11.png">
+                </div>
+                <!------ Tema 2 ------>
+                <div id="Concepto 2.2" class="description">
+                    <h2>La física en la vida cotidiana</h2>
+                    <p>La <strong>física</strong> no es solo algo que estudian los <strong>científicos</strong> en <strong>laboratorios</strong>; ¡está ocurriendo a tu alrededor todo el tiempo!</p>
+
+                    <p>Los principios fundamentales de la <strong>física</strong> están presentes en todas las cosas que suceden a nuestro alrededor, y nos ayudan a entender cómo funcionan muchas de las cosas que vemos y experimentamos. Por ejemplo, la <strong>tercera ley de Newton</strong> nos dice que "a toda acción corresponde una reacción igual y opuesta". Esto significa que cuando empujas algo, como a una persona en una piscina, tu cuerpo también se mueve hacia atrás. Lo mismo sucede cuando saltas: empujas el suelo hacia abajo, y el suelo te empuja hacia arriba. Es como cuando te impulsas en un <strong>trampolín</strong>: mientras empujas el trampolín hacia abajo, este te lanza hacia arriba.</p>
+
+                    <p>La <strong>primera ley de Newton</strong>, o la ley de la <strong>inercia</strong>, nos explica por qué una pelota sigue rodando hasta que algo la detiene. Imagina que vas en <strong>patineta</strong>, si no chocas con algo, vas a seguir moviéndote hasta que la <strong>fricción</strong> o el <strong>viento</strong> te frenen. La <strong>gravedad</strong> es la fuerza que hace que todos los objetos tengan <strong>peso</strong>, y es la razón por la que cuando lanzas algo hacia arriba, como una pelota, esta se desacelera y luego cae. Lo mismo pasa con un huevo: si lo dejas caer, la <strong>gravedad</strong> lo hace descender, y si no tiene nada que lo frene, se rompe.</p>
+
+                    <p>El <strong>segundo principio de la termodinámica</strong> se aplica a los <strong>refrigeradores</strong>, que usan electricidad para sacar el <strong>calor</strong> de los alimentos y mantenerlos fríos. De manera parecida, si en invierno tienes una bebida fría afuera, se calienta porque el <strong>calor</strong> pasa de un lugar más caliente a un lugar más frío. El <strong>principio de Arquímedes</strong> explica por qué los objetos en el agua parecen más livianos. Cuando metes un objeto en el agua, el agua empuja hacia arriba al objeto, ayudando a que flote. Este principio es el que hace que los <strong>barcos</strong> floten en el mar. La <strong>presión atmosférica</strong> también afecta cosas como el <strong>punto de ebullición</strong> del agua. Cuando estás en una altitud más alta, como en una montaña, el agua hierve a una temperatura más baja, lo que puede hacer que las comidas tarden más en cocinarse. Finalmente, el <strong>efecto Doppler</strong> explica por qué el sonido de una <strong>ambulancia</strong> cambia cuando pasa cerca de ti y luego se aleja. Cuando la ambulancia se acerca, el sonido de su sirena suena más agudo, pero cuando se aleja, se vuelve más grave. Esto sucede porque las <strong>ondas sonoras</strong> se comprimen o estiran dependiendo del movimiento de la fuente de sonido.</p>
+                    <img src="img/img12.png">
+
+                    <p>La Física también está presente en la <strong>tecnología</strong> que usamos todos los días, aunque muchas veces no la notamos. Por ejemplo, los <strong>rayos X</strong> que se usan en los hospitales o los <strong>lásers</strong> en cirugías están basados en principios de la física. Los <strong>teléfonos</strong>, <strong>televisores</strong> y casi todos los dispositivos electrónicos funcionan gracias a la física. Los <strong>aviones</strong> pueden volar, los <strong>autos</strong> se mueven y los <strong>edificios</strong> se mantienen firmes porque la física lo permite. El <strong>electromagnetismo</strong> es la base de muchos dispositivos eléctricos, como los <strong>hornos microondas</strong>, <strong>ventiladores</strong> y <strong>timbres</strong>. Incluso el sistema <strong>GPS</strong> que usamos en los coches depende de la <strong>teoría de la relatividad</strong> para funcionar correctamente. Los <strong>lásers</strong>, que usan <strong>luz</strong> para hacer cosas como cortar materiales o realizar cirugías, también son un ejemplo de cómo los principios de la física se aplican en la vida diaria. La <strong>física nuclear</strong>, que estudia cómo funcionan los <strong>átomos</strong>, nos ha dado descubrimientos importantes en áreas como la <strong>energía nuclear</strong>, la <strong>medicina nuclear</strong> y la <strong>agricultura</strong>. La <strong>aerodinámica</strong>, que estudia cómo se mueven los <strong>fluidos</strong> como el aire, es clave para el diseño de <strong>aviones</strong>, <strong>cohetes</strong>, <strong>coches</strong> y <strong>puentes</strong> que pueden resistir vientos fuertes. La <strong>teoría de la relatividad</strong>, aunque suena complicada, ha sido importante para el desarrollo de la tecnología que permite que los <strong>GPS</strong> en los coches funcionen correctamente.</p>
+
+                    <p>La física está en todos lados, desde el <strong>transporte</strong> hasta la <strong>comunicación</strong>. En el diseño de los <strong>motores</strong> de los <strong>autos</strong> y <strong>aviones</strong>, se aplica la <strong>termodinámica</strong> para aprovechar la <strong>energía</strong>, la <strong>mecánica</strong> para entender cómo se mueve el vehículo y la <strong>aerodinámica</strong> para reducir la <strong>resistencia del aire</strong>. Las tecnologías de <strong>comunicación</strong>, como la <strong>radio</strong>, <strong>televisión</strong> e <strong>internet</strong>, funcionan gracias al <strong>electromagnetismo</strong>, que estudia las <strong>ondas de energía</strong>. La <strong>fibra óptica</strong>, que se usa para transmitir internet a alta velocidad, también se basa en principios de la <strong>luz</strong>. En la <strong>medicina</strong>, los <strong>rayos X</strong>, las <strong>resonancias magnéticas</strong>, los <strong>escáneres PET</strong> y los <strong>ultrasonidos</strong> permiten hacer diagnósticos de manera no invasiva y se basan en diferentes principios físicos. La <strong>cirugía láser</strong> y la <strong>radioterapia</strong>, que se usan para tratar enfermedades como el <strong>cáncer</strong>, también aplican conceptos de la física. En casa, usamos <strong>electrodomésticos</strong> como los <strong>refrigeradores</strong>, <strong>microondas</strong> y <strong>luces</strong>, todos basados en principios físicos. La construcción de nuestros <strong>hogares</strong> y <strong>edificios</strong> también se asegura mediante la aplicación de la física, utilizando materiales adecuados para resistir las fuerzas que actúan sobre ellos. En los <strong>deportes</strong>, las <strong>leyes de la física</strong> nos ayudan a entender cómo se mueve una <strong>pelota</strong>, cómo el <strong>viento</strong> afecta al <strong>casco</strong> de un ciclista o cómo las <strong>fuerzas</strong> actúan cuando nadas. La física no solo está en los grandes descubrimientos, sino también en las cosas más simples y cotidianas que</p>
+                    <img src="img/img13.png">
+                </div>
+                <!------ Tema 3 ------>
+                <div id="Concepto 3.3" class="description">
+                    <h2>Método científico aplicado a la física</h2>
+                    <p>¿Alguna vez te has preguntado cómo los <strong>científicos</strong> descubren cosas sobre la <strong>física</strong>? Utilizan un proceso especial llamado <strong>método científico</strong>, que es como una guía paso a paso para resolver misterios sobre el mundo, ¡igual que un <strong>detective</strong>! Imagina que ves una huella extraña en el jardín. El <strong>método científico</strong> es como seguir pistas para descubrir qué animal la hizo.</p>
+
+                    <p>El <strong>método científico</strong> es un proceso sistemático y riguroso que guía a los investigadores en el descubrimiento y comprensión de los fenómenos naturales y los procesos complejos. Este enfoque se compone de varias etapas ordenadas: <strong>observación</strong>, formulación de una <strong>pregunta</strong> o definición del <strong>problema</strong>, formulación de una <strong>hipótesis</strong>, <strong>experimentación</strong>, análisis de los <strong>datos</strong> y elaboración de <strong>conclusiones</strong>. Además, incluye un paso de <strong>retroalimentación</strong> que permite revisar las hipótesis con base en los resultados obtenidos. Las características clave del <strong>método científico</strong> son la <strong>objetividad</strong> (evitar sesgos personales), la <strong>reproducibilidad</strong> (los experimentos pueden repetirse para verificar los resultados), la <strong>verificabilidad</strong> (los hallazgos se apoyan en <strong>evidencia empírica</strong>) y la <strong>falsabilidad</strong> (las hipótesis pueden demostrarse incorrectas mediante pruebas). Este método busca minimizar la influencia de la subjetividad del investigador, lo que refuerza la validez de los resultados y el <strong>conocimiento</strong> adquirido. Aunque los pasos generales son los mismos, la aplicación del método puede variar según la disciplina científica o área de investigación. Por ejemplo, en la <strong>física teórica</strong>, la <strong>experimentación</strong> no siempre es factible.</p>
+
+                    <p>En el ámbito de la <strong>física</strong>, el <strong>método científico</strong> comienza con la <strong>observación</strong> de fenómenos naturales o patrones que despiertan el interés científico. A partir de estas observaciones, se plantea una <strong>pregunta</strong> o <strong>problema</strong> específico que sea comprobable. Luego, se formula una <strong>hipótesis</strong>, una explicación tentativa que puede responder a la pregunta, basándose en el conocimiento existente y el razonamiento lógico. Posteriormente, se diseñan y realizan <strong>experimentos controlados</strong> para obtener <strong>datos</strong> que validen o refuten la hipótesis. Es crucial seguir protocolos rigurosos y registrar los resultados con precisión. Los <strong>datos</strong> obtenidos se analizan utilizando herramientas <strong>estadísticas</strong> y metodologías específicas para determinar si respaldan la hipótesis inicial. Finalmente, se elaboran <strong>conclusiones</strong> basadas en los resultados, evaluando si la hipótesis fue confirmada o refutada. Además, se discuten las <strong>implicaciones</strong> de los hallazgos y se sugieren posibles áreas para futuras investigaciones.</p>
+
+                    <p>La <strong>observación</strong> es el primer paso crucial en el proceso de <strong>investigación científica</strong>, y nos lleva a formular preguntas sobre el mundo natural. Una <strong>hipótesis</strong> bien formulada ofrece una explicación comprobable que orienta el diseño de <strong>experimentos</strong> en <strong>física</strong>. La <strong>experimentación</strong> es esencial para obtener <strong>datos empíricos</strong> que prueben las hipótesis y ayuden a entender las relaciones entre <strong>variables físicas</strong>. El <strong>análisis</strong> de los <strong>datos experimentales</strong> nos permite interpretar los resultados y determinar si nuestras hipótesis son válidas, refinando nuestras <strong>teorías</strong> existentes o desarrollando nuevas. La naturaleza <strong>iterativa</strong> del <strong>método científico</strong>, con sus ciclos de retroalimentación, permite una mejora continua de nuestra comprensión del mundo <strong>físico</strong>.</p>
+
+                    <p>El método científico puede explicarse de forma sencilla como si fuéramos detectives resolviendo un misterio. Los pasos serían:</p>
+
+                    <img src="img/img14.png">
+                    <h4>Experimentos sencillos para practicar el método científico</h4>
+
+                    <ul><strong>🔵 El misterio de la pelota que rebota</strong>
+                        <li><strong>Observación:</strong> Las pelotas rebotan</li>
+                        <li><strong>Pregunta:</strong> ¿La altura desde la que cae una pelota afecta la altura a la que rebota?</li>
+                        <li><strong>Hipótesis:</strong> Si dejo caer la pelota desde más alto, rebotará más alto.</li>
+                        <li><strong>Experimento:</strong> Deja caer la misma pelota desde diferentes alturas y mide la altura de cada rebote.</li>
+                        <li><strong>Análisis:</strong> Compara las alturas de los rebotes.</li>
+                        <li><strong>Conclusión:</strong> ¿Tu hipótesis fue correcta?</li>
+                    </ul>
+
+                    <ul><strong>🚗 La carrera rodante</strong>
+                        <li><strong>Observación:</strong> Los coches de juguete ruedan por las rampas.</li>
+                        <li><strong>Pregunta:</strong> ¿Añadir peso a un coche de juguete lo hace rodar más rápido?</li>
+                        <li><strong>Hipótesis:</strong> Si añado peso al coche, rodará más rápido.</li>
+                        <li><strong>Experimento:</strong> Cronometra cuánto tarda un coche normal y otro con peso extra en rodar por la misma rampa.</li>
+                        <li><strong>Análisis:</strong> Compara los tiempos.</li>
+                        <li><strong>Conclusión:</strong> ¿El coche pesado realmente fue más rápido?</li>
+                    </ul>
+                    
+                    <p>El <strong>método científico</strong> no solo se usa en la <strong>física</strong>, sino en muchas áreas de la <strong>vida</strong>. Nos ayuda a tomar decisiones basadas en <strong>pruebas</strong>, a pensar de forma <strong>lógica</strong> y a resolver problemas de manera <strong>organizada</strong>.</p>
+
+                    <p>Incluso si una <strong>hipótesis</strong> no es correcta, sigue siendo un paso importante en la <strong>ciencia</strong>. A veces, un <strong>resultado inesperado</strong> nos lleva a hacer nuevas preguntas y descubrir cosas aún más <strong>interesantes</strong>. ¡Así es como avanza el <strong>conocimiento</strong>!</p>
+                </div>
+                <!------ Tema 4 ------>
+                <div id="Concepto 4.4" class="description">
+                    <h2>Unidades de medida y Conversión de unidades</h2>
+                    <p>Una <strong>magnitud física</strong> es cualquier cosa que podamos <strong>medir</strong>, como la <strong>longitud</strong>, el <strong>peso</strong> o el <strong>tiempo</strong>. Estas magnitudes se dividen en dos tipos: <strong>fundamentales</strong> y <strong>derivadas</strong>. Las <strong>fundamentales</strong> son aquellas que no dependen de otras magnitudes para ser definidas. Por ejemplo, el <strong>metro</strong> mide la <strong>longitud</strong>, el <strong>kilogramo</strong> mide la <strong>masa</strong>, y el <strong>segundo</strong> mide el <strong>tiempo</strong>. Son las bases para medir cualquier otra cosa.</p>
+
+                    <p>Por otro lado, las <strong>magnitudes derivadas</strong> se obtienen combinando las <strong>magnitudes fundamentales</strong>. Por ejemplo, la <strong>velocidad</strong> se calcula dividiendo la <strong>longitud</strong> entre el <strong>tiempo</strong> (como decir cuántos metros recorres por segundo).</p>
+
+                    <p>El <strong>Sistema Internacional de Unidades (SI)</strong> es un conjunto de reglas para medir todas estas magnitudes, usando las <strong>unidades fundamentales</strong> como el <strong>metro</strong> y el <strong>kilogramo</strong>. Este sistema ayuda a que los científicos de todo el mundo puedan entenderse entre sí, ya que todos usan las mismas unidades.</p>
+
+                    <p>Por ejemplo, si un científico de Japón dice que midió algo en <strong>metros</strong>, alguien de México sabe exactamente a qué se refiere. El SI también tiene <strong>prefijos</strong> como "<strong>kilo-</strong>" (1000) o "<strong>centi-</strong>" (0.01) que ayudan a hacer las medidas más grandes o más pequeñas sin cambiar de unidad.</p>
+
+                    <p>A veces, necesitamos convertir una medida a otra. Por ejemplo, si tienes <strong>8 metros</strong> y quieres saber cuántos <strong>centímetros</strong> son, multiplicas <strong>8 por 100</strong> (porque un metro tiene <strong>100 centímetros</strong>), y así obtienes <strong>800 centímetros</strong>. De igual forma, si necesitas convertir entre <strong>kilogramos</strong> y <strong>libras</strong>, usarías un <strong>factor de conversión</strong>, como multiplicar por <strong>2.2</strong>.</p>
+
+                    <p>Las <strong>unidades estandarizadas</strong> son esenciales para que todos comprendan lo mismo cuando se habla de medidas. Sin ellas, sería muy difícil <strong>comparar los resultados</strong> de experimentos o entender avances tecnológicos de otros países.</p>
+
+                    <h2>Unidades Fundamentales del SI</h2>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Magnitud</th>
+                                <th>Unidad Base SI</th>
+                                <th>Símbolo</th>
+                                <th>Definición</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Longitud</td>
+                                <td>metro</td>
+                                <td>m</td>
+                                <td>Distancia recorrida por la luz en el vacío en 1/299,792,458 de segundo</td>
+                            </tr>
+                            <tr>
+                                <td>Masa</td>
+                                <td>kilogramo</td>
+                                <td>kg</td>
+                                <td>Igual a la masa del prototipo internacional del kilogramo (aunque actualmente se define en términos de la constante de Planck)</td>
+                            </tr>
+                            <tr>
+                                <td>Tiempo</td>
+                                <td>segundo</td>
+                                <td>s</td>
+                                <td>Duración de 9,192,631,770 períodos de la radiación correspondiente a la transición entre los dos niveles hiperfinos del estado fundamental del átomo de cesio-133</td>
+                            </tr>
+                            <tr>
+                                <td>Corriente Eléctrica</td>
+                                <td>amperio</td>
+                                <td>A</td>
+                                <td>Aquella corriente constante que, mantenida en dos conductores paralelos, rectilíneos, de longitud infinita, de sección transversal despreciable y colocados a una distancia de un metro uno de otro en el vacío, produciría entre estos conductores una fuerza igual a 2 × 10⁻⁷ newtons por metro de longitud</td>
+                            </tr>
+                            <tr>
+                                <td>Temperatura Termodinámica</td>
+                                <td>kelvin</td>
+                                <td>K</td>
+                                <td>Fracción 1/273.16 de la temperatura termodinámica del punto triple del agua</td>
+                            </tr>
+                            <tr>
+                                <td>Cantidad de Sustancia</td>
+                                <td>mol</td>
+                                <td>mol</td>
+                                <td>Cantidad de sustancia de un sistema que contiene tantas entidades elementales como átomos hay en 0.012 kilogramos de carbono-12</td>
+                            </tr>
+                            <tr>
+                                <td>Intensidad Luminosa</td>
+                                <td>candela</td>
+                                <td>cd</td>
+                                <td>Intensidad luminosa, en una dirección dada, de una fuente que emite una radiación monocromática de frecuencia 540 × 10¹² hercios y cuya intensidad radiante en esa dirección es de 1/683 vatios por estereorradián</td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    <h2>Unidades Derivadas Comunes del SI</h2>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Magnitud</th>
+                                <th>Unidad SI Derivada</th>
+                                <th>Símbolo</th>
+                                <th>Expresión en Unidades Base SI</th>
+                                <th>Ejemplo de Uso en Física</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Área</td>
+                                <td>metro cuadrado</td>
+                                <td>m²</td>
+                                <td>m × m</td>
+                                <td>Cálculo de superficies</td>
+                            </tr>
+                            <tr>
+                                <td>Volumen</td>
+                                <td>metro cúbico</td>
+                                <td>m³</td>
+                                <td>m × m × m</td>
+                                <td>Medición de la capacidad</td>
+                            </tr>
+                            <tr>
+                                <td>Velocidad</td>
+                                <td>metro por segundo</td>
+                                <td>m/s</td>
+                                <td>m / s</td>
+                                <td>Descripción del movimiento</td>
+                            </tr>
+                            <tr>
+                                <td>Aceleración</td>
+                                <td>metro por segundo cuadrado</td>
+                                <td>m/s²</td>
+                                <td>m / s²</td>
+                                <td>Cambio en la velocidad</td>
+                            </tr>
+                            <tr>
+                                <td>Fuerza</td>
+                                <td>newton</td>
+                                <td>N</td>
+                                <td>kg × m / s²</td>
+                                <td>Interacciones entre objetos</td>
+                            </tr>
+                            <tr>
+                                <td>Energía</td>
+                                <td>julio</td>
+                                <td>J</td>
+                                <td>kg × m² / s²</td>
+                                <td>Trabajo y calor</td>
+                            </tr>
+                            <tr>
+                                <td>Potencia</td>
+                                <td>vatio</td>
+                                <td>W</td>
+                                <td>kg × m² / s³</td>
+                                <td>Tasa de transferencia de energía</td>
+                            </tr>
+                            <tr>
+                                <td>Presión</td>
+                                <td>pascal</td>
+                                <td>Pa</td>
+                                <td>kg / (m × s²)</td>
+                                <td>Fuerza por unidad de área</td>
+                            </tr>
+                            <tr>
+                                <td>Carga Eléctrica</td>
+                                <td>culombio</td>
+                                <td>C</td>
+                                <td>s × A</td>
+                                <td>Cantidad de electricidad</td>
+                            </tr>
+                            <tr>
+                                <td>Potencial Eléctrico</td>
+                                <td>voltio</td>
+                                <td>V</td>
+                                <td>kg × m² / (s³ × A)</td>
+                                <td>Diferencia de potencial</td>
+                            </tr>
+                            <tr>
+                                <td>Resistencia Eléctrica</td>
+                                <td>ohmio</td>
+                                <td>Ω</td>
+                                <td>kg × m² / (s³ × A²)</td>
+                                <td>Oposición al flujo de corriente</td>
+                            </tr>
+                            <tr>
+                                <td>Frecuencia</td>
+                                <td>hercio</td>
+                                <td>Hz</td>
+                                <td>s⁻¹</td>
+                                <td>Número de ciclos por segundo</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    
+                    <h2>Factores de Conversión Comunes</h2>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Unidad</th>
+                                <th>Factor de Conversión</th>
+                                <th>Otra Unidad</th>
+                                <th>Unidad</th>
+                                <th>Factor de Conversión</th>
+                                <th>Otra Unidad</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td>1 metro (m)</td>
+                                <td>100</td>
+                                <td>centímetros (cm)</td>
+                                <td>1 kilogramo (kg)</td>
+                                <td>1000</td>
+                                <td>gramos (g)</td>
+                            </tr>
+                            <tr>
+                                <td>1 metro (m)</td>
+                                <td>1000</td>
+                                <td>milímetros (mm)</td>
+                                <td>1 kilogramo (kg)</td>
+                                <td>2.205</td>
+                                <td>libras (lb)</td>
+                            </tr>
+                            <tr>
+                                <td>1 metro (m)</td>
+                                <td>3.281</td>
+                                <td>pies (ft)</td>
+                                <td>1 segundo (s)</td>
+                                <td>1000</td>
+                                <td>milisegundos (ms)</td>
+                            </tr>
+                            <tr>
+                                <td>1 metro (m)</td>
+                                <td>1.094</td>
+                                <td>yardas (yd)</td>
+                                <td>1 minuto (min)</td>
+                                <td>60</td>
+                                <td>segundos (s)</td>
+                            </tr>
+                            <tr>
+                                <td>1 kilómetro (km)</td>
+                                <td>1000</td>
+                                <td>metros (m)</td>
+                                <td>1 hora (h)</td>
+                                <td>60</td>
+                                <td>minutos (min)</td>
+                            </tr>
+                            <tr>
+                                <td>1 pulgada (in)</td>
+                                <td>2.54</td>
+                                <td>centímetros (cm)</td>
+                                <td>1 litro (L)</td>
+                                <td>1000</td>
+                                <td>centímetros cúbicos (cm³)</td>
+                            </tr>
+                            <tr>
+                                <td>1 pie (ft)</td>
+                                <td>30.48</td>
+                                <td>centímetros (cm)</td>
+                                <td>1 litro (L)</td>
+                                <td>0.264</td>
+                                <td>galones (gal)</td>
+                            </tr>
+                            <tr>
+                                <td>1 milla (mi)</td>
+                                <td>1.609</td>
+                                <td>kilómetros (km)</td>
+                                <td>1 newton (N)</td>
+                                <td>100000</td>
+                                <td>dinas</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <!------ Funciones para ocultar y mostras los temas ------>
+        <script>
+            function changeContent(concept) {
+                const descriptions = document.querySelectorAll('.description');
+                descriptions.forEach((desc) => {
+                    desc.style.display = 'none'; 
+                });
+
+                const selectedConcept = document.getElementById(concept);
+                if (selectedConcept) {
+                    selectedConcept.style.display = 'block'; 
+                }
+            }
+
+            // Mostrar el primer concepto por defecto
+            window.onload = function() {
+                changeContent('Concepto 1');
+            }
+        </script>
+        </section>
+    </main>
+        
+    <!------ Botón para ir a otro modulo ------>
+    <button class="styled-button"><a href="modulo2.html">Siguiente Modulo</a></button>
+    
+    <!------ Pie de página ------>
+    <footer class="site-footer">
+        <p>&copy; 2024 Física en Contexto. Todos los derechos reservados.</p>
+        <ul>
+            <li><strong>Autor:</strong> Miguel Angel Jimenez Pérez</li>
+            <li><strong>Escuela:</strong> CETiS núm. 141</li>
+            <li><strong>Redes sociales:</strong> <a href="https://www.instagram.com/miguel_jp1003?igsh=dzByMW1seXgxMm1j">miguel_jp1003</a> y <a href="https://www.instagram.com/fisica_en_contexto_/profilecard/?igsh=MWttdHBvZHJtc2huMw==">fisica_en_contexto_</a></li>
+        </ul>
+    </footer>
+</body>
+</html>

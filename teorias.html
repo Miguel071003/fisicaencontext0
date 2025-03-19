@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teorías</title>
+    <link rel="stylesheet" href="modulo.css">
+    <link rel="icon" href="/img/img1.png" type="img/png">
+</head>
+<body>
+    <!--Encabezado-->
+    <header class="header">
+        <!--Barra de navegación-->
+        <input type="checkbox" id="open-menu" class="header__checkbox">
+        <label for="open-menu" class="header__open-nav-button" role="button">=</label>
+        <div class="header__title-container">
+            <h1>Física en contexto</h1>
+        </div>
+        <nav class="header__nav">
+            <ul class="header__nav-list">
+                <li class="header__nav-item"><img src="icons/icon0.png" alt=""><a href="index.html">Inicio</a></li>
+                <li class="header__nav-item"><img src="icons/icon1.png" alt=""><a href="contacto.html">Contacto</a></li>
+                <li class="header__nav-item"><img src="icons/icon2.png" alt=""><a href="recursos.html">Recursos</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <main class="container__content">
+        <section class="modal__container">
+            <!------ Sección de contenido por ventana modal-->
+            <div class="menu">
+                <h2>Teorías de la Física</h2>
+                <!------ Abrir la ventana modal ------>
+                <input type="checkbox" id="menu" class="menu__checkbox">
+                <label for="menu" class="equal-button" role="button"><h3>Presiona aquí</h3></label>
+                <div class="modal">
+                    <div class="modal__content-menu">
+                        <!------ Menú de temas de la ventana modal-->
+                        <div class="modal__menu">
+                            <h3>Modulo 1: Introducción a la Física</h3>
+                            <a onclick="changeContent('Concepto 1')">Teoría de la relatividad</a>
+                            <a onclick="changeContent('Concepto 2')">Teoría del big bang</a>
+                            <a onclick="changeContent('Concepto 3')">Teoría de la gran unificación</a>
+                            <a onclick="changeContent('Concepto 4')">Teoría de cuerdas</a>
+                            <a onclick="changeContent('Concepto 5')">Teoría del caos</a>
+                        </div>
+                        <!--Cerrar ventana modal-->
+                        <span class="modal__close-button">&times;</span>
+                        <!--Función para abrir y cerrar la ventana modal-->
+                        <script>
+                            document.addEventListener("DOMContentLoaded", () => {  
+                                document.querySelector(".modal").style.display = "none"; 
+
+                                document.querySelector(".equal-button").addEventListener("click", () => {
+                                    document.querySelector(".modal").style.display = "flex";
+                                });
+
+                                document.querySelector(".modal__close-button").addEventListener("click", () => {
+                                    document.querySelector(".modal").style.display = "none";
+                                });
+                            });
+                        </script>
+                    </div>
+                </div>
+            </div>
+            <div class="modal__content">
+                <!------ Tema 1 ------>
+                <div id="Concepto 1" class="description">
+                    <h3>Teoría de la Relatividad</h3>
+                    <p>La Teoría de la Relatividad nos dice que el espacio y el tiempo no son cosas fijas e inmutables, sino que pueden cambiar dependiendo de la velocidad a la que te mueves o la cantidad de gravedad que hay cerca de ti. Normalmente, pensamos que el tiempo pasa igual para todos y que el espacio es algo rígido, pero Einstein demostró que esto no es cierto. Si te mueves muy rápido, el tiempo transcurre más lento para ti en comparación con alguien que está quieto. Además, la gravedad no es solo una fuerza que jala los objetos, sino una deformación del espacio y el tiempo que hace que los cuerpos se muevan de cierta manera.</p>
+
+                    <p>Para entender esto con una analogía, imagina que tienes dos gemelos y uno de ellos viaja en una nave espacial a una velocidad cercana a la luz. Cuando regresa, descubre que su hermano ha envejecido mucho más que él. Esto sucede porque al moverse tan rápido, el tiempo transcurre más lento para él. Otra forma de verlo es con un tren en movimiento: si dentro del tren lanzas una pelota al aire, para ti solo sube y baja, pero para alguien afuera, la pelota sigue un arco porque combina su movimiento con el del tren. Algo similar sucede con la luz, y para que todo tenga sentido, el tiempo y el espacio deben ajustarse.</p>
+
+                    <p>En cuanto a la gravedad, imagina un trampolín tenso. Si colocas una bola de boliche en el centro, el trampolín se hunde, y si pones una canica cerca, esta rodará hacia la bola no porque algo la jale, sino porque la superficie está curvada. Eso es lo que pasa con el espacio: los objetos grandes, como el Sol, deforman el espacio a su alrededor, y los planetas simplemente siguen esa curvatura, lo que hace que orbiten. Esto también afecta el tiempo, haciendo que en lugares con mucha gravedad, como cerca de un agujero negro, el tiempo pase más lento. En pocas palabras, la Teoría de la Relatividad nos dice que el espacio y el tiempo pueden cambiar dependiendo de la velocidad y la gravedad.</p>
+                </div>
+                <!------ Tema 2 ------>
+                <div id="Concepto 2" class="description">
+                    <h3>El Big Bang: El universo comenzó con una gran expansión</h3>
+                    <p>La Teoría del Big Bang explica cómo se originó el universo. Nos dice que todo lo que existe, el espacio, el tiempo, la materia y la energía, estuvo concentrado en un punto increíblemente pequeño y denso, y hace aproximadamente 13.8 mil millones de años, este punto explotó y comenzó a expandirse. A partir de esa expansión, se formaron las partículas que luego se convirtieron en átomos, estrellas, galaxias y todo lo que conocemos hoy en día.</p>
+
+                    <p>Para entenderlo con una analogía, imagina que el universo es como un globo desinflado con puntitos dibujados en su superficie. A medida que inflas el globo, los puntos se separan unos de otros porque la superficie se expande. Esto es similar a lo que sucede con el universo: no es que las galaxias se estén moviendo a través del espacio, sino que el propio espacio se está estirando, haciendo que se alejen unas de otras.</p>
+
+                    <p>Otra manera de verlo es como una gota de tinta en un vaso con agua. Al principio, la tinta está concentrada en un solo punto, pero al echarla en el agua, comienza a dispersarse y ocupar más espacio. Así pasó con el universo: empezó en un estado extremadamente caliente y denso y se ha estado expandiendo desde entonces.</p>
+
+                    <p>Importante destacar que el Big Bang no fue una explosión en un lugar específico dentro del espacio, sino la expansión del propio espacio. Antes de eso, no había ni espacio ni tiempo, por lo que no tiene sentido preguntar qué había "antes" del Big Bang, ya que el tiempo mismo comenzó en ese momento.</p>
+                </div>
+                <!------ Tema 3 ------>
+                <div id="Concepto 3" class="description">
+                    <h3>Teoría de la gran unificación</h3>
+                    <p>La Teoría de la Gran Unificación trata de explicar cómo las fuerzas fundamentales del universo estuvieron unidas en el pasado. Hoy en día, conocemos cuatro fuerzas fundamentales que gobiernan todo: la gravedad, el electromagnetismo, la fuerza nuclear fuerte (que mantiene unidas las partículas en el núcleo de los átomos) y la fuerza nuclear débil (responsable de la desintegración radiactiva). Según esta teoría, en los primeros momentos después del Big Bang, el universo era tan caliente y energético que estas fuerzas no estaban separadas como las vemos hoy, sino que formaban una sola "súper fuerza".</p>
+
+                    <p>A medida que el universo se expandió y enfrió, las fuerzas comenzaron a separarse. Primero se dividió el electromagnetismo de la fuerza nuclear fuerte, luego la fuerza nuclear débil se separó del electromagnetismo, y finalmente, la gravedad quedó aparte. Sin embargo, la física actual todavía no ha logrado unir la gravedad con las demás fuerzas en una sola ecuación, lo que es uno de los mayores desafíos de la ciencia.</p>
+
+                    <p>Para entenderlo con una analogía, imagina que al principio del universo, todas las fuerzas eran como una gota de agua muy caliente. A medida que se enfría, esa gota empieza a separarse en diferentes sustancias, como cuando el agua, el aceite y otros líquidos se separan cuando bajan de temperatura. Otra forma de verlo es con un interruptor de luz regulable: al inicio, cuando la intensidad es muy alta, la luz parece una sola, pero al disminuir la intensidad, se empiezan a notar diferentes colores, como los de un arcoíris. Así, en el inicio del universo, todas las fuerzas estaban unificadas, pero conforme se "enfrió", comenzaron a dividirse en las cuatro que conocemos hoy.</p>
+
+                    <p>La Teoría de la Gran Unificación aún no está completa, pero si se logra comprobar, nos acercaría a una explicación única y profunda de cómo funciona todo el universo.</p>
+                </div>
+                <!------ Tema 4 ------>
+                <div id="Concepto 4" class="description">
+                    <h3>Teoría de Cuerdas</h3>
+                    <p>La Teoría de Cuerdas es una idea que trata de explicar todas las partículas y fuerzas del universo en términos de pequeñas "cuerdas" vibrantes. En lugar de pensar en las partículas subatómicas como puntos diminutos, la teoría propone que estas partículas son en realidad pequeñas cuerdas unidimensionales que vibran de diferentes formas. Cada forma de vibración de estas cuerdas correspondería a una partícula diferente, como electrones, quarks, o incluso la gravedad. Esta teoría intenta unificar todas las fuerzas de la naturaleza, incluidas la gravedad, el electromagnetismo, y las fuerzas nucleares, en un solo marco teórico, algo que la física tradicional aún no ha logrado.</p>
+
+                    <p>Además, la Teoría de Cuerdas también propone que el universo tiene más dimensiones de las que vemos. Mientras que nosotros solo experimentamos 3 dimensiones espaciales (alto, ancho y profundo) y 1 dimensión temporal (el tiempo), la teoría sugiere que en realidad hay hasta 10 o 11 dimensiones, aunque estas dimensiones extra son tan pequeñas que no podemos percibirlas directamente.</p>
+
+                    <p>Para explicarlo con analogías, imagina que una cuerda muy pequeña está vibrando de diferentes maneras. Cada una de esas vibraciones genera una partícula diferente. Es como si tuvieras un instrumento musical (como una guitarra), y dependiendo de cómo toques las cuerdas, puedes producir diferentes notas. En lugar de tener una partícula para cada "nota", lo que la teoría dice es que todas las partículas que conocemos son como diferentes vibraciones de una cuerda fundamental.</p>
+
+                    <p>Otra forma de verlo es pensar en una cuerda de salto: si la cuelgas y la haces vibrar, se moverá de diferentes maneras dependiendo de cómo la muevas. Así, las cuerdas en el universo vibran de distintas formas y producen las partículas que forman la materia. Además, esas vibraciones pueden tener efectos en dimensiones que no podemos ver, como si estuvieran sucediendo en una "segunda capa" que solo se puede detectar indirectamente.</p>
+
+                    <p>La Teoría de Cuerdas aún está en desarrollo, y aunque no se ha comprobado completamente, es una de las ideas más prometedoras para entender el funcionamiento profundo del universo.</p>
+                </div>
+                <!------ Tema 5 ------>
+                <div id="Concepto 5" class="description">
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos quae veritatis ipsum aliquam totam harum sint adipisci, est repellendus, non deleniti incidunt maxime aperiam, accusamus eos quod laudantium facere animi.
+                    </p>
+                </div>
+            
+        </section>
+
+        <!------ Sección de contenido y menu fijo ------>
+        <section class="fixed__container">
+            <!------ Menú ------>
+            <div class="fixed__menu">
+                <h2>Teorías de la Física</h2>
+                <a href="#" onclick="changeContent('Concepto 1.1')">Teoría de la relatividad</a>
+                <a href="#" onclick="changeContent('Concepto 2.2')">Teoría del big bang</a>
+                <a href="#" onclick="changeContent('Concepto 3.3')">Teoría de la gran unificación</a>
+                <a href="#" onclick="changeContent('Concepto 4.4')">Teoría de cuerdas</a>
+                <a href="#" onclick="changeContent('Concepto 5.5')">Teoría del caos</a>
+            </div>
+            <!------ Temas ------>
+            <div class="fixed__content">
+                <!------ Tema 1 ------>
+                <div id="Concepto 1.1" class="description">
+                    <h2>Teoría de la Relatividad</h2>
+                    <p>La Teoría de la Relatividad nos dice que el espacio y el tiempo no son cosas fijas e inmutables, sino que pueden cambiar dependiendo de la velocidad a la que te mueves o la cantidad de gravedad que hay cerca de ti. Normalmente, pensamos que el tiempo pasa igual para todos y que el espacio es algo rígido, pero Einstein demostró que esto no es cierto. Si te mueves muy rápido, el tiempo transcurre más lento para ti en comparación con alguien que está quieto. Además, la gravedad no es solo una fuerza que jala los objetos, sino una deformación del espacio y el tiempo que hace que los cuerpos se muevan de cierta manera.</p>
+                    <img src="img/img64.jpg">
+
+                    <p>Para entender esto con una analogía, imagina que tienes dos gemelos y uno de ellos viaja en una nave espacial a una velocidad cercana a la luz. Cuando regresa, descubre que su hermano ha envejecido mucho más que él. Esto sucede porque al moverse tan rápido, el tiempo transcurre más lento para él. Otra forma de verlo es con un tren en movimiento: si dentro del tren lanzas una pelota al aire, para ti solo sube y baja, pero para alguien afuera, la pelota sigue un arco porque combina su movimiento con el del tren. Algo similar sucede con la luz, y para que todo tenga sentido, el tiempo y el espacio deben ajustarse.</p>
+                    <img src="img/img65.jpeg" class="img__modificado">
+
+                    <p>En cuanto a la gravedad, imagina un trampolín tenso. Si colocas una bola de boliche en el centro, el trampolín se hunde, y si pones una canica cerca, esta rodará hacia la bola no porque algo la jale, sino porque la superficie está curvada. Eso es lo que pasa con el espacio: los objetos grandes, como el Sol, deforman el espacio a su alrededor, y los planetas simplemente siguen esa curvatura, lo que hace que orbiten. Esto también afecta el tiempo, haciendo que en lugares con mucha gravedad, como cerca de un agujero negro, el tiempo pase más lento. En pocas palabras, la Teoría de la Relatividad nos dice que el espacio y el tiempo pueden cambiar dependiendo de la velocidad y la gravedad.</p>
+                    <img src="img/img66.jpg">
+                </div>
+                <!------ Tema 2 ------>
+                <div id="Concepto 2.2" class="description">
+                    <h3>El Big Bang: El universo comenzó con una gran expansión</h3>
+                    <p>La Teoría del Big Bang no es solo el nombre una sitcom, sino que realmente es una teoría física que explica cómo se originó el universo. Nos dice que todo lo que existe, el espacio, el tiempo, la materia y la energía, estuvo concentrado en un punto increíblemente pequeño y denso, y hace aproximadamente 13.8 mil millones de años, este punto explotó y comenzó a expandirse. A partir de esa expansión, se formaron las partículas que luego se convirtieron en átomos, estrellas, galaxias y todo lo que conocemos hoy en día.</p>
+                    <img src="img/img69.jpg">
+
+                    <p>Para entenderlo con una analogía, imagina que el universo es como un globo desinflado con puntitos dibujados en su superficie. A medida que inflas el globo, los puntos se separan unos de otros porque la superficie se expande. Esto es similar a lo que sucede con el universo: no es que las galaxias se estén moviendo a través del espacio, sino que el propio espacio se está estirando, haciendo que se alejen unas de otras.</p>
+                    <img src="img/img68.jpg" class="img__modificado">
+
+                    <p>Otra manera de verlo es como una gota de tinta en un vaso con agua. Al principio, la tinta está concentrada en un solo punto, pero al echarla en el agua, comienza a dispersarse y ocupar más espacio. Así pasó con el universo: empezó en un estado extremadamente caliente y denso y se ha estado expandiendo desde entonces.</p>
+
+                    <p>Importante destacar que el Big Bang no fue una explosión en un lugar específico dentro del espacio, sino la expansión del propio espacio. Antes de eso, no había ni espacio ni tiempo, por lo que no tiene sentido preguntar qué había "antes" del Big Bang, ya que el tiempo mismo comenzó en ese momento.</p>
+                    <img src="img/img67.jpg">
+                </div>
+                <!------ Tema 3 ------>
+                <div id="Concepto 3.3" class="description">
+                    <h3>Teoría de la gran unificación</h3>
+                    <p>La Teoría de la Gran Unificación trata de explicar cómo las fuerzas fundamentales del universo estuvieron unidas en el pasado. Hoy en día, conocemos cuatro fuerzas fundamentales que gobiernan todo: la gravedad, el electromagnetismo, la fuerza nuclear fuerte (que mantiene unidas las partículas en el núcleo de los átomos) y la fuerza nuclear débil (responsable de la desintegración radiactiva). Según esta teoría, en los primeros momentos después del Big Bang, el universo era tan caliente y energético que estas fuerzas no estaban separadas como las vemos hoy, sino que formaban una sola "súper fuerza".</p>
+                    <img src="img/img70.jpg">
+
+                    <p>A medida que el universo se expandió y enfrió, las fuerzas comenzaron a separarse. Primero se dividió el electromagnetismo de la fuerza nuclear fuerte, luego la fuerza nuclear débil se separó del electromagnetismo, y finalmente, la gravedad quedó aparte. Sin embargo, la física actual todavía no ha logrado unir la gravedad con las demás fuerzas en una sola ecuación, lo que es uno de los mayores desafíos de la ciencia.</p>
+
+                    <p>Para entenderlo con una analogía, imagina que al principio del universo, todas las fuerzas eran como una gota de agua muy caliente. A medida que se enfría, esa gota empieza a separarse en diferentes sustancias, como cuando el agua, el aceite y otros líquidos se separan cuando bajan de temperatura. Otra forma de verlo es con un interruptor de luz regulable: al inicio, cuando la intensidad es muy alta, la luz parece una sola, pero al disminuir la intensidad, se empiezan a notar diferentes colores, como los de un arcoíris. Así, en el inicio del universo, todas las fuerzas estaban unificadas, pero conforme se "enfrió", comenzaron a dividirse en las cuatro que conocemos hoy.</p>
+                    <img src="img/img71.png" class="img__modificado">
+
+                    <p>La Teoría de la Gran Unificación aún no está completa, pero si se logra comprobar, nos acercaría a una explicación única y profunda de cómo funciona todo el universo.</p>
+                </div>
+                <!------ Tema 4 ------>
+                <div id="Concepto 4.4" class="description">
+                    <h3>Teoría de Cuerdas</h3>
+                    <p>La Teoría de Cuerdas es una idea que trata de explicar todas las partículas y fuerzas del universo en términos de pequeñas "cuerdas" vibrantes. En lugar de pensar en las partículas subatómicas como puntos diminutos, la teoría propone que estas partículas son en realidad pequeñas cuerdas unidimensionales que vibran de diferentes formas. Cada forma de vibración de estas cuerdas correspondería a una partícula diferente, como electrones, quarks, o incluso la gravedad. Esta teoría intenta unificar todas las fuerzas de la naturaleza, incluidas la gravedad, el electromagnetismo y las fuerzas nucleares, en un solo marco teórico, algo que la física tradicional aún no ha logrado.</p>
+
+                    <p>Además, la Teoría de Cuerdas también propone que el universo tiene más dimensiones de las que vemos. Mientras que nosotros solo experimentamos tres dimensiones espaciales (alto, ancho y profundo) y una dimensión temporal (el tiempo), la teoría sugiere que en realidad hay hasta 10 o 11 dimensiones, aunque estas dimensiones extra son tan pequeñas que no podemos percibirlas directamente.</p>
+                    <img src="img/img72.jpg">
+
+                    <p>Podemos entender la Teoría de Cuerdas con una analogía musical: si todo en el universo está compuesto por estas diminutas cuerdas vibrantes, podríamos decir que cada partícula es como una nota musical. Al combinarse, esas notas forman melodías, y en un sentido más amplio, cada persona podría ser vista como una melodía única compuesta por sus propias notas. Esto no solo explica la diversidad de la materia, sino que también podría reflejarse en nuestras interacciones humanas. Hay personas con las que simplemente no conectamos, como si sus notas no armonizaran con las nuestras, generando disonancia. En cambio, hay otras con quienes encajamos perfectamente, formando una melodía armoniosa sin que haya una explicación aparente. Esas conexiones inexplicables, como el amor profundo o una amistad instantánea, podrían verse como la resonancia natural entre vibraciones compatibles.</p>
+                    <img src="img/img73.jpg">
+
+                    <p>Así, la Teoría de Cuerdas no solo nos ofrece una nueva forma de entender la estructura del universo, sino que también nos permite reflexionar sobre nuestras conexiones con los demás desde una perspectiva vibratoria y armónica. Aunque esta teoría aún está en desarrollo y no ha sido completamente comprobada, es una de las ideas más prometedoras para entender el funcionamiento profundo del cosmos.</p>
+                </div>
+                <!------ Tema 5 ------>
+                <div id="Concepto 5.5" class="description">
+                    <h3>Teoría del Caos</h3>
+                    <p>La Teoría del Caos se refiere a un tipo de comportamiento en sistemas complejos que, aunque parecen ser aleatorios o impredecibles, en realidad están gobernados por leyes deterministas. Es decir, los resultados de estos sistemas dependen de las condiciones iniciales y pequeñas variaciones en esas condiciones pueden llevar a resultados completamente diferentes. En otras palabras, el caos no es lo mismo que el azar; es un desorden que sigue patrones muy sensibles a los detalles al principio. Esto es lo que se conoce como sensibilidad a las condiciones iniciales.</p>
+                    <img src="img/img74.png">
+
+                    <p>Un ejemplo común de un sistema caótico es el clima. Aunque sabemos que el clima está regido por leyes físicas, como la termodinámica, no podemos predecirlo con precisión a largo plazo debido a que pequeñas variaciones en los datos iniciales (como la temperatura o la presión en un lugar específico) pueden cambiar completamente las condiciones en días o semanas. De aquí viene la famosa frase "el aleteo de una mariposa en Brasil puede provocar un tornado en Texas", que describe cómo un pequeño cambio puede generar grandes efectos en un sistema caótico.</p>
+
+                    <p>Para explicar la Teoría del Caos con una analogía, imagina que estás en una montaña rusa. Si empujas el carrito un poquito hacia la izquierda o hacia la derecha en el primer tramo, a lo largo del recorrido, ese pequeño desvío hará que el carrito tome una trayectoria muy diferente. Aunque todo sigue un patrón de movimiento determinado por las reglas de la física, un pequeño cambio al principio puede hacer que la ruta final sea impredecible y parezca caótica.</p>
+
+                    <p>Otro ejemplo es el de un charco de agua con ondas. Si lanzas una piedra, las ondas se propagarán de manera ordenada, pero si lanzas varias piedras, las ondas se mezclarán y se volverán mucho más complejas, incluso impredecibles, aunque en realidad todo sigue las mismas reglas físicas. Así es el caos: sistemas que son sensibles a pequeñas variaciones y que, aunque se rigen por reglas, producen resultados complejos y difíciles de predecir.</p>
+
+                    <p>La Teoría del Caos no quiere decir que no haya un orden en el universo, sino que en sistemas complejos, ese orden puede ser extremadamente sensible a las condiciones iniciales, lo que hace que se vuelva difícil predecir a largo plazo.</p>
+                </div>
+            </div>
+            <!------ Funciones para ocultar y mostras los temas ------>
+        <script>
+            function changeContent(concept) {
+                const descriptions = document.querySelectorAll('.description');
+                descriptions.forEach((desc) => {
+                    desc.style.display = 'none'; 
+                });
+
+                const selectedConcept = document.getElementById(concept);
+                if (selectedConcept) {
+                    selectedConcept.style.display = 'block'; 
+                }
+            }
+
+            // Mostrar el primer concepto por defecto
+            window.onload = function() {
+                changeContent('Concepto 1');
+            }
+        </script>
+        </section>
+    </main>
+        
+    <!------ Botón para ir a otro modulo ------>
+    <button class="styled-button"><a href="index.html">Regresar al Inicio</a></button>
+    
+    <!------ Pie de página ------>
+    <footer class="site-footer">
+        <p>&copy; 2024 Física en Contexto. Todos los derechos reservados.</p>
+        <ul>
+            <li><strong>Autor:</strong> Miguel Angel Jimenez Pérez</li>
+            <li><strong>Escuela:</strong> CETiS núm. 141</li>
+            <li><strong>Redes sociales:</strong> <a href="https://www.instagram.com/miguel_jp1003?igsh=dzByMW1seXgxMm1j">miguel_jp1003</a> y <a href="https://www.instagram.com/fisica_en_contexto_/profilecard/?igsh=MWttdHBvZHJtc2huMw==">fisica_en_contexto_</a></li>
+        </ul>
+    </footer>
+</body>
+</html>

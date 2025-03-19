@@ -1,0 +1,554 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Curso Modulo 1</title>
+    <link rel="stylesheet" href="modulo.css">
+    <link rel="icon" href="/img/img1.png" type="img/png">
+</head>
+<body>
+    <!--Encabezado-->
+    <header class="header">
+        <!--Barra de navegación-->
+        <input type="checkbox" id="open-menu" class="header__checkbox">
+        <label for="open-menu" class="header__open-nav-button" role="button">=</label>
+        <div class="header__title-container">
+            <h1>Física en contexto</h1>
+        </div>
+        <nav class="header__nav">
+            <ul class="header__nav-list">
+                <li class="header__nav-item"><img src="icons/icon0.png" alt=""><a href="index.html">Inicio</a></li>
+                <li class="header__nav-item"><img src="icons/icon1.png" alt=""><a href="contacto.html">Contacto</a></li>
+                <li class="header__nav-item"><img src="icons/icon2.png" alt=""><a href="recursos.html">Recursos</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <main class="container__content">
+        <section class="modal__container">
+            <!------ Sección de contenido por ventana modal-->
+            <div class="menu">
+                <h2>Introducción a la Física</h2>
+                <!------ Abrir la ventana modal ------>
+                <input type="checkbox" id="menu" class="menu__checkbox">
+                <label for="menu" class="equal-button" role="button"><h2>Presiona aquí</h2></label>
+                <div class="modal">
+                    <div class="modal__content-menu">
+                        <!------ Menú de temas de la ventana modal-->
+                        <div class="modal__menu">
+                            <h2>Energía y Trabajo</h2>
+                            <a onclick="changeContent('Concepto 1')">Energía y Trabajo</a>
+                            <a onclick="changeContent('Concepto 2')">Diferencia entre Trabajo, Energía y Potencia</a>
+                            <a onclick="changeContent('Concepto 3')">Ejemplos en Máquinas y Dispositivos</a>
+                            <a onclick="changeContent('Concepto 4')">Formas de Energía</a>
+                            <a onclick="changeContent('Concepto 5')">Energías renovables y su impacto</a>
+                        </div>
+                        <!--Cerrar ventana modal-->
+                        <span class="modal__close-button">&times;</span>
+                        <!--Función para abrir y cerrar la ventana modal-->
+                        <script>
+                            document.addEventListener("DOMContentLoaded", () => {  
+                                document.querySelector(".modal").style.display = "none"; 
+
+                                document.querySelector(".equal-button").addEventListener("click", () => {
+                                    document.querySelector(".modal").style.display = "flex";
+                                });
+
+                                document.querySelector(".modal__close-button").addEventListener("click", () => {
+                                    document.querySelector(".modal").style.display = "none";
+                                });
+                            });
+                        </script>
+                    </div>
+                </div>
+            </div>
+            <div class="modal__content">
+                <!------ Tema 1 ------>
+                <div id="Concepto 1" class="description">
+                    <h2>Energía y Trabajo</h2>
+                    <p>Este módulo trata sobre los conceptos de <strong>energía</strong> y <strong>trabajo</strong> en <strong>física</strong>, que son fundamentales para entender cómo funcionan muchas cosas en el mundo que nos rodea. Comenzaremos viendo la diferencia entre <strong>trabajo</strong>, <strong>energía</strong> y <strong>potencia</strong>. Aunque suenan similares, son conceptos distintos: el <strong>trabajo</strong> es lo que ocurre cuando una <strong>fuerza</strong> mueve un objeto, la <strong>energía</strong> es la capacidad para hacer ese <strong>trabajo</strong>, y la <strong>potencia</strong> es la rapidez con la que se hace el <strong>trabajo</strong>.</p>
+                    
+                    <p>A partir de aquí, veremos cómo estos conceptos se aplican a las <strong>máquinas</strong> y <strong>dispositivos</strong> que usamos a diario, como los <strong>autos</strong>, los <strong>electrodomésticos</strong> y hasta el funcionamiento de nuestros <strong>cuerpos</strong>. La <strong>energía</strong> se presenta de muchas maneras, y cada una tiene un papel importante en cómo las cosas funcionan. Por ejemplo, la <strong>energía mecánica</strong> está relacionada con el <strong>movimiento</strong> o la <strong>posición</strong> de los objetos, como cuando empujamos un carrito. La <strong>energía térmica</strong> es el <strong>calor</strong>, que está relacionado con el <strong>movimiento</strong> de las partículas que forman los objetos, como el calor que sentimos cuando tocamos algo caliente. La <strong>energía eléctrica</strong> es la que alimenta nuestros <strong>aparatos</strong> y <strong>electrodomésticos</strong>, y la <strong>energía química</strong> es la que almacenan las <strong>baterías</strong> o los <strong>alimentos</strong> que comemos.</p>
+                    
+                    <p>Además, en el mundo actual, hablar de <strong>energías renovables</strong> es muy importante. Estas son fuentes de <strong>energía</strong> que provienen de recursos naturales que no se agotan, como el <strong>sol</strong>, el <strong>viento</strong> o el <strong>agua</strong>. Usarlas ayuda a cuidar el <strong>medio ambiente</strong> porque producen menos <strong>contaminación</strong> y protegen la <strong>biodiversidad</strong>. Además, las energías renovables no solo benefician al planeta, sino que también pueden crear nuevos <strong>empleos</strong> y asegurar que siempre tengamos <strong>energía</strong> disponible, sin depender de fuentes que puedan agotarse.</p>
+
+                    <p><strong>Comprender la energía</strong> y el <strong>trabajo</strong> es esencial porque estos conceptos son los pilares de toda la <strong>física</strong>. Nos ayudan a entender el comportamiento de las cosas a gran escala, como el movimiento de los <strong>planetas</strong> o la <strong>fuerza</strong> que mueve un coche, y a nivel más pequeño, como las interacciones entre <strong>átomos</strong> y <strong>moléculas</strong>. La <strong>energía</strong> es la fuerza que está detrás de todos los cambios que vemos en el mundo, desde las transformaciones naturales hasta los <strong>avances tecnológicos</strong> que inventamos los seres humanos.</p>
+                    <ul>
+                        <img src="img/img30.png">
+                    </ul>
+
+                    <p>Además, los conceptos de <strong>energía</strong> y <strong>trabajo</strong> se conectan con muchos otros temas de la <strong>física</strong>. Por ejemplo, en <strong>mecánica</strong>, el trabajo realizado por una fuerza cambia la energía de un objeto. En <strong>termodinámica</strong>, estudiaremos cómo la energía se convierte en <strong>calor</strong> y <strong>trabajo</strong>, y en <strong>electromagnetismo</strong>, aprenderemos sobre la energía en los <strong>campos eléctricos</strong> y <strong>magnéticos</strong>, que son claves para el funcionamiento de los <strong>circuitos eléctricos</strong>. Entender la naturaleza de la <strong>energía</strong> y el <strong>trabajo</strong> nos permite conectar estos diferentes temas de la <strong>física</strong> y obtener una visión más clara de cómo todo en el universo está relacionado y se mueve gracias a estos principios.</p>
+                    <button class="next"><a onclick="changeContent('Concepto 2')">Siguiente tema</a></button>
+                </div>
+                <!------ Tema 2 ------>
+                <div id="Concepto 2" class="description">
+                    <h2>Diferencia entre Trabajo, Energía y Potencia</h2>
+                    <h3>Trabajo</h3>
+                    <p>El <strong>trabajo</strong> es un concepto muy sencillo de entender si piensas en mover algo. Si empujas una <strong>caja</strong> y logras que se mueva, estás realizando trabajo. Imagina que empujas un <strong>carro</strong>; el trabajo se hace solo si el carro se desplaza. Si empujas, pero no se mueve, entonces no estás haciendo trabajo, aunque estés aplicando una <strong>fuerza</strong>.</p>
+
+                    <p>La fórmula que usamos para calcular el trabajo es: <h3>W = F ⋅ d ⋅ cos(θ)</h3></p>
+
+                    <p>Donde <strong>F</strong> es la <strong>fuerza</strong> aplicada, <strong>d</strong> es la <strong>distancia</strong> que recorre el objeto, y <strong>θ</strong> es el <strong>ángulo</strong> entre la fuerza y la dirección en la que el objeto se mueve. Esto significa que el <strong>trabajo</strong> depende de cuánta fuerza estás aplicando y en qué dirección estás empujando o tirando. Si la fuerza está completamente en la dirección del movimiento, el trabajo será <strong>máximo</strong>.</p>
+                    <img src="img/img31.png">
+
+                    <h3>Energía</h3>
+                    <p>La <strong>energía</strong>, como hemos mencionado, es la <strong>capacidad</strong> de hacer trabajo. Para entenderlo mejor, imagina que la energía es como el "<strong>combustible</strong>" de las cosas. Si tienes mucha energía, puedes hacer mucho trabajo. La energía no se ve ni se toca, pero sabes que está ahí cuando un objeto se mueve, cuando un coche acelera, o incluso cuando comes alimentos (porque te dan energía para moverte). La energía se puede <strong>transformar</strong> de una forma a otra: por ejemplo, la energía química en los alimentos se transforma en energía mecánica para que tu cuerpo se mueva.</p>
+
+                    <p>Una de las leyes más importantes de la <strong>energía</strong> es la <strong>Ley de Conservación de la Energía</strong>, que dice que la energía nunca se pierde; solo cambia de forma. Si un objeto cae, su <strong>energía potencial</strong> (debido a su altura) se convierte en <strong>energía cinética</strong> (debido al movimiento). Si esa energía no se usa completamente, se puede transformar en <strong>calor</strong>, lo que es común cuando las máquinas funcionan y producen calor como subproducto.</p>
+                    <img src="img/img32.jpg">
+
+                    <h3>Potencia</h3>
+                    <p>La <strong>potencia</strong> nos dice qué tan rápido se está haciendo el trabajo. Imagina que dos personas están empujando una caja. Si una de ellas empuja más rápido que la otra, está usando más <strong>potencia</strong>, porque está haciendo el trabajo en menos tiempo. En la vida cotidiana, la <strong>potencia</strong> es importante para dispositivos como autos, electrodomésticos, y hasta el cargador de tu celular. Un coche con mucha <strong>potencia</strong> puede acelerar más rápido, mientras que una licuadora con alta <strong>potencia</strong> puede triturar ingredientes en menos tiempo.</p>
+                    <p>La fórmula de potencia es: <h3>P = W/t = E/t</h3></p>
+                    <p>Esto significa que la <strong>potencia</strong> es igual al trabajo realizado o la energía consumida dividido por el tiempo que tarda en realizarse. Cuanto menor es el tiempo, mayor es la <strong>potencia</strong>. Por ejemplo, si una lámpara de 100 vatios consume 100 julios de energía cada segundo, tiene más <strong>potencia</strong> que una lámpara de 50 vatios.</p>
+                    <img src="img/img33.jpg">
+
+                    <h3>Ejemplos adicionales:</h3>
+                    <ul>
+                        <li><strong>Trabajo:</strong> Si levantas una caja del suelo, el trabajo realizado es la energía que gastas para mover la caja contra la gravedad.</li>
+                        <li><strong>Energía:</strong> La energía en una batería es lo que permite que el teléfono funcione, porque la batería tiene la capacidad de hacer trabajar los componentes del teléfono.</li>
+                        <li><strong>Potencia:</strong> Si tienes una lámpara de 60 watts y otra de 100 watts, la de 100 watts consume más energía por segundo y por lo tanto tiene mayor potencia, por lo que te da más luz.</li>
+                        <img src="img/img34.png">
+                    </ul>
+
+                    <p>En resumen, podemos ver que el <strong>trabajo</strong>, la <strong>energía</strong> y la <strong>potencia</strong> están todos relacionados, pero cada uno tiene su propio papel. El <strong>trabajo</strong> es la cantidad de <strong>energía</strong> que se usa para mover algo, la <strong>energía</strong> es la capacidad para hacer ese <strong>trabajo</strong>, y la <strong>potencia</strong> es qué tan rápido hacemos ese <strong>trabajo</strong> o usamos esa <strong>energía</strong>. Todo esto forma una gran red de conceptos que ayudan a explicar cómo funcionan las cosas en el mundo, desde el movimiento de los planetas hasta el funcionamiento de los dispositivos que usamos todos los días.</p>
+
+                    <h2>Tabla comparativa:</h2>
+                    <div class="table-container">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Concepto</th>
+                                    <th>Definición</th>
+                                    <th>Unidades (SI)</th>
+                                    <th>Naturaleza</th>
+                                    <th>¿Qué mide?</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Trabajo</td>
+                                    <td>Transferencia de energía causada por una fuerza que desplaza un objeto.</td>
+                                    <td>Julio (J)</td>
+                                    <td>Escalar</td>
+                                    <td>Cantidad de energía transferida.</td>
+                                </tr>
+                                <tr>
+                                    <td>Energía</td>
+                                    <td>Capacidad para realizar trabajo.</td>
+                                    <td>Julio (J)</td>
+                                    <td>Escalar</td>
+                                    <td>Cantidad de capacidad para realizar trabajo.</td>
+                                </tr>
+                                <tr>
+                                    <td>Potencia</td>
+                                    <td>Tasa a la que se realiza el trabajo o se consume energía.</td>
+                                    <td>Watt (W)</td>
+                                    <td>Escalar</td>
+                                    <td>Rapidez con la que se realiza el trabajo o se consume energía.</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <button class="next"><a onclick="changeContent('Concepto 3')">Siguiente tema</a></button>
+                </div>
+                <!------ Tema 3 ------>
+                <div id="Concepto 3" class="description">
+                    <h2>Ejemplos en Máquinas y Dispositivos</h2>
+                    <h3>Trabajo:</h3>
+                    <ol>
+                        <li><strong>Grúa levantando un contenedor:</strong> Imagina que tienes una grúa que levanta un contenedor pesado. La grúa ejerce una fuerza hacia arriba sobre el contenedor, y este se mueve en contra de la gravedad. El trabajo realizado por la grúa aumenta la energía potencial del contenedor, ya que ahora está a una mayor altura. Este es un buen ejemplo de cómo se usa el trabajo para aumentar la energía de un objeto, en este caso, su energía potencial gravitatoria.</li>
+                        <li><strong>Resorte comprimido:</strong> Cuando aprietas un resorte, como el de un juguete o una válvula, aplicas una fuerza que cambia su forma. Ese cambio en la forma se almacena como energía potencial elástica . En este caso, el trabajo realizado sobre el recurso se guarda en él, y cuando lo deja ir, el recurso puede hacer trabajo, como empujar un objeto o hacer funcionar una máquina.</li>
+                        <li><strong>Motor de automóvil:</strong> Cuando un automóvil se mueve, el motor realiza trabajo al transformar la energía química del combustible en energía cinética para desplazar el vehículo. Esto ocurre mediante un proceso donde la energía almacenada en el combustible se libera y se convierte en fuerza de movimiento, permitiendo que el coche avance.</li>
+                        <img src="img/img35.png">
+                    </ol>
+
+                    <h3>Energía:</h3>
+                    <ol>
+                        <li><strong>Automóvil en movimiento (energía cinética):</strong> Un automóvil que se desplaza por la carretera tiene energía cinética , que depende de su velocidad y masa. Cuanto más rápido vaya o más pesado sea, más energía cinética tendrá. Esta es la energía asociada al movimiento de los objetos.</li>
+                        <li><strong>Objeto a altura (energía potencial gravitatoria):</strong> Imagina una pelota colocada en una mesa alta. Tiene energía potencial gravitatoria porque su altura la pone en una posición donde la gravedad quiere hacerla caer. Esta energía depende de la masa de la pelota, la gravedad y la altura. Cuando la deja caer, esa energía potencial se convierte en energía cinética a medida que se mueve hacia el suelo.</li>
+                        <li><strong>Batería (energía química):</strong> Una batería guarda energía química , que es como una especie de "combustible". Cuando la batería se conecta a un dispositivo, como un teléfono, esa energía química se convierte en energía eléctrica que hace funcionar el dispositivo. Por ejemplo, la batería de tu teléfono almacena energía que después se convierte en corriente eléctrica para que puedas cargarlo o usarlo.</li>
+                        <li><strong>Combustible (energía química):</strong> La gasolina o el carbón son ejemplos de energía química almacenada. Al quemarse, los enlaces entre los átomos se rompen, liberando energía en forma de calor y luz, que se puede usar para hacer funcionar motores en coches, calefacción en casas, o generar electricidad en plantas térmicas.</li>
+                        <img src="img/img36.png">
+                    </ol>
+
+                    <h3>Potencia:</h3>
+                    <ol>
+                        <li><strong>Motor de automóvil (potencia):</strong> La potencia de un motor mide qué tan rápido convierte la energía química del combustible en trabajo mecánico. Un motor más potente puede hacer que el automóvil acelere más rápido o suba colinas más fácilmente porque realiza el trabajo más rápido. Así, un motor con más potencia es como una versión más "rápida" para transformar energía en movimiento.</li>
+                        <li><strong>Bombilla eléctrica (potencia):</strong> Las bombillas tienen una potencia que indica qué tan rápido consume energía eléctrica. Por ejemplo, una bombilla de 100 vatios usa más energía que una de 60 vatios, por lo que produce más luz y calor. Esta potencia es lo que determina cuánta energía consume la bombilla cada segundo para generar luz.</li>
+                        <li><strong>Levantar pesas (potencia):</strong> Cuando levantas pesas, la potencia que desarrollas depende de la cantidad de trabajo que realizas (cuánto peso levantas ya qué altura) y del tiempo que te lleva hacerlo. Si levantas el mismo peso en menos tiempo, desarrollas más potencia. Por ejemplo, si levantas un peso rápidamente, usas más potencia que si lo levantas despacio, aunque el trabajo realizado sea el mismo.</li>
+                        <img src="img/img37.png">
+                    </ol>
+                    <button class="next"><a onclick="changeContent('Concepto 4')">Siguiente tema</a></button>
+                </div>
+                <!------ Tema 4 ------>
+                <div id="Concepto 4" class="description">
+                    <h2>Formas de Energía</h2>
+                    <h3>1. Energía Mecánica</h3>
+                    <p>La energía mecánica es la energía asociada al movimiento y la posición de un objeto. Se presenta en dos formas principales:</p>
+
+                    <p><strong>Energía Cinética</strong></p>
+                    <ul>Es la energía que posee un objeto debido a su movimiento. Depende de la masa (metro) y la velocidad (v) del objeto, de acuerdo con la ecuación: <h3>K = (1/2)mv<sup>2</sup></h3>
+                        Existen dos tipos de energía cinematográfica:
+                        <li><strong>Cinética traslacional:</strong> Se refiere al movimiento en línea recta de un objeto. Un ejemplo es una pelota rodando por el suelo.</li>
+                        <li><strong>Cinética rotacional:</strong> Está asociada al giro de un objeto alrededor de un eje. Un trompo girando sobre su punta es un ejemplo claro. En este caso, la energía depende del momento de inercia y de la velocidad angular.</li>
+                    </ul>
+
+                    <p><strong>Energía Potencial</strong></p>
+                    <ul>Es la energía almacenada en un objeto debido a su posición o configuración en un campo de fuerzas. Se divide en:
+                        <li><strong>Energía potencial gravitatoria:</strong> Es la energía que un objeto posee debido a su altura en un campo gravitatorio. Un ejemplo es el agua almacenada en una presa, que puede liberar su energía al caer. Se calcula con la ecuación:</li>
+                        <li><strong>Energía potencial elástica:</strong> Es la energía almacenada en objetos deformables, como resortes o bandas elásticas. Un arco tensado antes de disparar una flecha es un buen ejemplo. La cantidad de energía almacenada depende de la constante elástica del material y de la distancia de deformación.</li>
+                        <img src="img/img38.png">
+                    </ul>
+
+                    <h3>2. Energía térmica</h3>
+                    <p>La energía térmica es la energía interna de un sistema y se relaciona con la energía cinética y potencial de las partículas que lo componen. La temperatura de un objeto es una medida de la energía cinética promedio de sus partículas.</p>
+                    <ul>La transferencia de energía térmica ocurre mediante tres mecanismos:
+                        <li><strong>Conducción:</strong> Transferencia de calor por contacto directo entre objetos a diferente temperatura. Ejemplo: un metal calentándose al tocar una estufa.</li>
+                        <li><strong>Convección:</strong> Transferencia de calor mediante el movimiento de fluidos (líquidos o gases). Ejemplo: el agua caliente subiendo en una olla.</li>
+                        <li><strong>Radiación:</strong> Transferencia de energía en forma de ondas electromagnéticas, sin necesidad de un medio. Ejemplo: la luz del sol calentando la Tierra.
+                        </li>
+                        <img src="img/img39.png">
+                    </ul>
+
+                    <h3>3. Energía Eléctrica</h3>
+                    <p>La energía eléctrica se asocia con el movimiento de cargas eléctricas. Se manifiesta en circuitos eléctricos y dispositivos electrónicos. Algunos conceptos clave son:</p>
+                    <ul>
+                        <li><strong>Campo eléctrico:</strong>  Región donde una carga experimenta una fuerza.</li>
+                        <li><strong>Potencial eléctrico:</strong> Energía potencial por unidad de carga en un punto del campo eléctrico.</li>
+                        <li><strong>Corriente eléctrica:</strong> Flujo de cargas eléctricas a través de un conductor, como los electrones moviéndose en un cable.</li>
+                        Ejemplo: una bombilla encendida convierte la energía eléctrica en luz y calor.
+                        <img src="img/img40.png">
+                    </ul>
+
+                    <h3>4. Energía Química</h3>
+                    <p>Es la energía almacenada en los enlaces de los átomos y moléculas. Se libera o se absorbe en las reacciones químicas.</p>
+                    <ul>
+                        <li><strong>Reacciones exotérmicas:</strong> Liberan energía, como la combustión de gasolina.</li>
+                        <li><strong>Reacciones endotérmicas:</strong> Absorben energía, como la fotosíntesis en las plantas.</li>
+                        Ejemplo: Los alimentos contienen energía química, que el cuerpo se transforma en energía para moverse y funcionar.
+                        <img src="img/img41.png">
+                    </ul>
+
+                    <h3>5. Energía Nuclear</h3>
+                    <p>La energía nuclear proviene del núcleo de los átomos y se libera en dos tipos de reacciones:</p>
+                    <ul>
+                        <li><strong>Fisión nuclear:</strong> Un núcleo pesado se divide en núcleos más pequeños, liberando energía. Ejemplo: las centrales nucleares.</li>
+                        <li><strong>Fusión nuclear:</strong> Núcleos ligeros se combinan para formar uno más grande, liberando aún más energía. Ejemplo: el sol genera su energía mediante fusión nuclear.</li>
+                        <img src="img/img42.png">
+                    </ul>
+
+                    <h3>6. Energía Radiante</h3>
+                    <p>También llamada energía electromagnética , es la energía que se propaga en forma de ondas electromagnéticas. Incluye:</p>
+                    <ul>
+                        <li><strong>Ondas de radio</strong> (comunicaciones).</li>
+                        <li><strong>Microondas</strong> (calentar alimentos).</li>
+                        <li><strong>Infrarrojo</strong> (sensores térmicos).</li>
+                        <li><strong>Luz visible</strong> (permite la visión).</li>
+                        <li><strong>Ultravioleta</strong> (radiación solar).</li>
+                        <li><strong>Rayos X y gamma</strong> (aplicaciones médicas y nucleares).</li>
+                        Ejemplo: La luz solar transporta energía radiante que calienta la Tierra y permite la fotosíntesis.
+                        <img src="img/img43.png">
+                    </ul>
+
+                    <h3>7. Otras formas de energía</h3>
+                    <ul>
+                        <li><strong>Energía sonora:</strong> Se produce por vibraciones que se propagan en un medio, como el sonido de un instrumento musical.</li>
+                        <li><strong>Energía hidráulica:</strong> Se obtiene del movimiento del agua, como en represas hidroeléctricas.</li>
+                        <li><strong>Energía geotérmica:</strong> Proviene del calor del interior de la Tierra y se usa para generar electricidad.</li>
+                        <img src="img/img44.png">
+                    </ul>
+                    <button class="next"><a onclick="changeContent('Concepto 5')">Siguiente tema</a></button>
+                </div>
+                <!------ Tema 5 ------>
+                <div id="Concepto 5" class="description">
+                    <h2>Energías renovables y su impacto</h2>
+                    <p>Las <strong>energías renovables</strong> son aquellas fuentes de energía que se reponen de forma <strong>natural</strong> a una velocidad igual o superior a la de su consumo. A diferencia de los <strong>combustibles fósiles</strong>, su funcionamiento suele generar <strong>bajas o nulas emisiones</strong> de gases de efecto invernadero, lo que las convierte en una alternativa más <strong>limpia</strong> y sostenible.</p>
+
+                    <p>Entre las principales fuentes de <strong>energía renovable</strong> se encuentra la <strong>energía solar</strong>, que puede aprovecharse de forma <strong>fotovoltaica</strong> o <strong>térmica</strong>. La primera convierte la <strong>luz solar</strong> en <strong>electricidad</strong> mediante el <strong>efecto fotovoltaico</strong> en células semiconductoras, mientras que la segunda utiliza el <strong>calor del sol</strong> para calentar fluidos, generando <strong>energía mecánica</strong> y posteriormente <strong>electricidad</strong>. Por otro lado, la <strong>energía eólica</strong> transforma la <strong>energía cinética</strong> del viento en <strong>electricidad</strong> mediante <strong>aerogeneradores</strong>, cuyo movimiento activa un <strong>generador eléctrico</strong>.</p>
+                    <img src="img/img45.jpg">
+
+                    <p>Otra fuente importante es la <strong>energía hidráulica</strong>, basada en el aprovechamiento del <strong>agua en movimiento</strong>, ya sea mediante <strong>ríos</strong>, <strong>embalses</strong> o <strong>mareas</strong>, para accionar <strong>turbinas generadoras de electricidad</strong>. La <strong>geotérmica</strong>, en cambio, emplea el <strong>calor interno de la Tierra</strong> para generar <strong>vapor</strong> que mueve <strong>turbinas</strong> conectadas a <strong>generadores eléctricos</strong>. Finalmente, la <strong>biomasa</strong> obtiene <strong>energía</strong> a partir de <strong>materia orgánica</strong>, ya sea mediante <strong>combustión directa</strong> para producir <strong>calor</strong> o mediante <strong>procesos químicos</strong> para la generación de <strong>biocombustibles</strong>.</p>
+                    <img src="img/img46.jpg">
+
+                    <p>El <strong>impacto ambiental</strong> de las <strong>energías renovables</strong> es en su mayoría <strong>positivo</strong>, ya que reduce significativamente la <strong>emisión de gases contaminantes</strong> y contribuye a la <strong>mitigación del cambio climático</strong>. Sin embargo, la instalación de <strong>infraestructuras</strong>, como <strong>parques solares</strong> y <strong>eólicos</strong>, puede afectar <strong>ecosistemas locales</strong>, mientras que el <strong>reciclaje</strong> de <strong>paneles</strong> y <strong>baterías</strong> es un <strong>desafío</strong> que debe abordarse para garantizar la <strong>sostenibilidad a largo plazo</strong>.</p>
+
+                    <p>Desde el punto de vista <strong>económico</strong>, estas <strong>fuentes energéticas</strong> han impulsado la creación de <strong>empleo</strong> en sectores como la <strong>fabricación</strong>, <strong>instalación</strong> y <strong>mantenimiento de infraestructuras</strong>. Además, favorecen la <strong>independencia energética</strong> de los países, reduciendo su dependencia de los <strong>combustibles fósiles</strong> importados y estabilizando los <strong>precios de la energía</strong> a largo plazo.</p>
+
+                    <p>A pesar de sus beneficios, algunas <strong>energías renovables</strong> presentan <strong>desafíos</strong> como la <strong>intermitencia en el suministro</strong>, especialmente en el caso de la <strong>solar</strong> y la <strong>eólica</strong>, cuya producción depende de factores <strong>climáticos</strong>. Esto hace necesaria la implementación de <strong>sistemas de almacenamiento energético</strong>, como <strong>baterías avanzadas</strong>, <strong>bombeo hidroeléctrico</strong>, <strong>almacenamiento de aire comprimido</strong> e <strong>hidrógeno</strong> como <strong>vector energético</strong>.</p>
+                    <img src="img/img47.png">
+
+                    <p>Otro aspecto clave es la <strong>transmisión</strong> y <strong>distribución</strong> de la <strong>energía renovable</strong>. La <strong>infraestructura eléctrica</strong> actual, diseñada principalmente para fuentes de <strong>energía centralizadas</strong>, requiere <strong>adaptaciones</strong> para gestionar la <strong>variabilidad</strong> de estas fuentes y mejorar su <strong>integración</strong> en la <strong>red</strong>. Soluciones como las <strong>redes inteligentes</strong> permiten optimizar el <strong>flujo de energía</strong>, garantizando un <strong>suministro estable</strong> y <strong>eficiente</strong>.</p>
+
+                    <p>Las <strong>energías renovables</strong> representan el <strong>futuro</strong> de la <strong>producción energética</strong> <strong>sostenible</strong>. Su <strong>desarrollo continuo</strong>, junto con avances en <strong>almacenamiento</strong> y <strong>distribución</strong>, permitirá una <strong>transición energética</strong> más <strong>eficiente</strong>, con <strong>beneficios ambientales</strong>, <strong>económicos</strong> y <strong>sociales</strong> a nivel global.</p>
+                    <button class="next"><a onclick="changeContent('Concepto 1')">Siguiente tema</a></button>
+                </div>
+            </div>
+        </section>
+
+        <!------ Sección de contenido y menu fijo ------>
+        <section class="fixed__container">
+            <!------ Menú ------>
+            <div class="fixed__menu">
+                <h2>Energía y Trabajo</h2>
+                <a onclick="changeContent('Concepto 1.1')">Energía y Trabajo</a>
+                <a onclick="changeContent('Concepto 2.2')">Diferencia entre Trabajo, Energía y Potencia</a>
+                <a onclick="changeContent('Concepto 3.3')">Ejemplos en Máquinas y Dispositivos</a>
+                <a onclick="changeContent('Concepto 4.4')">Formas de Energía</a>
+                <a onclick="changeContent('Concepto 5.5')">Energías renovables y su impacto</a>
+            </div>
+            <!------ Temas ------>
+            <div class="fixed__content">
+                <!------ Tema 1 ------>
+                <div id="Concepto 1.1" class="description">
+                    <h2>Energía y Trabajo</h2>
+                    <p>Este módulo trata sobre los conceptos de <strong>energía</strong> y <strong>trabajo</strong> en <strong>física</strong>, que son fundamentales para entender cómo funcionan muchas cosas en el mundo que nos rodea. Comenzaremos viendo la diferencia entre <strong>trabajo</strong>, <strong>energía</strong> y <strong>potencia</strong>. Aunque suenan similares, son conceptos distintos: el <strong>trabajo</strong> es lo que ocurre cuando una <strong>fuerza</strong> mueve un objeto, la <strong>energía</strong> es la capacidad para hacer ese <strong>trabajo</strong>, y la <strong>potencia</strong> es la rapidez con la que se hace el <strong>trabajo</strong>.</p>
+                    
+                    <p>A partir de aquí, veremos cómo estos conceptos se aplican a las <strong>máquinas</strong> y <strong>dispositivos</strong> que usamos a diario, como los <strong>autos</strong>, los <strong>electrodomésticos</strong> y hasta el funcionamiento de nuestros <strong>cuerpos</strong>. La <strong>energía</strong> se presenta de muchas maneras, y cada una tiene un papel importante en cómo las cosas funcionan. Por ejemplo, la <strong>energía mecánica</strong> está relacionada con el <strong>movimiento</strong> o la <strong>posición</strong> de los objetos, como cuando empujamos un carrito. La <strong>energía térmica</strong> es el <strong>calor</strong>, que está relacionado con el <strong>movimiento</strong> de las partículas que forman los objetos, como el calor que sentimos cuando tocamos algo caliente. La <strong>energía eléctrica</strong> es la que alimenta nuestros <strong>aparatos</strong> y <strong>electrodomésticos</strong>, y la <strong>energía química</strong> es la que almacenan las <strong>baterías</strong> o los <strong>alimentos</strong> que comemos.</p>
+                    
+                    <p>Además, en el mundo actual, hablar de <strong>energías renovables</strong> es muy importante. Estas son fuentes de <strong>energía</strong> que provienen de recursos naturales que no se agotan, como el <strong>sol</strong>, el <strong>viento</strong> o el <strong>agua</strong>. Usarlas ayuda a cuidar el <strong>medio ambiente</strong> porque producen menos <strong>contaminación</strong> y protegen la <strong>biodiversidad</strong>. Además, las energías renovables no solo benefician al planeta, sino que también pueden crear nuevos <strong>empleos</strong> y asegurar que siempre tengamos <strong>energía</strong> disponible, sin depender de fuentes que puedan agotarse.</p>
+
+                    <p><strong>Comprender la energía</strong> y el <strong>trabajo</strong> es esencial porque estos conceptos son los pilares de toda la <strong>física</strong>. Nos ayudan a entender el comportamiento de las cosas a gran escala, como el movimiento de los <strong>planetas</strong> o la <strong>fuerza</strong> que mueve un coche, y a nivel más pequeño, como las interacciones entre <strong>átomos</strong> y <strong>moléculas</strong>. La <strong>energía</strong> es la fuerza que está detrás de todos los cambios que vemos en el mundo, desde las transformaciones naturales hasta los <strong>avances tecnológicos</strong> que inventamos los seres humanos.</p>
+                    <ul>
+                        <img src="img/img30.png">
+                    </ul>
+
+                    <p>Además, los conceptos de <strong>energía</strong> y <strong>trabajo</strong> se conectan con muchos otros temas de la <strong>física</strong>. Por ejemplo, en <strong>mecánica</strong>, el trabajo realizado por una fuerza cambia la energía de un objeto. En <strong>termodinámica</strong>, estudiaremos cómo la energía se convierte en <strong>calor</strong> y <strong>trabajo</strong>, y en <strong>electromagnetismo</strong>, aprenderemos sobre la energía en los <strong>campos eléctricos</strong> y <strong>magnéticos</strong>, que son claves para el funcionamiento de los <strong>circuitos eléctricos</strong>. Entender la naturaleza de la <strong>energía</strong> y el <strong>trabajo</strong> nos permite conectar estos diferentes temas de la <strong>física</strong> y obtener una visión más clara de cómo todo en el universo está relacionado y se mueve gracias a estos principios.</p>
+                </div>
+                <!------ Tema 2 ------>
+                <div id="Concepto 2.2" class="description">
+                    <h2>Diferencia entre Trabajo, Energía y Potencia</h2>
+                    <h3>Trabajo</h3>
+                    <p>El <strong>trabajo</strong> es un concepto muy sencillo de entender si piensas en mover algo. Si empujas una <strong>caja</strong> y logras que se mueva, estás realizando trabajo. Imagina que empujas un <strong>carro</strong>; el trabajo se hace solo si el carro se desplaza. Si empujas, pero no se mueve, entonces no estás haciendo trabajo, aunque estés aplicando una <strong>fuerza</strong>.</p>
+
+                    <p>La fórmula que usamos para calcular el trabajo es: <h3>W = F ⋅ d ⋅ cos(θ)</h3></p>
+
+                    <p>Donde <strong>F</strong> es la <strong>fuerza</strong> aplicada, <strong>d</strong> es la <strong>distancia</strong> que recorre el objeto, y <strong>θ</strong> es el <strong>ángulo</strong> entre la fuerza y la dirección en la que el objeto se mueve. Esto significa que el <strong>trabajo</strong> depende de cuánta fuerza estás aplicando y en qué dirección estás empujando o tirando. Si la fuerza está completamente en la dirección del movimiento, el trabajo será <strong>máximo</strong>.</p>
+                    <img src="img/img31.png">
+
+                    <h3>Energía</h3>
+                    <p>La <strong>energía</strong>, como hemos mencionado, es la <strong>capacidad</strong> de hacer trabajo. Para entenderlo mejor, imagina que la energía es como el "<strong>combustible</strong>" de las cosas. Si tienes mucha energía, puedes hacer mucho trabajo. La energía no se ve ni se toca, pero sabes que está ahí cuando un objeto se mueve, cuando un coche acelera, o incluso cuando comes alimentos (porque te dan energía para moverte). La energía se puede <strong>transformar</strong> de una forma a otra: por ejemplo, la energía química en los alimentos se transforma en energía mecánica para que tu cuerpo se mueva.</p>
+
+                    <p>Una de las leyes más importantes de la <strong>energía</strong> es la <strong>Ley de Conservación de la Energía</strong>, que dice que la energía nunca se pierde; solo cambia de forma. Si un objeto cae, su <strong>energía potencial</strong> (debido a su altura) se convierte en <strong>energía cinética</strong> (debido al movimiento). Si esa energía no se usa completamente, se puede transformar en <strong>calor</strong>, lo que es común cuando las máquinas funcionan y producen calor como subproducto.</p>
+                    <img src="img/img32.jpg">
+
+                    <h3>Potencia</h3>
+                    <p>La <strong>potencia</strong> nos dice qué tan rápido se está haciendo el trabajo. Imagina que dos personas están empujando una caja. Si una de ellas empuja más rápido que la otra, está usando más <strong>potencia</strong>, porque está haciendo el trabajo en menos tiempo. En la vida cotidiana, la <strong>potencia</strong> es importante para dispositivos como autos, electrodomésticos, y hasta el cargador de tu celular. Un coche con mucha <strong>potencia</strong> puede acelerar más rápido, mientras que una licuadora con alta <strong>potencia</strong> puede triturar ingredientes en menos tiempo.</p>
+                    <p>La fórmula de potencia es: <h3>P = W/t = E/t</h3></p>
+                    <p>Esto significa que la <strong>potencia</strong> es igual al trabajo realizado o la energía consumida dividido por el tiempo que tarda en realizarse. Cuanto menor es el tiempo, mayor es la <strong>potencia</strong>. Por ejemplo, si una lámpara de 100 vatios consume 100 julios de energía cada segundo, tiene más <strong>potencia</strong> que una lámpara de 50 vatios.</p>
+                    <img src="img/img33.jpg">
+
+                    <h3>Ejemplos adicionales:</h3>
+                    <ul>
+                        <li><strong>Trabajo:</strong> Si levantas una caja del suelo, el trabajo realizado es la energía que gastas para mover la caja contra la gravedad.</li>
+                        <li><strong>Energía:</strong> La energía en una batería es lo que permite que el teléfono funcione, porque la batería tiene la capacidad de hacer trabajar los componentes del teléfono.</li>
+                        <li><strong>Potencia:</strong> Si tienes una lámpara de 60 watts y otra de 100 watts, la de 100 watts consume más energía por segundo y por lo tanto tiene mayor potencia, por lo que te da más luz.</li>
+                        <img src="img/img34.png">
+                    </ul>
+
+                    <p>En resumen, podemos ver que el <strong>trabajo</strong>, la <strong>energía</strong> y la <strong>potencia</strong> están todos relacionados, pero cada uno tiene su propio papel. El <strong>trabajo</strong> es la cantidad de <strong>energía</strong> que se usa para mover algo, la <strong>energía</strong> es la capacidad para hacer ese <strong>trabajo</strong>, y la <strong>potencia</strong> es qué tan rápido hacemos ese <strong>trabajo</strong> o usamos esa <strong>energía</strong>. Todo esto forma una gran red de conceptos que ayudan a explicar cómo funcionan las cosas en el mundo, desde el movimiento de los planetas hasta el funcionamiento de los dispositivos que usamos todos los días.</p>
+
+                    <h2>Tabla comparativa:</h2>
+                    <div class="table-container">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Concepto</th>
+                                    <th>Definición</th>
+                                    <th>Unidades (SI)</th>
+                                    <th>Naturaleza</th>
+                                    <th>¿Qué mide?</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Trabajo</td>
+                                    <td>Transferencia de energía causada por una fuerza que desplaza un objeto.</td>
+                                    <td>Julio (J)</td>
+                                    <td>Escalar</td>
+                                    <td>Cantidad de energía transferida.</td>
+                                </tr>
+                                <tr>
+                                    <td>Energía</td>
+                                    <td>Capacidad para realizar trabajo.</td>
+                                    <td>Julio (J)</td>
+                                    <td>Escalar</td>
+                                    <td>Cantidad de capacidad para realizar trabajo.</td>
+                                </tr>
+                                <tr>
+                                    <td>Potencia</td>
+                                    <td>Tasa a la que se realiza el trabajo o se consume energía.</td>
+                                    <td>Watt (W)</td>
+                                    <td>Escalar</td>
+                                    <td>Rapidez con la que se realiza el trabajo o se consume energía.</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <!------ Tema 3 ------>
+                <div id="Concepto 3.3" class="description">
+                    <h2>Ejemplos en Máquinas y Dispositivos</h2>
+                    <h3>Trabajo:</h3>
+                    <ol>
+                        <li><strong>Grúa levantando un contenedor:</strong> Imagina que tienes una grúa que levanta un contenedor pesado. La grúa ejerce una fuerza hacia arriba sobre el contenedor, y este se mueve en contra de la gravedad. El trabajo realizado por la grúa aumenta la energía potencial del contenedor, ya que ahora está a una mayor altura. Este es un buen ejemplo de cómo se usa el trabajo para aumentar la energía de un objeto, en este caso, su energía potencial gravitatoria.</li>
+                        <li><strong>Resorte comprimido:</strong> Cuando aprietas un resorte, como el de un juguete o una válvula, aplicas una fuerza que cambia su forma. Ese cambio en la forma se almacena como energía potencial elástica . En este caso, el trabajo realizado sobre el recurso se guarda en él, y cuando lo deja ir, el recurso puede hacer trabajo, como empujar un objeto o hacer funcionar una máquina.</li>
+                        <li><strong>Motor de automóvil:</strong> Cuando un automóvil se mueve, el motor realiza trabajo al transformar la energía química del combustible en energía cinética para desplazar el vehículo. Esto ocurre mediante un proceso donde la energía almacenada en el combustible se libera y se convierte en fuerza de movimiento, permitiendo que el coche avance.</li>
+                        <img src="img/img35.png">
+                    </ol>
+
+                    <h3>Energía:</h3>
+                    <ol>
+                        <li><strong>Automóvil en movimiento (energía cinética):</strong> Un automóvil que se desplaza por la carretera tiene energía cinética , que depende de su velocidad y masa. Cuanto más rápido vaya o más pesado sea, más energía cinética tendrá. Esta es la energía asociada al movimiento de los objetos.</li>
+                        <li><strong>Objeto a altura (energía potencial gravitatoria):</strong> Imagina una pelota colocada en una mesa alta. Tiene energía potencial gravitatoria porque su altura la pone en una posición donde la gravedad quiere hacerla caer. Esta energía depende de la masa de la pelota, la gravedad y la altura. Cuando la deja caer, esa energía potencial se convierte en energía cinética a medida que se mueve hacia el suelo.</li>
+                        <li><strong>Batería (energía química):</strong> Una batería guarda energía química , que es como una especie de "combustible". Cuando la batería se conecta a un dispositivo, como un teléfono, esa energía química se convierte en energía eléctrica que hace funcionar el dispositivo. Por ejemplo, la batería de tu teléfono almacena energía que después se convierte en corriente eléctrica para que puedas cargarlo o usarlo.</li>
+                        <li><strong>Combustible (energía química):</strong> La gasolina o el carbón son ejemplos de energía química almacenada. Al quemarse, los enlaces entre los átomos se rompen, liberando energía en forma de calor y luz, que se puede usar para hacer funcionar motores en coches, calefacción en casas, o generar electricidad en plantas térmicas.</li>
+                        <img src="img/img36.png">
+                    </ol>
+
+                    <h3>Potencia:</h3>
+                    <ol>
+                        <li><strong>Motor de automóvil (potencia):</strong> La potencia de un motor mide qué tan rápido convierte la energía química del combustible en trabajo mecánico. Un motor más potente puede hacer que el automóvil acelere más rápido o suba colinas más fácilmente porque realiza el trabajo más rápido. Así, un motor con más potencia es como una versión más "rápida" para transformar energía en movimiento.</li>
+                        <li><strong>Bombilla eléctrica (potencia):</strong> Las bombillas tienen una potencia que indica qué tan rápido consume energía eléctrica. Por ejemplo, una bombilla de 100 vatios usa más energía que una de 60 vatios, por lo que produce más luz y calor. Esta potencia es lo que determina cuánta energía consume la bombilla cada segundo para generar luz.</li>
+                        <li><strong>Levantar pesas (potencia):</strong> Cuando levantas pesas, la potencia que desarrollas depende de la cantidad de trabajo que realizas (cuánto peso levantas ya qué altura) y del tiempo que te lleva hacerlo. Si levantas el mismo peso en menos tiempo, desarrollas más potencia. Por ejemplo, si levantas un peso rápidamente, usas más potencia que si lo levantas despacio, aunque el trabajo realizado sea el mismo.</li>
+                        <img src="img/img37.png">
+                    </ol>
+                </div>
+                <!------ Tema 4 ------>
+                <div id="Concepto 4.4" class="description">
+                    <h2>Formas de Energía</h2>
+                    <h3>1. Energía Mecánica</h3>
+                    <p>La energía mecánica es la energía asociada al movimiento y la posición de un objeto. Se presenta en dos formas principales:</p>
+
+                    <p><strong>Energía Cinética</strong></p>
+                    <ul>Es la energía que posee un objeto debido a su movimiento. Depende de la masa (metro) y la velocidad (v) del objeto, de acuerdo con la ecuación: <h3>K = (1/2)mv<sup>2</sup></h3>
+                        Existen dos tipos de energía cinematográfica:
+                        <li><strong>Cinética traslacional:</strong> Se refiere al movimiento en línea recta de un objeto. Un ejemplo es una pelota rodando por el suelo.</li>
+                        <li><strong>Cinética rotacional:</strong> Está asociada al giro de un objeto alrededor de un eje. Un trompo girando sobre su punta es un ejemplo claro. En este caso, la energía depende del momento de inercia y de la velocidad angular.</li>
+                    </ul>
+
+                    <p><strong>Energía Potencial</strong></p>
+                    <ul>Es la energía almacenada en un objeto debido a su posición o configuración en un campo de fuerzas. Se divide en:
+                        <li><strong>Energía potencial gravitatoria:</strong> Es la energía que un objeto posee debido a su altura en un campo gravitatorio. Un ejemplo es el agua almacenada en una presa, que puede liberar su energía al caer. Se calcula con la ecuación:</li>
+                        <li><strong>Energía potencial elástica:</strong> Es la energía almacenada en objetos deformables, como resortes o bandas elásticas. Un arco tensado antes de disparar una flecha es un buen ejemplo. La cantidad de energía almacenada depende de la constante elástica del material y de la distancia de deformación.</li>
+                        <img src="img/img38.png">
+                    </ul>
+
+                    <h3>2. Energía térmica</h3>
+                    <p>La energía térmica es la energía interna de un sistema y se relaciona con la energía cinética y potencial de las partículas que lo componen. La temperatura de un objeto es una medida de la energía cinética promedio de sus partículas.</p>
+                    <ul>La transferencia de energía térmica ocurre mediante tres mecanismos:
+                        <li><strong>Conducción:</strong> Transferencia de calor por contacto directo entre objetos a diferente temperatura. Ejemplo: un metal calentándose al tocar una estufa.</li>
+                        <li><strong>Convección:</strong> Transferencia de calor mediante el movimiento de fluidos (líquidos o gases). Ejemplo: el agua caliente subiendo en una olla.</li>
+                        <li><strong>Radiación:</strong> Transferencia de energía en forma de ondas electromagnéticas, sin necesidad de un medio. Ejemplo: la luz del sol calentando la Tierra.
+                        </li>
+                        <img src="img/img39.png">
+                    </ul>
+
+                    <h3>3. Energía Eléctrica</h3>
+                    <p>La energía eléctrica se asocia con el movimiento de cargas eléctricas. Se manifiesta en circuitos eléctricos y dispositivos electrónicos. Algunos conceptos clave son:</p>
+                    <ul>
+                        <li><strong>Campo eléctrico:</strong>  Región donde una carga experimenta una fuerza.</li>
+                        <li><strong>Potencial eléctrico:</strong> Energía potencial por unidad de carga en un punto del campo eléctrico.</li>
+                        <li><strong>Corriente eléctrica:</strong> Flujo de cargas eléctricas a través de un conductor, como los electrones moviéndose en un cable.</li>
+                        Ejemplo: una bombilla encendida convierte la energía eléctrica en luz y calor.
+                        <img src="img/img40.png">
+                    </ul>
+
+                    <h3>4. Energía Química</h3>
+                    <p>Es la energía almacenada en los enlaces de los átomos y moléculas. Se libera o se absorbe en las reacciones químicas.</p>
+                    <ul>
+                        <li><strong>Reacciones exotérmicas:</strong> Liberan energía, como la combustión de gasolina.</li>
+                        <li><strong>Reacciones endotérmicas:</strong> Absorben energía, como la fotosíntesis en las plantas.</li>
+                        Ejemplo: Los alimentos contienen energía química, que el cuerpo se transforma en energía para moverse y funcionar.
+                        <img src="img/img41.png">
+                    </ul>
+
+                    <h3>5. Energía Nuclear</h3>
+                    <p>La energía nuclear proviene del núcleo de los átomos y se libera en dos tipos de reacciones:</p>
+                    <ul>
+                        <li><strong>Fisión nuclear:</strong> Un núcleo pesado se divide en núcleos más pequeños, liberando energía. Ejemplo: las centrales nucleares.</li>
+                        <li><strong>Fusión nuclear:</strong> Núcleos ligeros se combinan para formar uno más grande, liberando aún más energía. Ejemplo: el sol genera su energía mediante fusión nuclear.</li>
+                        <img src="img/img42.png">
+                    </ul>
+
+                    <h3>6. Energía Radiante</h3>
+                    <p>También llamada energía electromagnética , es la energía que se propaga en forma de ondas electromagnéticas. Incluye:</p>
+                    <ul>
+                        <li><strong>Ondas de radio</strong> (comunicaciones).</li>
+                        <li><strong>Microondas</strong> (calentar alimentos).</li>
+                        <li><strong>Infrarrojo</strong> (sensores térmicos).</li>
+                        <li><strong>Luz visible</strong> (permite la visión).</li>
+                        <li><strong>Ultravioleta</strong> (radiación solar).</li>
+                        <li><strong>Rayos X y gamma</strong> (aplicaciones médicas y nucleares).</li>
+                        Ejemplo: La luz solar transporta energía radiante que calienta la Tierra y permite la fotosíntesis.
+                        <img src="img/img43.png">
+                    </ul>
+
+                    <h3>7. Otras formas de energía</h3>
+                    <ul>
+                        <li><strong>Energía sonora:</strong> Se produce por vibraciones que se propagan en un medio, como el sonido de un instrumento musical.</li>
+                        <li><strong>Energía hidráulica:</strong> Se obtiene del movimiento del agua, como en represas hidroeléctricas.</li>
+                        <li><strong>Energía geotérmica:</strong> Proviene del calor del interior de la Tierra y se usa para generar electricidad.</li>
+                        <img src="img/img44.png">
+                    </ul>
+                </div>
+                <!------ Tema 5 ------>
+                <div id="Concepto 5.5" class="description">
+                    <h2>Energías renovables y su impacto</h2>
+                    <p>Las <strong>energías renovables</strong> son aquellas fuentes de energía que se reponen de forma <strong>natural</strong> a una velocidad igual o superior a la de su consumo. A diferencia de los <strong>combustibles fósiles</strong>, su funcionamiento suele generar <strong>bajas o nulas emisiones</strong> de gases de efecto invernadero, lo que las convierte en una alternativa más <strong>limpia</strong> y sostenible.</p>
+
+                    <p>Entre las principales fuentes de <strong>energía renovable</strong> se encuentra la <strong>energía solar</strong>, que puede aprovecharse de forma <strong>fotovoltaica</strong> o <strong>térmica</strong>. La primera convierte la <strong>luz solar</strong> en <strong>electricidad</strong> mediante el <strong>efecto fotovoltaico</strong> en células semiconductoras, mientras que la segunda utiliza el <strong>calor del sol</strong> para calentar fluidos, generando <strong>energía mecánica</strong> y posteriormente <strong>electricidad</strong>. Por otro lado, la <strong>energía eólica</strong> transforma la <strong>energía cinética</strong> del viento en <strong>electricidad</strong> mediante <strong>aerogeneradores</strong>, cuyo movimiento activa un <strong>generador eléctrico</strong>.</p>
+                    <img src="img/img45.jpg">
+
+                    <p>Otra fuente importante es la <strong>energía hidráulica</strong>, basada en el aprovechamiento del <strong>agua en movimiento</strong>, ya sea mediante <strong>ríos</strong>, <strong>embalses</strong> o <strong>mareas</strong>, para accionar <strong>turbinas generadoras de electricidad</strong>. La <strong>geotérmica</strong>, en cambio, emplea el <strong>calor interno de la Tierra</strong> para generar <strong>vapor</strong> que mueve <strong>turbinas</strong> conectadas a <strong>generadores eléctricos</strong>. Finalmente, la <strong>biomasa</strong> obtiene <strong>energía</strong> a partir de <strong>materia orgánica</strong>, ya sea mediante <strong>combustión directa</strong> para producir <strong>calor</strong> o mediante <strong>procesos químicos</strong> para la generación de <strong>biocombustibles</strong>.</p>
+                    <img src="img/img46.jpg">
+
+                    <p>El <strong>impacto ambiental</strong> de las <strong>energías renovables</strong> es en su mayoría <strong>positivo</strong>, ya que reduce significativamente la <strong>emisión de gases contaminantes</strong> y contribuye a la <strong>mitigación del cambio climático</strong>. Sin embargo, la instalación de <strong>infraestructuras</strong>, como <strong>parques solares</strong> y <strong>eólicos</strong>, puede afectar <strong>ecosistemas locales</strong>, mientras que el <strong>reciclaje</strong> de <strong>paneles</strong> y <strong>baterías</strong> es un <strong>desafío</strong> que debe abordarse para garantizar la <strong>sostenibilidad a largo plazo</strong>.</p>
+
+                    <p>Desde el punto de vista <strong>económico</strong>, estas <strong>fuentes energéticas</strong> han impulsado la creación de <strong>empleo</strong> en sectores como la <strong>fabricación</strong>, <strong>instalación</strong> y <strong>mantenimiento de infraestructuras</strong>. Además, favorecen la <strong>independencia energética</strong> de los países, reduciendo su dependencia de los <strong>combustibles fósiles</strong> importados y estabilizando los <strong>precios de la energía</strong> a largo plazo.</p>
+
+                    <p>A pesar de sus beneficios, algunas <strong>energías renovables</strong> presentan <strong>desafíos</strong> como la <strong>intermitencia en el suministro</strong>, especialmente en el caso de la <strong>solar</strong> y la <strong>eólica</strong>, cuya producción depende de factores <strong>climáticos</strong>. Esto hace necesaria la implementación de <strong>sistemas de almacenamiento energético</strong>, como <strong>baterías avanzadas</strong>, <strong>bombeo hidroeléctrico</strong>, <strong>almacenamiento de aire comprimido</strong> e <strong>hidrógeno</strong> como <strong>vector energético</strong>.</p>
+                    <img src="img/img47.png">
+
+                    <p>Otro aspecto clave es la <strong>transmisión</strong> y <strong>distribución</strong> de la <strong>energía renovable</strong>. La <strong>infraestructura eléctrica</strong> actual, diseñada principalmente para fuentes de <strong>energía centralizadas</strong>, requiere <strong>adaptaciones</strong> para gestionar la <strong>variabilidad</strong> de estas fuentes y mejorar su <strong>integración</strong> en la <strong>red</strong>. Soluciones como las <strong>redes inteligentes</strong> permiten optimizar el <strong>flujo de energía</strong>, garantizando un <strong>suministro estable</strong> y <strong>eficiente</strong>.</p>
+
+                    <p>Las <strong>energías renovables</strong> representan el <strong>futuro</strong> de la <strong>producción energética</strong> <strong>sostenible</strong>. Su <strong>desarrollo continuo</strong>, junto con avances en <strong>almacenamiento</strong> y <strong>distribución</strong>, permitirá una <strong>transición energética</strong> más <strong>eficiente</strong>, con <strong>beneficios ambientales</strong>, <strong>económicos</strong> y <strong>sociales</strong> a nivel global.</p>
+                </div>
+            </div>
+            <!------ Funciones para ocultar y mostras los temas ------>
+        <script>
+            function changeContent(concept) {
+                const descriptions = document.querySelectorAll('.description');
+                descriptions.forEach((desc) => {
+                    desc.style.display = 'none'; 
+                });
+
+                const selectedConcept = document.getElementById(concept);
+                if (selectedConcept) {
+                    selectedConcept.style.display = 'block'; 
+                }
+            }
+
+            // Mostrar el primer concepto por defecto
+            window.onload = function() {
+                changeContent('Concepto 1');
+            }
+        </script>
+        </section>
+    </main>
+        
+    <!------ Botón para ir a otro modulo ------>
+    <button class="styled-button"><a href="modulo1.html">Siguiente Modulo</a></button>
+    
+    <!------ Pie de página ------>
+    <footer class="site-footer">
+        <p>&copy; 2024 Física en Contexto. Todos los derechos reservados.</p>
+        <ul>
+            <li><strong>Autor:</strong> Miguel Angel Jimenez Pérez</li>
+            <li><strong>Escuela:</strong> CETiS núm. 141</li>
+            <li><strong>Redes sociales:</strong> <a href="https://www.instagram.com/miguel_jp1003?igsh=dzByMW1seXgxMm1j">miguel_jp1003</a> y <a href="https://www.instagram.com/fisica_en_contexto_/profilecard/?igsh=MWttdHBvZHJtc2huMw==">fisica_en_contexto_</a></li>
+        </ul>
+    </footer>
+</body>
+</html>

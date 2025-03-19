@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Retos</title>
+    <link rel="stylesheet" href="retos.css">
+    <link rel="icon" href="img/img1.png" type="img/png">
+</head>
+<body>
+    <!--Encabezado-->
+    <header class="header">
+        <!--Barra de navegación-->
+        <input type="checkbox" id="open-menu" class="header__checkbox">
+        <label for="open-menu" class="header__open-nav-button" role="button">=</label>
+        <div class="header__title-container">
+            <h1>Física en contexto</h1>
+        </div>
+        <nav class="header__nav">
+            <ul class="header__nav-list">
+                <li class="header__nav-item"><img src="icons/icon0.png" alt=""><a href="index.html">Inicio</a></li>
+                <li class="header__nav-item"><img src="icons/icon1.png" alt=""><a href="contacto.html">Contacto</a></li>
+                <li class="header__nav-item"><img src="icons/icon2.png" alt=""><a href="recursos.html">Recursos</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="container__content">
+        <!-- Start quiz button -->
+    <div class="start__btn"><button>Iniciar prueba</button></div>
+
+    <!-- Info box -->
+    <div class="info__box">
+        <div class="info__title">
+            <span>Algunas reglas de este cuestionario</span>
+        </div>
+        <div class="info__list">
+            <div class="info">1. Tendrás sólo <span>15 segundos</span> por cada pregunta.</div>
+            <div class="info">2. Una vez que selecciones tu respuesta, no podrás volver a seleccionarla.</div>
+            <div class="info">3. No puedes seleccionar ninguna opción una vez que se acabe el tiempo.</div>
+            <div class="info">4. No puedes salir del cuestionario mientras tengas respuestas correctas.</div>
+        </div>
+        <div class="buttons">
+            <button class="quit">Salir</button>
+            <button class="restart">Continuar</button>
+        </div>
+    </div>
+
+    <!-- Quiz box -->
+    <div class="quiz__box">
+        <section class="quiz__header">
+            <div class="title">Preguntas de prueba</div>
+            <div class="timer">
+                <div class="timer__text">Tiempo restante</div>
+                <div class="timer__sec">15</div>
+                <div class="time__line"></div>
+            </div>
+        </section>
+        <section>
+            <div class="que__text">
+                <!-- Dynamically loaded question -->
+            </div>
+            <div class="option__list">
+                <!-- Dynamically loaded options -->
+            </div>
+        </section>
+
+        <!-- Quiz box footer -->
+        <section class="quiz__footer">
+            <div class="total__que">
+                <!-- Question counter will be loaded here -->
+            </div>
+            <button class="next__btn">Siguiente</button>
+        </section>
+    </div>
+
+    <!-- Result box -->
+    <div class="result__box">
+        <div class="icoN">
+            <img src="icons/icon6.png" class="fas fa-crown">
+        </div>
+        <div class="complete__text">¡Has completado el cuestionario!</div>
+        <div class="score__text">
+            <span>Y lo siento, solo tienes <p>2</p> de <p>5</p></span>
+        </div>
+        <div class="buttons">
+            <button class="restart">Repetir</button>
+            <button class="quit"><a href="index.html">Salir</a></button>
+            <button class="close__result">Cerrar Resultados</button> <!-- Botón para cerrar -->
+        </div>
+    </div>
+
+    <script src="js/script.js"></script>
+    <script src="js/questions.js"></script>
+
+    </main>
+
+    <!------ Botón para ir a otro modulo ------>
+    <button class="styled-button"><a href="index.html">Regresar al Inicio</a></button>
+    
+    <!------ Pie de página ------>
+    <footer class="site-footer">
+        <p>&copy; 2024 Física en Contexto. Todos los derechos reservados.</p>
+        <ul>
+            <li><strong>Autor:</strong> Miguel Angel Jimenez Pérez</li>
+            <li><strong>Escuela:</strong> CETiS núm. 141</li>
+            <li><strong>Redes sociales:</strong> <a href="https://www.instagram.com/miguel_jp1003?igsh=dzByMW1seXgxMm1j">miguel_jp1003</a> y <a href="https://www.instagram.com/fisica_en_contexto_/profilecard/?igsh=MWttdHBvZHJtc2huMw==">fisica_en_contexto_</a></li>
+        </ul>
+    </footer>
+</body>
+</html>
+</body>
+</html>

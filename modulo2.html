@@ -1,0 +1,980 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Curso Modulo 1</title>
+    <link rel="stylesheet" href="modulo.css">
+    <link rel="icon" href="/img/img1.png" type="img/png">
+</head>
+<body>
+    <!--Encabezado-->
+    <header class="header">
+        <!--Barra de navegación-->
+        <input type="checkbox" id="open-menu" class="header__checkbox">
+        <label for="open-menu" class="header__open-nav-button" role="button">=</label>
+        <div class="header__title-container">
+            <h1>Física en contexto</h1>
+        </div>
+        <nav class="header__nav">
+            <ul class="header__nav-list">
+                <li class="header__nav-item"><img src="icons/icon0.png" alt=""><a href="index.html">Inicio</a></li>
+                <li class="header__nav-item"><img src="icons/icon1.png" alt=""><a href="contacto.html">Contacto</a></li>
+                <li class="header__nav-item"><img src="icons/icon2.png" alt=""><a href="recursos.html">Recursos</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <main class="container__content">
+        <section class="modal__container">
+            <!------ Sección de contenido por ventana modal-->
+            <div class="menu">
+                <h2>Introducción a la Física</h2>
+                <!------ Abrir la ventana modal ------>
+                <input type="checkbox" id="menu" class="menu__checkbox">
+                <label for="menu" class="equal-button" role="button"><h2>Presiona aquí</h2></label>
+                <div class="modal">
+                    <div class="modal__content-menu">
+                        <!------ Menú de temas de la ventana modal-->
+                        <div class="modal__menu">
+                            <h3>Cinemática y Dinamica</h3>
+                            <a onclick="changeContent('Concepto 1')">Introducción a los Conceptos Fundamentales de Cinemática y Dinámica</a>
+                            <a onclick="changeContent('Concepto 2')">La Importancia de Comprender el Movimiento en el Mundo Físico</a>
+                            <a onclick="changeContent('Concepto 3')">Cinemática: Describiendo el Movimiento</a>
+                            <a onclick="changeContent('Concepto 4')">Dinámica: Las Fuerzas Detrás del Movimiento</a>
+                            <a onclick="changeContent('Concepto 5')">Fricción: Una Fuerza de Resistencia</a>
+                            <a onclick="changeContent('Concepto 6')"> Integración de Cinemática y Dinámica: Análisis del Mundo Real</a>
+                        </div>
+                        <!--Cerrar ventana modal-->
+                        <span class="modal__close-button">&times;</span>
+                        <!--Función para abrir y cerrar la ventana modal-->
+                        <script>
+                            document.addEventListener("DOMContentLoaded", () => {  
+                                document.querySelector(".modal").style.display = "none"; 
+
+                                document.querySelector(".equal-button").addEventListener("click", () => {
+                                    document.querySelector(".modal").style.display = "flex";
+                                });
+
+                                document.querySelector(".modal__close-button").addEventListener("click", () => {
+                                    document.querySelector(".modal").style.display = "none";
+                                });
+                            });
+                        </script>
+                    </div>
+                </div>
+            </div>
+            <div class="modal__content">
+                <!------ Tema 1 ------>
+                <div id="Concepto 1" class="description">
+                    <h2>Introducción a los Conceptos Fundamentales de Cinemática y Dinámica</h2>
+                    <p>La <strong>física</strong> busca entender cómo funciona el universo, y para estudiar el movimiento de los objetos, se divide en dos áreas importantes: <strong>cinemática</strong> y <strong>dinámica</strong>.</p>
+                    
+                    <p>La <strong>cinemática</strong> describe cómo se mueven los objetos sin preguntarse por qué se mueven. Es como ver un auto en movimiento y notar su posición, velocidad y aceleración sin preocuparse por las razones que lo hacen moverse. Se enfoca en responder preguntas como: ¿Qué tan rápido va el objeto? ¿Cuánto ha recorrido? ¿Cómo cambia su velocidad con el tiempo?</p>
+                    <img src="img/img15.png">
+
+                    <p>La <strong>dínámica</strong>, en cambio, sí se interesa por las razones detrás del movimiento. Se enfoca en las <strong>fuerzas</strong> que actúan sobre un objeto, como la <strong>gravedad</strong>, la <strong>fricción</strong> o el <strong>empuje</strong> de un motor, para entender por qué se mueve de cierta manera. Si la <strong>cinemática</strong> solo observa el movimiento, la <strong>dínamica</strong> trata de explicarlo, como si quisiera saber por qué el auto acelera cuando pisa el pedal del gas o por qué frena cuando se aplica el freno.</p>
+
+                    <p>El estudio del movimiento tiene una historia larga. Hace más de 2,000 años, filósofos como <strong>Aristóteles</strong> intentaron explicarlo, aunque sus ideas eran más filosóficas que científicas, ya que no contaban con los métodos experimentales que usamos hoy. Luego, durante la <strong>Revolución Científica</strong>, <strong>Galileo Galilei</strong> e <strong>Isaac Newton</strong> cambiaron la manera de estudiar la física al usar experimentos y matemáticas, sentando las bases de la <strong>mecánica clásica</strong>. Galileo fue uno de los primeros en estudiar cómo los objetos caen al suelo, mientras que Newton formuló leyes matemáticas para describir el movimiento y la relación entre la <strong>fuerza</strong> y el movimiento de los objetos, lo que conocemos como las <strong>tres leyes del movimiento de Newton</strong>.</p>
+                    <img src="img/img16.jpg">
+
+                    <p>Estas leyes explican cómo un objeto en reposo se pone en movimiento (si se le aplica una <strong>fuerza</strong>), cómo un objeto sigue moviéndose hasta que algo lo detiene (su tendencia a seguir moviéndose, o la <strong>inercia</strong>), y cómo las <strong>fuerzas</strong> afectan la <strong>aceleración</strong> de los objetos dependiendo de su <strong>masa</strong>.</p>
+
+                    <p>Entender la <strong>cinemática</strong> y la <strong>dinámica</strong> no solo es clave para la <strong>física</strong>, sino también para la <strong>ingeniería</strong>, que usa estos principios para diseñar cosas como <strong>edificios</strong>, <strong>autos</strong> y <strong>máquinas</strong>. Gracias a estas leyes, podemos calcular cómo debe ser un <strong>puente</strong> para soportar peso o cómo diseñar un <strong>automóvil</strong> para que sea seguro y eficiente. La <strong>ingeniería civil</strong>, <strong>mecánica</strong> y <strong>aeronáutica</strong>, por ejemplo, depende directamente de estos principios para hacer cosas como <strong>aviones</strong> que vuelen, <strong>coches</strong> que se muevan eficientemente y <strong>puentes</strong> que no se caigan.</p>
+
+                    <p>Además, el conocimiento de estas áreas es crucial para áreas como la <strong>tecnología espacial</strong>, donde se estudia el movimiento de <strong>satélites</strong>, <strong>cohetes</strong> y <strong>naves espaciales</strong>, o incluso en el desarrollo de <strong>robots</strong> que se muevan correctamente en <strong>entornos complejos</strong>. Por eso, no solo los <strong>físicos</strong>, sino también los <strong>ingenieros</strong>, <strong>diseñadores</strong> y <strong>tecnólogos</strong>, aplican estos conocimientos para resolver problemas cotidianos y desafíos tecnológicos.</p>
+                    <button class="next"><a onclick="changeContent('Concepto 2')">Siguiente tema</a></button>
+                </div>
+                <!------ Tema 2 ------>
+                <div id="Concepto 2" class="description">
+                    <h2>La Importancia de Comprender el Movimiento en el Mundo Físico</h2>
+                    <p>El <strong>movimiento</strong> está en todas partes. Desde que caminamos hasta cómo los <strong>planetas</strong> giran alrededor del <strong>sol</strong>, todo se mueve. Entender cómo se mueven las cosas nos ayuda a saber por qué lo hacen y a predecir cómo se moverán en el futuro. Es como si tuviéramos un <strong>mapa</strong> que nos muestra cómo se mueven los <strong>objetos</strong> a nuestro alrededor, y si entendemos este mapa, podemos saber qué esperar en cualquier momento. Por ejemplo, si estás jugando <strong>fútbol</strong> y sabes cómo se mueve la <strong>pelota</strong>, puedes anticipar hacia dónde irá.</p>
+
+                    <p>Saber sobre <strong>cinemática</strong> (que estudia cómo se mueven las cosas) y <strong>dinámica</strong> (que estudia por qué se mueven) es muy importante para muchas cosas que usamos todos los días. Por ejemplo, para hacer <strong>autos</strong>, <strong>aviones</strong> y <strong>trenes</strong>, necesitamos saber cómo las <strong>fuerzas</strong>, como el <strong>viento</strong> o el <strong>peso</strong>, afectan su movimiento. Esto nos ayuda a hacer que estos vehículos se muevan de manera más segura y eficiente. Si no entendemos cómo funciona el <strong>movimiento</strong>, no podríamos diseñar <strong>autos</strong> que frenen bien o <strong>aviones</strong> que puedan volar de manera estable. También, cuando usamos el <strong>teléfono</strong> o vemos <strong>televisión</strong>, lo que estamos haciendo es enviar y recibir <strong>ondas de energía</strong>, que también son una forma de movimiento. Las ondas son como pequeñas olas que viajan por el aire y nos permiten comunicarnos de forma instantánea.</p>
+
+                    <p>Incluso en <strong>medicina</strong>, tecnologías como los <strong>rayos X</strong> o los <strong>láseres</strong>, que se usan para ver el interior de nuestro cuerpo o realizar <strong>cirugías</strong>, no existirían sin entender el <strong>movimiento</strong> de las <strong>partículas</strong> o la <strong>luz</strong>. Los rayos X, por ejemplo, viajan a través de nuestro cuerpo para darnos imágenes sin necesidad de cirugía. Sin comprender el movimiento de estos rayos, no podríamos usar esta tecnología para detectar <strong>enfermedades</strong>.</p>
+
+                    <p>El estudio del <strong>movimiento</strong> sigue el <strong>método científico</strong>, que es como un proceso para aprender y entender cómo funcionan las cosas. Primero <strong>observamos</strong>, después probamos ideas y finalmente <strong>analizamos</strong> los resultados. Este proceso de prueba y error nos ayuda a encontrar respuestas a las preguntas más complicadas. La <strong>cinemática</strong> y la <strong>dinámica</strong> no solo son fórmulas, son el resultado de mucho trabajo de <strong>investigación</strong> que nos ayuda a mejorar la <strong>ciencia</strong> y la <strong>tecnología</strong>. Gracias a todo esto, podemos crear nuevas <strong>tecnologías</strong> que hacen nuestra vida más fácil y cómoda. Por ejemplo, los avances en la <strong>tecnología</strong> de los <strong>videojuegos</strong>, que utilizan muchas leyes del <strong>movimiento</strong>, permiten experiencias de juego cada vez más realistas.</p>
+
+                    <p>Gracias al estudio de cómo se mueven las cosas, podemos inventar y mejorar muchísimas cosas que usamos en nuestra <strong>vida diaria</strong>. Esto también nos ayuda a entender mejor el <strong>mundo</strong> en que vivimos, de modo que podamos hacer que nuestras <strong>ciudades</strong>, nuestros <strong>transportes</strong> y nuestras <strong>tecnologías</strong> sean más <strong>eficientes</strong> y <strong>seguras</strong>.</p>
+                    <img src="img/img17.png">
+                    <button class="next"><a onclick="changeContent('Concepto 3')">Siguiente tema</a></button>
+                </div>
+                <!------ Tema 3 ------>
+                <div id="Concepto 3" class="description">
+                    <h2>Cinemática: Describiendo el Movimiento</h2>
+                    <p>El <strong>Movimiento Rectilíneo Uniforme</strong> (<strong>MRU</strong>) es un tipo de movimiento en el que un objeto se desplaza a lo largo de una <strong>línea recta</strong> con una <strong>velocidad constante</strong>. Esto significa que el objeto mantiene la misma <strong>rapidez</strong> y <strong>dirección</strong> a lo largo del tiempo. El MRU tiene varias características clave. Primero, la <strong>trayectoria</strong> del objeto es una <strong>línea recta</strong>, es decir, se mueve en una sola dirección. Segundo, la <strong>velocidad</strong> del objeto no cambia. Como la <strong>velocidad</strong> es una magnitud <strong>vectorial</strong>, tanto su <strong>rapidez</strong> como su <strong>dirección</strong> permanecen constantes. Esto quiere decir que el objeto recorre distancias iguales en intervalos de <strong>tiempo</strong> iguales. Finalmente, dado que la <strong>velocidad</strong> es constante, la <strong>aceleración</strong> del objeto es <strong>cero</strong>.</p>
+
+                    <p>El <strong>MRU</strong> se puede representar gráficamente de dos maneras principales: con un gráfico de <strong>desplazamiento frente a tiempo</strong> y un gráfico de <strong>velocidad frente a tiempo</strong>. En un gráfico de <strong>desplazamiento frente a tiempo</strong>, el MRU se representa como una <strong>línea recta</strong> cuya <strong>pendiente</strong> es constante. Esta pendiente refleja la <strong>velocidad</strong> del objeto, y un aumento lineal del <strong>desplazamiento</strong> indica que el objeto se mueve a <strong>velocidad constante</strong>. En un gráfico de <strong>velocidad frente a tiempo</strong>, el MRU aparece como una <strong>línea horizontal</strong>, lo que significa que la <strong>velocidad</strong> no cambia con el <strong>tiempo</strong>. El <strong>área</strong> bajo esta línea nos da el <strong>desplazamiento</strong> del objeto durante ese intervalo de <strong>tiempo</strong>.</p>
+
+                    <p>La relación fundamental en el MRU se expresa con la fórmula: <strong>v = Δx / Δt</strong> donde:</p>
+                    <ul>
+                        <li><strong>v</strong> es la velocidad constante del objeto,</li>
+                        <li><strong>Δx</strong> es el desplazamiento, o el cambio en la posición del objeto,</li>
+                        <li><strong>Δt</strong> es el intervalo de tiempo durante el cual ocurre ese desplazamiento.</li>
+                    </ul>
+
+                    <p>Esta fórmula también se puede reorganizar para resolver el <strong>desplazamiento</strong> <strong>(Δx = v ⋅ Δt)</strong> y el <strong>tiempo</strong> <strong>(Δt = Δx/v).</strong> Por ejemplo, si conocemos la <strong>velocidad</strong> de un objeto y el <strong>tiempo</strong> que ha estado en movimiento, podemos calcular la <strong>distancia</strong> que ha recorrido. De la misma manera, si sabemos la <strong>distancia</strong> y la <strong>velocidad</strong>, podemos calcular el <strong>tiempo</strong> que ha tardado en recorrerla.</p>
+
+                    <p>Estas <strong>fórmulas</strong> son muy útiles para resolver problemas relacionados con objetos que se mueven a <strong>velocidad constante</strong>. Es importante asegurarse de que las <strong>unidades de medida</strong> para la <strong>velocidad</strong>, el <strong>desplazamiento</strong> y el <strong>tiempo</strong> sean las mismas para obtener resultados correctos.</p>
+
+                    <h3>Ejemplos Ilustrativos de la Vida Cotidiana</h3>
+                    <ul>El Movimiento Rectilíneo Uniforme (MRU) se presenta en diversas situaciones cotidianas que nos rodean:
+                        <li><strong>Vehículos:</strong>Un ejemplo claro es un automóvil que viaja por una autopista recta a una velocidad constante. Si el coche mantiene la misma velocidad sin acelerar ni frenar, está realizando un MRU. También, un tren que avanza a velocidad constante por una vía recta, o un avión que vuela a una altitud y velocidad constantes, son ejemplos de MRU en acción.</li>
+                        <li><strong>Deportes:</strong>En el mundo del deporte, un corredor que mantiene un ritmo constante en una pista recta está realizando un MRU. También un nadador que nada de manera constante en línea recta dentro de una piscina está realizando el mismo tipo de movimiento. Incluso, un disco de hockey deslizándose sobre una pista de hielo con poca fricción puede acercarse a un MRU, ya que se mueve de manera casi constante.</li>
+                        <li><strong>Naturaleza:</strong>En el ámbito natural, un fenómeno importante es la luz. La luz viaja a través del vacío a una velocidad constante, conocida como la velocidad de la luz, lo que es un ejemplo fundamental de MRU. Además, un objeto en el espacio, como una herramienta flotante de un astronauta que no experimenta fuerzas externas, se movería con velocidad constante siguiendo una trayectoria recta, lo que también describe un MRU.</li>
+                        <img src="img/img18.png">
+                    </ul>
+
+
+                    <h3>Definición y Características del Movimiento con Aceleración Constante</h3>
+                    <p>El <strong>Movimiento Rectilíneo Uniformemente Acelerado</strong> (<strong>MRUA</strong>) ocurre cuando un objeto se mueve a lo largo de una <strong>trayectoria recta</strong> y su <strong>velocidad</strong> cambia de manera constante a lo largo del <strong>tiempo</strong>. Esta variación constante en la <strong>velocidad</strong> se llama <strong>aceleración</strong>.</p>
+                    <ul>
+                        <li><strong>Aceleración positiva:</strong> Si la aceleración es positiva, la velocidad del objeto aumenta en la dirección del movimiento.</li>
+                        <li><strong>Aceleración negativa (desaceleración):</strong> Si la aceleración es negativa, la velocidad disminuye. Sin embargo, es importante entender que una aceleración negativa no siempre significa que el objeto va más lento. Si la velocidad inicial es negativa, una aceleración negativa puede hacer que el objeto acelere en la dirección opuesta.</li>
+                        <img src="img/img19.jpg">
+                    </ul>
+                    <h3>Fórmulas Clave y Sus Aplicaciones</h3>
+                    <p>Existen <strong>cinco ecuaciones fundamentales</strong> que describen el <strong>movimiento uniformemente acelerado</strong> (<strong>MRUA</strong>), las cuales son esenciales para resolver problemas de <strong>física</strong> relacionados con este tipo de <strong>movimiento</strong>. A continuación, se detallan las <strong>ecuaciones</strong> y sus significados:</p>
+                    <ol>
+                        <li>
+                            <strong>Velocidad final en función de la velocidad inicial, la aceleración y el tiempo:</strong> <h3>v<sub>f</sub> = v<sub>o</sub> + at</h3>
+                            <ul>
+                                <li><strong>v<sub>f</sub>:</strong> Velocidad final del objeto.</li>
+                                <li><strong>v<sub>o</sub>:</strong> Velocidad inicial del objeto.</li>
+                                <li><strong>a:</strong> Aceleración constante.</li>
+                                <li><strong>t:</strong> Tiempo transcurrido.</li>
+                            </ul>
+                        </li>
+                        <li>
+                            <strong>Desplazamiento en función de la velocidad inicial, la aceleración y el tiempo:</strong> <h3>Δx = v<sub>o</sub>t + (1/2)at<sup>2</sup></h3>
+                            <ul>
+                                <li><strong>Δx:</strong> Desplazamiento del objeto.</li>
+                                <li><strong>v<sub>o</sub></strong> Velocidad inicial.</li>
+                                <li><strong>a:</strong> Aceleración.</li>
+                                <li><strong>t:</strong> Tiempo.</li>
+                            </ul>
+                        </li>
+                        <li>
+                            <strong>Desplazamiento en función de la velocidad final, la velocidad inicial y el tiempo:</strong> <h3>Δx = (1/2)(v<sub>f</sub> + v<sub>o</sub>)t</h3>
+                        </li>
+                        <li>
+                            <strong>Desplazamiento en función de la velocidad final, la aceleración y el tiempo:</strong> <h3>Δx = v<sub>f</sub>t - (1/2)at<sup>2</sup></h3>
+                        </li>
+                        <li>
+                            <strong>Velocidad final en función de la velocidad inicial, la aceleración y el desplazamiento:</strong> <h3>v<sub>f</sub><sup>2</sup> = v<sub>0</sub><sup>2</sup> + 2aΔx</h3>
+                        </li>
+                    </ol>
+                    <p>Estas ecuaciones son herramientas fundamentales para analizar y predecir el movimiento de objetos que experimentan una aceleración constante. La elección de la ecuación adecuada depende de las variables conocidas y la que se desea encontrar.</p>
+                    
+                    <h3>Ejemplos ilustrativos de la Vida Cotidiana</h3>
+                    <ul>El Movimiento Rectilíneo Uniformemente Acelerado (MRUA) no es solo un concepto abstracto; se manifiesta en situaciones cotidianas que observamos con frecuencia:
+                        <li><strong>Vehículos:</strong> Cuando un automóvil arranca desde el reposo y acelera con una aceleración constante, está siguiendo un MRUA. De manera similar, cuando un vehículo frena con una desaceleración constante hasta detenerse, también se trata de un MRUA, pero en este caso con aceleración negativa. Incluso, un vehículo lanzado con una catapulta, que experimenta una aceleración constante, ilustra este tipo de movimiento.</li>
+                        <li><strong>Deportes:</strong> En atletismo, un velocista que acelera desde los bloques de salida al principio de una carrera está experimentando un MRUA, al menos durante la fase inicial de la carrera. Además, una pelota lanzada verticalmente hacia arriba, que desacelera debido a la fuerza de gravedad, muestra un MRUA con aceleración negativa en la fase ascendente y positiva en la descendente. Un esquiador que baja por una pendiente con aceleración constante también está siguiendo un MRUA.</li>
+                        <li><strong>Naturaleza:</strong> Un objeto que cae libremente cerca de la superficie de la Tierra, despreciando la resistencia del aire, experimenta una aceleración constante debido a la gravedad. Este fenómeno es un claro ejemplo de MRUA, donde el objeto se acelera constantemente hacia el suelo.</li>
+                        <img src="img/img20.png">
+                    </ul>
+                    <button class="next"><a onclick="changeContent('Concepto 4')">Siguiente tema</a></button>
+                </div>
+                <!------ Tema 4 ------>
+                <div id="Concepto 4" class="description">
+                    <h2>Dinámica: Las Fuerzas Detrás del Movimiento</h2>
+                    <p>En <strong>física</strong>, la <strong>fuerza</strong> se define como cualquier influencia que pueda causar que un objeto cambie su <strong>velocidad</strong>, es decir, que se <strong>acelere</strong>. Se puede pensar en una <strong>fuerza</strong> como un empujón o un tirón ejercido sobre un objeto. Sin embargo, es importante comprender que la <strong>fuerza</strong> es una cantidad <strong>vectorial</strong>, lo que significa que tiene <strong>magnitud</strong> (cuánto es la fuerza) y <strong>dirección</strong> (hacia dónde se aplica la fuerza).</p>
+
+                    <p>Cuando varias <strong>fuerzas</strong> actúan sobre un objeto, el efecto combinado de estas <strong>fuerzas</strong> se denomina <strong>fuerza neta</strong>. La <strong>fuerza neta</strong> es la <strong>suma vectorial</strong> de todas las <strong>fuerzas</strong> que actúan sobre el objeto. Para determinarla, es necesario considerar tanto la <strong>magnitud</strong> como la <strong>dirección</strong> de cada <strong>fuerza</strong>.</p>
+
+                    <p>Una herramienta útil para visualizar y analizar las <strong>fuerzas</strong> es el <strong>diagrama de cuerpo libre</strong>, que muestra el objeto aislado de su entorno y las <strong>fuerzas externas</strong> representadas como <strong>vectores</strong>.</p>
+                    <img src="img/img21.png">
+
+                    <h3>Unidades de fuerza (Newton)</h3>
+                    <p>La unidad estándar de <strong>fuerza</strong> en el <strong>Sistema Internacional de Unidades</strong> (<strong>SI</strong>) es el <strong>Newton</strong> (<strong>N</strong>). Un <strong>Newton</strong> se define como la cantidad de <strong>fuerza</strong> necesaria para <strong>acelerar</strong> una <strong>masa</strong> de un kilogramo a un metro por segundo al cuadrado: <h3>(1 N = 1 kg⋅m/s²)</h3> Esto establece una relación entre <strong>fuerza</strong>, <strong>masa</strong> y <strong>aceleración</strong>. Un ejemplo concreto de la magnitud de un <strong>Newton</strong> es la <strong>fuerza gravitacional</strong> de la Tierra sobre una manzana de tamaño mediano, que es aproximadamente 1 <strong>Newton</strong>.</p>
+
+                    <h3>Diferentes tipos de fuerzas en física</h3>
+                    <p>Las fuerzas en física se pueden clasificar en dos grandes grupos: <strong>fuerzas de contacto</strong> y <strong>fuerzas de no contacto.</strong></p>
+                    <ol>
+                        <li>
+                            <strong>Fuerzas de contacto: </strong>Requieren que los objetos estén en <strong>contacto físico</strong> para que actúen.
+                            <ul>
+                                <li><strong>Fuerza de fricción:</strong> Se opone al movimiento relativo entre superficies en contacto.</li>
+                                <li><strong>Fuerza de tensión:</strong> Se ejerce a través de cuerdas, cables o materiales similares cuando se estiran.</li>
+                                <li><strong>Fuerza normal:</strong> Es la fuerza que una superficie ejerce sobre un objeto en contacto con ella, siempre perpendicular a la superficie.</li>
+                                <li><strong>Fuerza aplicada:</strong> Es cualquier fuerza que se ejerce directamente sobre un objeto por otra fuente, como una persona empujando un carro.</li>
+                            </ul>
+                        </li>
+                        <li>
+                            <strong>Fuerzas de No Contacto: </strong> Actúan entre objetos que no están en <strong>contacto físico directo.</strong>
+                            <ul>
+                                <li><strong>Fuerza gravitacional:</strong> Es la fuerza de atracción entre objetos con masa.</li>
+                                <li><strong>Fuerza electromagnética:</strong> Incluye la interacción entre cargas eléctricas (fuerza eléctrica) y entre imanes o corrientes eléctricas (fuerza magnética).</li>
+                                <li><strong>Fuerza nuclear fuerte:</strong> Es la fuerza que mantiene unidos a los protones y neutrones en el núcleo de un átomo.</li>
+                                <li><strong>Fuerza nuclear débil:</strong> Está relacionada con ciertos tipos de desintegración radiactiva.</li>
+                            </ul>
+                        </li>
+                        <img src="img/img22.png">
+                    </ol>
+                    
+                    <p>Para el estudio introductorio de la <strong>cinemática</strong> y la <strong>dinámica</strong>, nos centraremos principalmente en las <strong>fuerzas de contacto</strong> (como la <strong>fuerza de fricción</strong>, <strong>normal</strong>, <strong>de tensión</strong> y <strong>aplicada</strong>) y en la <strong>fuerza gravitacional</strong>, que son las más relevantes para describir el <strong>movimiento</strong> de los objetos.</p>
+
+                    <h3>Primera Ley de Newton (Inercia)</h3>
+                    <p>La <strong>Primera Ley de Newton</strong>, conocida como la <strong>Ley de la Inercia</strong>, establece que un objeto en <strong>reposo</strong> permanecerá en <strong>reposo</strong>, y un objeto en <strong>movimiento</strong> continuará en <strong>movimiento</strong> con la misma <strong>velocidad</strong> y en la misma <strong>dirección</strong>, a menos que una <strong>fuerza neta</strong> actúe sobre él.</p>
+
+                    <p>La <strong>inercia</strong> es la tendencia de un objeto a resistir cambios en su estado de <strong>movimiento</strong>. Cuanto mayor sea la <strong>masa</strong> de un objeto, mayor será su <strong>inercia</strong>.</p>
+
+                    <ul><strong>Ejemplos de la Primera Ley de Newton:</strong>
+                        <li>Una pelota que rueda sobre una superficie plana seguirá rodando hasta que la fricción u otra fuerza la detenga.</li>
+                        <li>Los pasajeros de un automóvil continúan moviéndose hacia adelante cuando el vehículo frena repentinamente.</li>
+                        <li>En el espacio, donde hay muy poca fricción, una herramienta que flota permanecerá en reposo o en movimiento con velocidad constante hasta que se aplique una fuerza.</li>
+                        <li>El truco de retirar rápidamente un mantel de debajo de los platos sin que estos se caigan ilustra la inercia de los objetos.</li>
+                        <img src="img/img23.png">
+                    </ul>
+
+                    <h3>Segunda Ley de Newton (F=ma)</h3>
+                    <p>La Segunda Ley de Newton establece que la aceleración de un objeto es directamente proporcional a la fuerza neta que actúa sobre él, tiene la misma dirección que la fuerza neta y es inversamente proporcional a la masa del objeto. Matemáticamente, se expresa como: <h3>F<sub>net</sub> = ma</h3></p>
+                    <ul>Donde:
+                        <li><strong>F<sub>net</sub>: </strong>es la fuerza neta que actúa sobre el objeto.</li>
+                        <li><strong>m: </strong>es la masa del objeto.</li>
+                        <li><strong>a: </strong>es la aceleración del objeto.</li>
+                    </ul>
+                    
+                    <p>Esta ley fundamental nos dice que una <strong>fuerza neta</strong> aplicada a un objeto causará que se <strong>acelere</strong>, es decir, que cambie su <strong>velocidad</strong>. La magnitud de la <strong>aceleración</strong> será mayor si la <strong>fuerza neta</strong> es mayor o si la <strong>masa</strong> del objeto es menor. Es importante recordar que <strong>F<sub>net</sub></strong> es la suma vectorial de todas las fuerzas que actúan sobre el objeto.</p>
+
+                    <p>Las <strong>aplicaciones prácticas</strong> de la <strong>Segunda Ley de Newton</strong> son numerosas. Por ejemplo, se requiere más <strong>fuerza</strong> para empujar un <strong>automóvil</strong> que para empujar un <strong>carrito de compras</strong> para lograr la misma <strong>aceleración</strong>, ya que el <strong>automóvil</strong> tiene una <strong>masa</strong> mucho mayor. La <strong>aceleración</strong> de un <strong>cohete</strong> depende de la <strong>fuerza de empuje</strong> generada por sus motores y de la <strong>masa</strong> del <strong>cohete</strong>. Un objeto más <strong>pesado</strong> requerirá una <strong>fuerza mayor</strong> para alcanzar la misma <strong>aceleración</strong> que un objeto más <strong>ligero</strong>. La <strong>fuerza</strong> experimentada en una <strong>colisión de automóviles</strong> está directamente relacionada con la <strong>masa</strong> y la <strong>aceleración</strong> de los vehículos involucrados.</p>
+
+                    <img src="img/img24.png" class="img__modificado">
+
+                    <h3>Tercera Ley de Newton (Acción-Reacción)</h3>
+                    <p>La <strong>Tercera Ley de Newton</strong> establece que por cada <strong>acción</strong>, hay una <strong>reacción</strong> igual y opuesta. Si un <strong>objeto A</strong> ejerce una <strong>fuerza</strong> sobre un <strong>objeto B</strong>, entonces el <strong>objeto B</strong> ejerce una <strong>fuerza</strong> de igual <strong>magnitud</strong> pero en <strong>dirección opuesta</strong> sobre el <strong>objeto A</strong>. Es importante notar que estas <strong>fuerzas</strong> actúan sobre <strong>objetos diferentes</strong>.</p>
+
+                    <ul><strong>Ejemplos de la Tercera Ley de Newton:</strong>
+                        <li>Un nadador empuja contra la pared de una piscina (acción), y la pared lo empuja hacia adelante (reacción).</li>
+                        <li>Un cohete expulsa gases hacia abajo (acción), y los gases ejercen una fuerza hacia arriba sobre el cohete (reacción), impulsándolo al espacio.</li>
+                        <li>Al caminar, el pie empuja el suelo hacia atrás (acción), y el suelo empuja hacia adelante con una fuerza igual y opuesta (reacción), permitiendo el movimiento.</li>
+                        <li>Una pelota que rebota contra el suelo ejerce una fuerza hacia abajo (acción), y el suelo la empuja hacia arriba con la misma fuerza pero en dirección opuesta (reacción).</li>
+                        <img src="img/img25.png">
+                    </ul>
+                    <button class="next"><a onclick="changeContent('Concepto 5')">Siguiente tema</a></button>
+                </div>
+                <!------ Tema 5 ------>
+                <div id="Concepto 5" class="description">
+                    <h2>Fricción: Una Fuerza de Resistencia</h2>
+                    <p>La <strong>fricción</strong> es una <strong>fuerza</strong> que <strong>frena el movimiento</strong> cuando dos superficies están en contacto. Siempre actúa en la <strong>dirección opuesta</strong> al movimiento o al intento de moverse. Existen diferentes tipos de <strong>fricción</strong>:</p>
+
+                    <ul>
+                        <li><strong>Fricción estática:</strong> Es como cuando intentas empujar un mueble pesado y no se mueve. Esta fricción mantiene el objeto quieto hasta que empuja con suficiente fuerza.</li>
+                        <li><strong>Fricción cinética:</strong> Es como cuando ya lograste mover el mueble, pero sientes que sigue costando trabajo arrastrarlo. Aunque hay fricción, es menor que cuando estaba quieto.</li>
+                        <li><strong>Fricción de rodadura:</strong> Es como cuando mueves el mismo mueble, pero ahora con ruedas. Se siente mucho más fácil porque la fricción de rodadura es menor.</li>
+                        <li><strong>Fricción fluida (arrastre):</strong> Es como cuando nadas en el agua o sacas la mano por la ventana del carro en movimiento. El aire o el agua ejercen una resistencia que hace más difícil moverse.</li>
+                        <img src="img/img26.png">
+                        <p>En la mayoría de los casos, cuesta más trabajo empezar a mover algo (fricción estática) que seguir moviéndolo (fricción cinética).</p>
+                    </ul>
+
+                    <h3>Factores que Influyen en la Magnitud de la Fricción</h3>
+                    <p>La magnitud de la <strong>fuerza de fricción</strong> depende de varios factores. La naturaleza de las superficies en contacto es crucial; superficies más rugosas tienden a generar una mayor fricción que las superficies lisas. Las propiedades del material también juegan un papel importante. Además, la <strong>fuerza normal</strong>, que es la fuerza que presiona las dos superficies juntas, afecta directamente la magnitud de la fricción; cuanto mayor sea la fuerza normal, mayor será la fricción.</p>
+
+                    <p>La <strong>fricción</strong> entre dos superficies se puede cuantificar mediante el <strong>coeficiente de fricción</strong>, que es una cantidad adimensional que depende de los materiales en contacto. Se distingue entre el <strong>coeficiente de fricción estática</strong> (<em>μ <sub>s</sub></em>) y el <strong>coeficiente de fricción cinética</strong> (<em>μ <sub>k </sub></em>). La <strong>fuerza de fricción estática máxima</strong> es igual al producto del coeficiente de fricción estática y la fuerza normal (<em>f<sub>s,max </sub> = μ <sub>s </sub>N </em>), mientras que la <strong>fuerza de fricción cinética</strong> es igual al producto del coeficiente de fricción cinética y la fuerza normal (<em>f <sub>k </sub> = μ<sub> k </sub> N </em>).</p>
+
+                    <ul>
+                        <strong>Varios factores afectan la fricción:</strong>
+                        <li><strong>La textura de las superficies:</strong> Si frotas tus manos secas, apenas sientes resistencia, pero si pones arena entre ellas, cuesta más moverlas. Las superficies rugosas tienen más fricción que las lisas.</li>
+                        <li><strong>El tipo de material:</strong> No es lo mismo deslizar un zapato de goma en el piso que un bloque de hielo. Algunos materiales generan más fricción que otros.</li>
+                        <li><strong>La presión entre los objetos:</strong> Si presionas fuerte tu mano contra una mesa y tratas de moverla, notarás que cuesta más. Cuanto más se aprieten las superficies, mayor será la fricción.</li>
+                        <strong>La fricción se mide con un número llamado coeficiente de fricción. Hay dos tipos:</strong>
+                        <li><strong>Coeficiente de fricción estática</strong> (<em>μ<sub>s</sub>): Se usa para calcular la fricción antes de que algo comience a moverse.</li>
+                        <li><strong>Coeficiente de fricción cinética</strong> (<em>μ<sub>k</sub>): Se usa cuando el objeto ya está en movimiento.</li>
+                        <strong>Las fórmulas para calcular la fricción son:</strong>
+                        <li><strong>Fricción estática máxima:</strong> <em>f<sub>s,max</sub> = μ<sub>s</sub> N</em></li>
+                        <li><strong>Fricción cinética:</strong> <em>f<sub>k</sub> = μ<sub>k</sub> N</em></li>
+                        Donde <strong>N</strong> es la fuerza con la que las superficies se presionan entre sí.
+                        <img src="img/img27.png">
+
+                        <h3>Cosas curiosas sobre la fricción</h3>
+                        <li>Si te empujas con patines en el suelo, notarás que con el tiempo te detienes. Eso pasa porque la fricción siempre está presente.</li>
+                        <li>Para velocidades bajas, la fricción cinética no cambia mucho sin importar qué tan rápido vayas.</li>
+                        <li>Aunque un objeto sea más grande, si su peso es el mismo, el área de contacto no afecta la fricción. Por eso, un zapato grande y uno pequeño resbalan igual en un piso mojado.</li>
+
+                        <h3>Impacto de la fricción en la tecnología</h3>
+                        <p>La fricción juega un papel muy importante en muchas tecnologías. Puede ser útil en algunos casos y perjudicial en otros, dependiendo de cómo se use.</p>
+
+                        <h3>Aplicaciones Beneficiosas de la Fricción en la Tecnología</h3>
+                        <p>La fricción es esencial para el funcionamiento de muchas tecnologías que usamos a diario. Aquí te dejo algunos ejemplos de cómo ayudar:</p>
+                        <li><strong>Caminar y mover vehículos:</strong> La fricción entre tus zapatos y el suelo te permite caminar sin resbalar, y también ayuda a los vehículos a moverse y detenerse.</li>
+                        <li><strong>Frenado de vehículos:</strong> La fricción entre las pastillas de freno y los discos o tambores es lo que hace que los autos se detengan.</li>
+                        <li><strong>Rodamientos y ruedas:</strong> La fricción es clave para el movimiento de las ruedas de autos, bicicletas y en rodamientos, lo que facilita el transporte y hace funcionar la maquinaria.</li>
+                        <li><strong>Escribir y dibujar:</strong> La fricción entre el bolígrafo o lápiz y el papel es lo que permite que podamos escribir y dibujar.</li>
+                        <li><strong>Máquinas y herramientas:</strong> En sistemas como engranajes, poleas y cintas transportadoras, la fricción ayuda a transferir movimiento y energía.</li>
+                        <li><strong>Generar calor:</strong> La fricción se puede usar para generar calor, como al frotar dos palos para encender fuego o en procesos industriales como la soldadura por fricción.</li>
+                        <li><strong>Sujetar objetos:</strong> La fricción también ayuda a mantener los objetos en su lugar y evita que se deslicen por superficies inclinadas.</li>
+                        <li><strong>Tecnología avanzada:</strong> En la soldadura por fricción, se usa el calor generado por la fricción para unir materiales.</li>
+                        <li><strong>Tecnología háptica:</strong> Incluso en pantallas táctiles de dispositivos, la fricción controlada crea una sensación de retroalimentación para hacer la experiencia más realista.</li>
+                        <img src="img/img28.png">
+                    </ul>
+
+                    <h3>Efectos Perjudiciales de la Fricción y Cómo Reducirla</h3>
+                    <p>Aunque la <strong>fricción</strong> es útil en muchas situaciones, también puede ser un problema en la tecnología. Uno de sus efectos más negativos es que convierte parte de la <strong>energía</strong> en <strong>calor</strong>, lo que reduce la <strong>eficiencia</strong> de las máquinas y los motores. Además, provoca el <strong>desgaste</strong> de las partes móviles, lo que acorta la <strong>vida útil</strong> de los equipos. Por último, la fricción también hace que sea más difícil mover las cosas, ya que ofrece <strong>resistencia</strong> al movimiento, lo que requiere más <strong>energía</strong> para superarla.</p>
+
+                    <p>Para minimizar estos efectos, existen varias soluciones. Una de las más comunes es el uso de <strong>lubricantes</strong>, como aceite y grasa, que forman una capa entre las superficies en contacto y ayudan a reducir la <strong>fricción</strong>. Otra estrategia es <strong>pulir</strong> o alisar las superficies para que sean más suaves y disminuyan la fricción. También se utilizan elementos <strong>rodantes</strong>, como rodamientos de bolas o rodillos, en lugar de superficies que se deslizan, lo que reduce la fricción de manera significativa. En casos de fricción con <strong>fluidos</strong>, como el aire o el agua, se emplean formas <strong>aerodinámicas</strong> que disminuyen la resistencia al movimiento.</p>
+
+                    <h3>Control de la Fricción en la Tecnología Moderna</h3>
+                    <p>La tecnología moderna emplea diversas técnicas para controlar la <strong>fricción</strong> de manera eficiente. Por ejemplo, los vehículos utilizan sistemas <strong>antibloqueo de frenos (ABS)</strong> para mantener el control de la fricción entre los neumáticos y la carretera durante el frenado, evitando que las llantas se bloqueen. Los motores y las máquinas tienen sistemas de <strong>lubricación</strong> diseñados para reducir el desgaste de sus partes y minimizar la pérdida de energía.</p>
+
+                    <p>En el caso de los <strong>neumáticos</strong>, se diseñan con patrones específicos en la banda de rodadura para optimizar la fricción con la carretera en diferentes condiciones. En <strong>trenes de alta velocidad</strong> y otros equipos, se utilizan tecnologías como los <strong>cojinetes de aire</strong> o la <strong>levitación magnética</strong> para minimizar la fricción y mejorar la eficiencia. Además, en algunas aplicaciones, como el <strong>calzado</strong>, se está desarrollando tecnología que ajusta la fricción según las necesidades del momento.</p>
+
+                    <p>La <strong>inteligencia artificial</strong> también está siendo utilizada en sistemas avanzados para controlar la fricción en maquinaria dañada, mejorando su rendimiento. De hecho, en el mundo digital, se está investigando la <strong>"fricción digital"</strong> y cómo reducirla para optimizar los dispositivos y su interacción con los usuarios.</p>
+                    <button class="next"><a onclick="changeContent('Concepto 6')">Siguiente tema</a></button>
+                </div>
+                <!------ Tema 6 ------>
+                <div id="Concepto 6" class="description">
+                    <h2>Integración de Cinemática y Dinámica: Análisis del Mundo Real</h2>
+                    <p>El análisis de situaciones físicas complejas a menudo requiere un enfoque que combine dos conceptos fundamentales: la cinemática y la dinámica. La cinemática se ocupa de describir cómo se mueve un objeto, es decir, su posición, velocidad y aceleración a lo largo del tiempo, sin necesidad de conocer las causas del movimiento. En cambio, la dinámica se enfoca en las fuerzas que causan ese movimiento, utilizando las Leyes de Newton para explicar cómo las fuerzas actúan sobre los cuerpos y cómo afectan su aceleración.</p>
+
+                    <p>En la mayoría de los escenarios reales, ambos conceptos se entrelazan para ofrecer una visión completa del fenómeno. Es importante tener en cuenta que, al resolver problemas de física en la vida cotidiana, tanto las fuerzas involucradas como el movimiento resultante deben ser analizados conjuntamente. La Ley de Newton proporciona las bases para entender las fuerzas que actúan sobre un cuerpo, mientras que las ecuaciones de la cinemática permiten describir cómo se mueve ese cuerpo. La combinación de estos principios es crucial para comprender fenómenos tan diversos como el movimiento de vehículos, los deportes y los fenómenos naturales, donde tanto las fuerzas como el movimiento desempeñan un papel fundamental.</p>
+                    <img src="img/img29.png">
+
+                    <h3>Ejemplos en Vehículos, Deportes y Fenómenos Naturales donde Ambos Conceptos se Combinan</h3>
+                    <p><strong>Vehículos</strong>: Imaginemos un automóvil acelerando en una carretera. La dinámica nos dice que la <strong>fuerza generada por el motor</strong> es la que causa la aceleración, tal como lo expresa la <strong>segunda ley de Newton</strong>, que establece que una <strong>fuerza</strong> sobre un objeto produce una <strong>aceleración</strong> proporcional a su masa. Por otro lado, la <strong>cinemática</strong> nos ayuda a describir cómo varía la velocidad del automóvil con el tiempo, así como la distancia recorrida. Si queremos analizar la distancia necesaria para que un automóvil se detenga, la <strong>dinámica</strong> considera la <strong>fuerza de fricción</strong> que actúa entre los frenos y las ruedas, mientras que la <strong>cinemática</strong> nos indica cómo cambia la <strong>velocidad</strong> del vehículo hasta detenerse, lo que nos permite calcular esa <strong>distancia de frenado</strong>.</p>
+
+                    <p><strong>Deportes</strong>: En deportes como el <strong>salto de altura</strong>, la <strong>dinámica</strong> estudia las <strong>fuerzas</strong> que el atleta ejerce al impulsarse hacia el aire, así como la <strong>fuerza de gravedad</strong> que lo atrae hacia el suelo. La <strong>cinemática</strong>, por su parte, se encarga de describir el trayecto que sigue el atleta, calculando la <strong>altura máxima</strong> alcanzada y el <strong>tiempo</strong> que pasa en el aire. En el caso de una <strong>pelota lanzada</strong>, la <strong>dinámica</strong> toma en cuenta la <strong>fuerza</strong> con la que se lanza la pelota, la <strong>resistencia del aire</strong> y la <strong>fuerza de gravedad</strong>, mientras que la <strong>cinemática</strong> describe la <strong>trayectoria</strong> que seguirá la pelota, incluyendo su <strong>velocidad</strong> en diferentes puntos y su <strong>distancia de alcance</strong> antes de caer al suelo.</p>
+
+                    <p><strong>Fenómenos Naturales</strong>: El movimiento de una <strong>hoja que cae</strong> es un claro ejemplo de cómo se combinan la <strong>dinámica</strong> y la <strong>cinemática</strong>. La <strong>dinámica</strong> nos explica que la <strong>fuerza de gravedad</strong> es la responsable de que la hoja caiga hacia el suelo, pero también interviene la <strong>resistencia del aire</strong>, que desacelera la caída. La <strong>cinemática</strong>, en este caso, describe cómo cambia la <strong>velocidad</strong> de la hoja mientras desciende y cómo su <strong>aceleración</strong> varía a medida que la resistencia del aire actúa sobre ella. Un ejemplo más complejo es el movimiento de un <strong>satélite en órbita</strong> alrededor de la Tierra. La <strong>dinámica</strong> explica que la <strong>gravedad de la Tierra</strong> mantiene al satélite en su órbita, mientras que la <strong>cinemática</strong> calcula su <strong>velocidad orbital</strong> y el <strong>tiempo</strong> que tarda en dar una vuelta completa alrededor de la Tierra.</p>
+
+                    <h2>Fórmulas Clave para el Movimiento Rectilíneo Uniformemente Acelerado (MRUA)</h2>
+                    <div class="table-container">
+                        <table>
+                            <thead>
+                            <tr>
+                                <th>Ecuación No.</th>
+                                <th>Fórmula</th>
+                                <th>Variables Involucradas</th>
+                                <th>Condiciones de Uso</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td>1</td>
+                                <td>v<sub>f</sub> = v<sub>o</sub> + at</td>
+                                <td>v<sub>f</sub>, v<sub>o</sub>, a, t</td>
+                                <td>Cuando se conoce o se busca el tiempo</td>
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td>Δx = v<sub>o</sub>t + ½ at<sup>2</sup></td>
+                                <td>Δx, v<sub>o</sub>, a, t</td>
+                                <td>Cuando se conoce o se busca el desplazamiento y no se conoce v<sub>f</sub></td>
+                            </tr>
+                            <tr>
+                                <td>3</td>
+                                <td>Δx = ½ (v<sub>f</sub> + v<sub>o</sub>)t</td>
+                                <td>Δx, v<sub>f</sub>, v<sub>o</sub>, t</td>
+                                <td>Cuando no se conoce o no se busca la aceleración</td>
+                            </tr>
+                            <tr>
+                                <td>4</td>
+                                <td>Δx = v<sub>f</sub>t – ½at<sup>2</sup></td>
+                                <td>Δx, v<sub>f</sub>, a, t</td>
+                                <td>Cuando se conoce o se busca el desplazamiento y no se conoce v<sub>o</sub></td>
+                            </tr>
+                            <tr>
+                                <td>5</td>
+                                <td>v<sub>f</sub><sup>2</sup> = v<sub>o</sub><sup>2</sup> + 2aΔx</td>
+                                <td>v<sub>f</sub>, v<sub>o</sub>, a, Δx</td>
+                                <td>Cuando no se conoce o no se busca el tiempo</td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <h2>Tipos de Fuerzas y Sus Características</h2>
+                    <div class="table-container">
+                        <table>
+                            <thead>
+                                <tr>
+                                <th>Tipo de Fuerza</th>
+                                <th>Fuerza Específica</th>
+                                <th>Descripción/Origen</th>
+                                <th>Símbolo</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                <td>Contacto</td>
+                                <td>Fricción</td>
+                                <td>Se opone al movimiento relativo entre superficies en contacto</td>
+                                <td>f</td>
+                                </tr>
+                                <tr>
+                                <td>Contacto</td>
+                                <td>Tensión</td>
+                                <td>Fuerza ejercida a través de una cuerda, cable, etc., cuando se estira</td>
+                                <td>T</td>
+                                </tr>
+                                <tr>
+                                <td>Contacto</td>
+                                <td>Normal</td>
+                                <td>Fuerza ejercida por una superficie sobre un objeto en contacto, perpendicular a la superficie</td>
+                                <td>N</td>
+                                </tr>
+                                <tr>
+                                <td>Contacto</td>
+                                <td>Aplicada</td>
+                                <td>Fuerza ejercida directamente sobre un objeto por otra fuente</td>
+                                <td>F<sub>app</sub></td>
+                                </tr>
+                                <tr>
+                                <td>No Contacto</td>
+                                <td>Gravitacional</td>
+                                <td>Fuerza de atracción entre objetos con masa</td>
+                                <td>F<sub>g</sub> o w</td>
+                                </tr>
+                                <tr>
+                                <td>No Contacto</td>
+                                <td>Electromagnética</td>
+                                <td>Fuerza entre cargas eléctricas o imanes</td>
+                                <td>F<sub>e</sub> o F<sub>m</sub></td>
+                                </tr>
+                                <tr>
+                                <td>No Contacto</td>
+                                <td>Nuclear Fuerte</td>
+                                <td>Fuerza que mantiene unidos a los nucleones en el núcleo atómico</td>
+                                <td></td>
+                                </tr>
+                                <tr>
+                                <td>No Contacto</td>
+                                <td>Nuclear Débil</td>
+                                <td>Fuerza responsable de ciertos tipos de desintegración radiactiva</td>
+                                <td></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <h2>Coeficientes de Fricción para Diferentes Materiales (Ejemplos)</h2>
+                    <div class="table-container">
+                        <table>
+                            <thead>
+                            <tr>
+                                <th>Materiales en Contacto</th>
+                                <th>Coeficiente de Fricción Estática (μ<sub>s</sub>)</th>
+                                <th>Coeficiente de Fricción Cinética (μ<sub>k</sub>)</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td>Acero sobre acero</td>
+                                <td>0.74</td>
+                                <td>0.57</td>
+                            </tr>
+                            <tr>
+                                <td>Aluminio sobre acero</td>
+                                <td>0.61</td>
+                                <td>0.47</td>
+                            </tr>
+                            <tr>
+                                <td>Cobre sobre acero</td>
+                                <td>0.53</td>
+                                <td>0.36</td>
+                            </tr>
+                            <tr>
+                                <td>Caucho sobre concreto (seco)</td>
+                                <td>0.8</td>
+                                <td>0.6</td>
+                            </tr>
+                            <tr>
+                                <td>Caucho sobre concreto (húmedo)</td>
+                                <td>0.6</td>
+                                <td>0.4</td>
+                            </tr>
+                            <tr>
+                                <td>Hielo sobre hielo</td>
+                                <td>0.1</td>
+                                <td>0.03</td>
+                            </tr>
+                            <tr>
+                                <td>Madera sobre madera</td>
+                                <td>0.25 - 0.5</td>
+                                <td>0.2 - 0.4</td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <button class="next"><a onclick="changeContent('Concepto 1')">Leyes de Newton  y Ejemplos</a></button>
+                </div>
+            </div>
+        </section>
+
+        <!------ Sección de contenido y menu fijo ------>
+        <section class="fixed__container">
+            <!------ Menú ------>
+            <div class="fixed__menu">
+                <h2>Cinemática y Dinamica</h2>
+                <a onclick="changeContent('Concepto 1.1')">Introducción a los Conceptos Fundamentales de Cinemática y Dinámica</a>
+                <a onclick="changeContent('Concepto 2.2')">La Importancia de Comprender el Movimiento en el Mundo Físico</a>
+                <a onclick="changeContent('Concepto 3.3')">Cinemática: Describiendo el Movimiento</a>
+                <a onclick="changeContent('Concepto 4.4')">Dinámica: Las Fuerzas Detrás del Movimiento</a>
+                <a onclick="changeContent('Concepto 5.5')">Fricción: Una Fuerza de Resistencia</a>
+                <a onclick="changeContent('Concepto 6.6')">Integración de Cinemática y Dinámica: Análisis del Mundo Real</a>
+            </div>
+            <!------ Temas ------>
+            <div class="fixed__content">
+                <div id="Concepto 1.1" class="description">
+                    <h2>Introducción a los Conceptos Fundamentales de Cinemática y Dinámica</h2>
+                    <p>La <strong>física</strong> busca entender cómo funciona el universo, y para estudiar el movimiento de los objetos, se divide en dos áreas importantes: <strong>cinemática</strong> y <strong>dinámica</strong>.</p>
+                    
+                    <p>La <strong>cinemática</strong> describe cómo se mueven los objetos sin preguntarse por qué se mueven. Es como ver un auto en movimiento y notar su posición, velocidad y aceleración sin preocuparse por las razones que lo hacen moverse. Se enfoca en responder preguntas como: ¿Qué tan rápido va el objeto? ¿Cuánto ha recorrido? ¿Cómo cambia su velocidad con el tiempo?</p>
+                    <img src="img/img15.png">
+
+                    <p>La <strong>dínámica</strong>, en cambio, sí se interesa por las razones detrás del movimiento. Se enfoca en las <strong>fuerzas</strong> que actúan sobre un objeto, como la <strong>gravedad</strong>, la <strong>fricción</strong> o el <strong>empuje</strong> de un motor, para entender por qué se mueve de cierta manera. Si la <strong>cinemática</strong> solo observa el movimiento, la <strong>dínamica</strong> trata de explicarlo, como si quisiera saber por qué el auto acelera cuando pisa el pedal del gas o por qué frena cuando se aplica el freno.</p>
+
+                    <p>El estudio del movimiento tiene una historia larga. Hace más de 2,000 años, filósofos como <strong>Aristóteles</strong> intentaron explicarlo, aunque sus ideas eran más filosóficas que científicas, ya que no contaban con los métodos experimentales que usamos hoy. Luego, durante la <strong>Revolución Científica</strong>, <strong>Galileo Galilei</strong> e <strong>Isaac Newton</strong> cambiaron la manera de estudiar la física al usar experimentos y matemáticas, sentando las bases de la <strong>mecánica clásica</strong>. Galileo fue uno de los primeros en estudiar cómo los objetos caen al suelo, mientras que Newton formuló leyes matemáticas para describir el movimiento y la relación entre la <strong>fuerza</strong> y el movimiento de los objetos, lo que conocemos como las <strong>tres leyes del movimiento de Newton</strong>.</p>
+                    <img src="img/img16.jpg">
+
+                    <p>Estas leyes explican cómo un objeto en reposo se pone en movimiento (si se le aplica una <strong>fuerza</strong>), cómo un objeto sigue moviéndose hasta que algo lo detiene (su tendencia a seguir moviéndose, o la <strong>inercia</strong>), y cómo las <strong>fuerzas</strong> afectan la <strong>aceleración</strong> de los objetos dependiendo de su <strong>masa</strong>.</p>
+
+                    <p>Entender la <strong>cinemática</strong> y la <strong>dinámica</strong> no solo es clave para la <strong>física</strong>, sino también para la <strong>ingeniería</strong>, que usa estos principios para diseñar cosas como <strong>edificios</strong>, <strong>autos</strong> y <strong>máquinas</strong>. Gracias a estas leyes, podemos calcular cómo debe ser un <strong>puente</strong> para soportar peso o cómo diseñar un <strong>automóvil</strong> para que sea seguro y eficiente. La <strong>ingeniería civil</strong>, <strong>mecánica</strong> y <strong>aeronáutica</strong>, por ejemplo, depende directamente de estos principios para hacer cosas como <strong>aviones</strong> que vuelen, <strong>coches</strong> que se muevan eficientemente y <strong>puentes</strong> que no se caigan.</p>
+
+                    <p>Además, el conocimiento de estas áreas es crucial para áreas como la <strong>tecnología espacial</strong>, donde se estudia el movimiento de <strong>satélites</strong>, <strong>cohetes</strong> y <strong>naves espaciales</strong>, o incluso en el desarrollo de <strong>robots</strong> que se muevan correctamente en <strong>entornos complejos</strong>. Por eso, no solo los <strong>físicos</strong>, sino también los <strong>ingenieros</strong>, <strong>diseñadores</strong> y <strong>tecnólogos</strong>, aplican estos conocimientos para resolver problemas cotidianos y desafíos tecnológicos.</p>
+                </div>
+                <!------ Tema 2 ------>
+                <div id="Concepto 2.2" class="description">
+                    <h2>La Importancia de Comprender el Movimiento en el Mundo Físico</h2>
+                    <p>El <strong>movimiento</strong> está en todas partes. Desde que caminamos hasta cómo los <strong>planetas</strong> giran alrededor del <strong>sol</strong>, todo se mueve. Entender cómo se mueven las cosas nos ayuda a saber por qué lo hacen y a predecir cómo se moverán en el futuro. Es como si tuviéramos un <strong>mapa</strong> que nos muestra cómo se mueven los <strong>objetos</strong> a nuestro alrededor, y si entendemos este mapa, podemos saber qué esperar en cualquier momento. Por ejemplo, si estás jugando <strong>fútbol</strong> y sabes cómo se mueve la <strong>pelota</strong>, puedes anticipar hacia dónde irá.</p>
+
+                    <p>Saber sobre <strong>cinemática</strong> (que estudia cómo se mueven las cosas) y <strong>dinámica</strong> (que estudia por qué se mueven) es muy importante para muchas cosas que usamos todos los días. Por ejemplo, para hacer <strong>autos</strong>, <strong>aviones</strong> y <strong>trenes</strong>, necesitamos saber cómo las <strong>fuerzas</strong>, como el <strong>viento</strong> o el <strong>peso</strong>, afectan su movimiento. Esto nos ayuda a hacer que estos vehículos se muevan de manera más segura y eficiente. Si no entendemos cómo funciona el <strong>movimiento</strong>, no podríamos diseñar <strong>autos</strong> que frenen bien o <strong>aviones</strong> que puedan volar de manera estable. También, cuando usamos el <strong>teléfono</strong> o vemos <strong>televisión</strong>, lo que estamos haciendo es enviar y recibir <strong>ondas de energía</strong>, que también son una forma de movimiento. Las ondas son como pequeñas olas que viajan por el aire y nos permiten comunicarnos de forma instantánea.</p>
+
+                    <p>Incluso en <strong>medicina</strong>, tecnologías como los <strong>rayos X</strong> o los <strong>láseres</strong>, que se usan para ver el interior de nuestro cuerpo o realizar <strong>cirugías</strong>, no existirían sin entender el <strong>movimiento</strong> de las <strong>partículas</strong> o la <strong>luz</strong>. Los rayos X, por ejemplo, viajan a través de nuestro cuerpo para darnos imágenes sin necesidad de cirugía. Sin comprender el movimiento de estos rayos, no podríamos usar esta tecnología para detectar <strong>enfermedades</strong>.</p>
+
+                    <p>El estudio del <strong>movimiento</strong> sigue el <strong>método científico</strong>, que es como un proceso para aprender y entender cómo funcionan las cosas. Primero <strong>observamos</strong>, después probamos ideas y finalmente <strong>analizamos</strong> los resultados. Este proceso de prueba y error nos ayuda a encontrar respuestas a las preguntas más complicadas. La <strong>cinemática</strong> y la <strong>dinámica</strong> no solo son fórmulas, son el resultado de mucho trabajo de <strong>investigación</strong> que nos ayuda a mejorar la <strong>ciencia</strong> y la <strong>tecnología</strong>. Gracias a todo esto, podemos crear nuevas <strong>tecnologías</strong> que hacen nuestra vida más fácil y cómoda. Por ejemplo, los avances en la <strong>tecnología</strong> de los <strong>videojuegos</strong>, que utilizan muchas leyes del <strong>movimiento</strong>, permiten experiencias de juego cada vez más realistas.</p>
+
+                    <p>Gracias al estudio de cómo se mueven las cosas, podemos inventar y mejorar muchísimas cosas que usamos en nuestra <strong>vida diaria</strong>. Esto también nos ayuda a entender mejor el <strong>mundo</strong> en que vivimos, de modo que podamos hacer que nuestras <strong>ciudades</strong>, nuestros <strong>transportes</strong> y nuestras <strong>tecnologías</strong> sean más <strong>eficientes</strong> y <strong>seguras</strong>.</p>
+                    <img src="img/img17.png">
+                </div>
+                <!------ Tema 3 ------>
+                <div id="Concepto 3.3" class="description">
+                    <h2>Cinemática: Describiendo el Movimiento</h2>
+                    <p>El <strong>Movimiento Rectilíneo Uniforme</strong> (<strong>MRU</strong>) es un tipo de movimiento en el que un objeto se desplaza a lo largo de una <strong>línea recta</strong> con una <strong>velocidad constante</strong>. Esto significa que el objeto mantiene la misma <strong>rapidez</strong> y <strong>dirección</strong> a lo largo del tiempo. El MRU tiene varias características clave. Primero, la <strong>trayectoria</strong> del objeto es una <strong>línea recta</strong>, es decir, se mueve en una sola dirección. Segundo, la <strong>velocidad</strong> del objeto no cambia. Como la <strong>velocidad</strong> es una magnitud <strong>vectorial</strong>, tanto su <strong>rapidez</strong> como su <strong>dirección</strong> permanecen constantes. Esto quiere decir que el objeto recorre distancias iguales en intervalos de <strong>tiempo</strong> iguales. Finalmente, dado que la <strong>velocidad</strong> es constante, la <strong>aceleración</strong> del objeto es <strong>cero</strong>.</p>
+
+                    <p>El <strong>MRU</strong> se puede representar gráficamente de dos maneras principales: con un gráfico de <strong>desplazamiento frente a tiempo</strong> y un gráfico de <strong>velocidad frente a tiempo</strong>. En un gráfico de <strong>desplazamiento frente a tiempo</strong>, el MRU se representa como una <strong>línea recta</strong> cuya <strong>pendiente</strong> es constante. Esta pendiente refleja la <strong>velocidad</strong> del objeto, y un aumento lineal del <strong>desplazamiento</strong> indica que el objeto se mueve a <strong>velocidad constante</strong>. En un gráfico de <strong>velocidad frente a tiempo</strong>, el MRU aparece como una <strong>línea horizontal</strong>, lo que significa que la <strong>velocidad</strong> no cambia con el <strong>tiempo</strong>. El <strong>área</strong> bajo esta línea nos da el <strong>desplazamiento</strong> del objeto durante ese intervalo de <strong>tiempo</strong>.</p>
+
+                    <p>La relación fundamental en el MRU se expresa con la fórmula: <strong>v = Δx / Δt</strong> donde:</p>
+                    <ul>
+                        <li><strong>v</strong> es la velocidad constante del objeto,</li>
+                        <li><strong>Δx</strong> es el desplazamiento, o el cambio en la posición del objeto,</li>
+                        <li><strong>Δt</strong> es el intervalo de tiempo durante el cual ocurre ese desplazamiento.</li>
+                    </ul>
+
+                    <p>Esta fórmula también se puede reorganizar para resolver el <strong>desplazamiento</strong> <strong>(Δx = v ⋅ Δt)</strong> y el <strong>tiempo</strong> <strong>(Δt = Δx/v).</strong> Por ejemplo, si conocemos la <strong>velocidad</strong> de un objeto y el <strong>tiempo</strong> que ha estado en movimiento, podemos calcular la <strong>distancia</strong> que ha recorrido. De la misma manera, si sabemos la <strong>distancia</strong> y la <strong>velocidad</strong>, podemos calcular el <strong>tiempo</strong> que ha tardado en recorrerla.</p>
+
+                    <p>Estas <strong>fórmulas</strong> son muy útiles para resolver problemas relacionados con objetos que se mueven a <strong>velocidad constante</strong>. Es importante asegurarse de que las <strong>unidades de medida</strong> para la <strong>velocidad</strong>, el <strong>desplazamiento</strong> y el <strong>tiempo</strong> sean las mismas para obtener resultados correctos.</p>
+
+                    <h3>Ejemplos Ilustrativos de la Vida Cotidiana</h3>
+                    <ul>El Movimiento Rectilíneo Uniforme (MRU) se presenta en diversas situaciones cotidianas que nos rodean:
+                        <li><strong>Vehículos:</strong>Un ejemplo claro es un automóvil que viaja por una autopista recta a una velocidad constante. Si el coche mantiene la misma velocidad sin acelerar ni frenar, está realizando un MRU. También, un tren que avanza a velocidad constante por una vía recta, o un avión que vuela a una altitud y velocidad constantes, son ejemplos de MRU en acción.</li>
+                        <li><strong>Deportes:</strong>En el mundo del deporte, un corredor que mantiene un ritmo constante en una pista recta está realizando un MRU. También un nadador que nada de manera constante en línea recta dentro de una piscina está realizando el mismo tipo de movimiento. Incluso, un disco de hockey deslizándose sobre una pista de hielo con poca fricción puede acercarse a un MRU, ya que se mueve de manera casi constante.</li>
+                        <li><strong>Naturaleza:</strong>En el ámbito natural, un fenómeno importante es la luz. La luz viaja a través del vacío a una velocidad constante, conocida como la velocidad de la luz, lo que es un ejemplo fundamental de MRU. Además, un objeto en el espacio, como una herramienta flotante de un astronauta que no experimenta fuerzas externas, se movería con velocidad constante siguiendo una trayectoria recta, lo que también describe un MRU.</li>
+                        <img src="img/img18.png">
+                    </ul>
+
+
+                    <h3>Definición y Características del Movimiento con Aceleración Constante</h3>
+                    <p>El <strong>Movimiento Rectilíneo Uniformemente Acelerado</strong> (<strong>MRUA</strong>) ocurre cuando un objeto se mueve a lo largo de una <strong>trayectoria recta</strong> y su <strong>velocidad</strong> cambia de manera constante a lo largo del <strong>tiempo</strong>. Esta variación constante en la <strong>velocidad</strong> se llama <strong>aceleración</strong>.</p>
+                    <ul>
+                        <li><strong>Aceleración positiva:</strong> Si la aceleración es positiva, la velocidad del objeto aumenta en la dirección del movimiento.</li>
+                        <li><strong>Aceleración negativa (desaceleración):</strong> Si la aceleración es negativa, la velocidad disminuye. Sin embargo, es importante entender que una aceleración negativa no siempre significa que el objeto va más lento. Si la velocidad inicial es negativa, una aceleración negativa puede hacer que el objeto acelere en la dirección opuesta.</li>
+                        <img src="img/img19.jpg">
+                    </ul>
+                    <h3>Fórmulas Clave y Sus Aplicaciones</h3>
+                    <p>Existen <strong>cinco ecuaciones fundamentales</strong> que describen el <strong>movimiento uniformemente acelerado</strong> (<strong>MRUA</strong>), las cuales son esenciales para resolver problemas de <strong>física</strong> relacionados con este tipo de <strong>movimiento</strong>. A continuación, se detallan las <strong>ecuaciones</strong> y sus significados:</p>
+                    <ol>
+                        <li>
+                            <strong>Velocidad final en función de la velocidad inicial, la aceleración y el tiempo:</strong> <h3>v<sub>f</sub> = v<sub>o</sub> + at</h3>
+                            <ul>
+                                <li><strong>v<sub>f</sub>:</strong> Velocidad final del objeto.</li>
+                                <li><strong>v<sub>o</sub>:</strong> Velocidad inicial del objeto.</li>
+                                <li><strong>a:</strong> Aceleración constante.</li>
+                                <li><strong>t:</strong> Tiempo transcurrido.</li>
+                            </ul>
+                        </li>
+                        <li>
+                            <strong>Desplazamiento en función de la velocidad inicial, la aceleración y el tiempo:</strong> <h3>Δx = v<sub>o</sub>t + (1/2)at<sup>2</sup></h3>
+                            <ul>
+                                <li><strong>Δx:</strong> Desplazamiento del objeto.</li>
+                                <li><strong>v<sub>o</sub></strong> Velocidad inicial.</li>
+                                <li><strong>a:</strong> Aceleración.</li>
+                                <li><strong>t:</strong> Tiempo.</li>
+                            </ul>
+                        </li>
+                        <li>
+                            <strong>Desplazamiento en función de la velocidad final, la velocidad inicial y el tiempo:</strong> <h3>Δx = (1/2)(v<sub>f</sub> + v<sub>o</sub>)t</h3>
+                        </li>
+                        <li>
+                            <strong>Desplazamiento en función de la velocidad final, la aceleración y el tiempo:</strong> <h3>Δx = v<sub>f</sub>t - (1/2)at<sup>2</sup></h3>
+                        </li>
+                        <li>
+                            <strong>Velocidad final en función de la velocidad inicial, la aceleración y el desplazamiento:</strong> <h3>v<sub>f</sub><sup>2</sup> = v<sub>0</sub><sup>2</sup> + 2aΔx</h3>
+                        </li>
+                    </ol>
+                    <p>Estas ecuaciones son herramientas fundamentales para analizar y predecir el movimiento de objetos que experimentan una aceleración constante. La elección de la ecuación adecuada depende de las variables conocidas y la que se desea encontrar.</p>
+                    
+                    <h3>Ejemplos ilustrativos de la Vida Cotidiana</h3>
+                    <ul>El Movimiento Rectilíneo Uniformemente Acelerado (MRUA) no es solo un concepto abstracto; se manifiesta en situaciones cotidianas que observamos con frecuencia:
+                        <li><strong>Vehículos:</strong> Cuando un automóvil arranca desde el reposo y acelera con una aceleración constante, está siguiendo un MRUA. De manera similar, cuando un vehículo frena con una desaceleración constante hasta detenerse, también se trata de un MRUA, pero en este caso con aceleración negativa. Incluso, un vehículo lanzado con una catapulta, que experimenta una aceleración constante, ilustra este tipo de movimiento.</li>
+                        <li><strong>Deportes:</strong> En atletismo, un velocista que acelera desde los bloques de salida al principio de una carrera está experimentando un MRUA, al menos durante la fase inicial de la carrera. Además, una pelota lanzada verticalmente hacia arriba, que desacelera debido a la fuerza de gravedad, muestra un MRUA con aceleración negativa en la fase ascendente y positiva en la descendente. Un esquiador que baja por una pendiente con aceleración constante también está siguiendo un MRUA.</li>
+                        <li><strong>Naturaleza:</strong> Un objeto que cae libremente cerca de la superficie de la Tierra, despreciando la resistencia del aire, experimenta una aceleración constante debido a la gravedad. Este fenómeno es un claro ejemplo de MRUA, donde el objeto se acelera constantemente hacia el suelo.</li>
+                        <img src="img/img20.png">
+                    </ul>
+                </div>
+                <!------ Tema 4 ------>
+                <div id="Concepto 4.4" class="description">
+                    <h2>Dinámica: Las Fuerzas Detrás del Movimiento</h2>
+                    <p>En <strong>física</strong>, la <strong>fuerza</strong> se define como cualquier influencia que pueda causar que un objeto cambie su <strong>velocidad</strong>, es decir, que se <strong>acelere</strong>. Se puede pensar en una <strong>fuerza</strong> como un empujón o un tirón ejercido sobre un objeto. Sin embargo, es importante comprender que la <strong>fuerza</strong> es una cantidad <strong>vectorial</strong>, lo que significa que tiene <strong>magnitud</strong> (cuánto es la fuerza) y <strong>dirección</strong> (hacia dónde se aplica la fuerza).</p>
+
+                    <p>Cuando varias <strong>fuerzas</strong> actúan sobre un objeto, el efecto combinado de estas <strong>fuerzas</strong> se denomina <strong>fuerza neta</strong>. La <strong>fuerza neta</strong> es la <strong>suma vectorial</strong> de todas las <strong>fuerzas</strong> que actúan sobre el objeto. Para determinarla, es necesario considerar tanto la <strong>magnitud</strong> como la <strong>dirección</strong> de cada <strong>fuerza</strong>.</p>
+
+                    <p>Una herramienta útil para visualizar y analizar las <strong>fuerzas</strong> es el <strong>diagrama de cuerpo libre</strong>, que muestra el objeto aislado de su entorno y las <strong>fuerzas externas</strong> representadas como <strong>vectores</strong>.</p>
+                    <img src="img/img21.png">
+
+                    <h3>Unidades de fuerza (Newton)</h3>
+                    <p>La unidad estándar de <strong>fuerza</strong> en el <strong>Sistema Internacional de Unidades</strong> (<strong>SI</strong>) es el <strong>Newton</strong> (<strong>N</strong>). Un <strong>Newton</strong> se define como la cantidad de <strong>fuerza</strong> necesaria para <strong>acelerar</strong> una <strong>masa</strong> de un kilogramo a un metro por segundo al cuadrado: <h3>(1 N = 1 kg⋅m/s²)</h3> Esto establece una relación entre <strong>fuerza</strong>, <strong>masa</strong> y <strong>aceleración</strong>. Un ejemplo concreto de la magnitud de un <strong>Newton</strong> es la <strong>fuerza gravitacional</strong> de la Tierra sobre una manzana de tamaño mediano, que es aproximadamente 1 <strong>Newton</strong>.</p>
+
+                    <h3>Diferentes tipos de fuerzas en física</h3>
+                    <p>Las fuerzas en física se pueden clasificar en dos grandes grupos: <strong>fuerzas de contacto</strong> y <strong>fuerzas de no contacto.</strong></p>
+                    <ol>
+                        <li>
+                            <strong>Fuerzas de contacto: </strong>Requieren que los objetos estén en <strong>contacto físico</strong> para que actúen.
+                            <ul>
+                                <li><strong>Fuerza de fricción:</strong> Se opone al movimiento relativo entre superficies en contacto.</li>
+                                <li><strong>Fuerza de tensión:</strong> Se ejerce a través de cuerdas, cables o materiales similares cuando se estiran.</li>
+                                <li><strong>Fuerza normal:</strong> Es la fuerza que una superficie ejerce sobre un objeto en contacto con ella, siempre perpendicular a la superficie.</li>
+                                <li><strong>Fuerza aplicada:</strong> Es cualquier fuerza que se ejerce directamente sobre un objeto por otra fuente, como una persona empujando un carro.</li>
+                            </ul>
+                        </li>
+                        <li>
+                            <strong>Fuerzas de No Contacto: </strong> Actúan entre objetos que no están en <strong>contacto físico directo.</strong>
+                            <ul>
+                                <li><strong>Fuerza gravitacional:</strong> Es la fuerza de atracción entre objetos con masa.</li>
+                                <li><strong>Fuerza electromagnética:</strong> Incluye la interacción entre cargas eléctricas (fuerza eléctrica) y entre imanes o corrientes eléctricas (fuerza magnética).</li>
+                                <li><strong>Fuerza nuclear fuerte:</strong> Es la fuerza que mantiene unidos a los protones y neutrones en el núcleo de un átomo.</li>
+                                <li><strong>Fuerza nuclear débil:</strong> Está relacionada con ciertos tipos de desintegración radiactiva.</li>
+                            </ul>
+                        </li>
+                        <img src="img/img22.png">
+                    </ol>
+                    
+                    <p>Para el estudio introductorio de la <strong>cinemática</strong> y la <strong>dinámica</strong>, nos centraremos principalmente en las <strong>fuerzas de contacto</strong> (como la <strong>fuerza de fricción</strong>, <strong>normal</strong>, <strong>de tensión</strong> y <strong>aplicada</strong>) y en la <strong>fuerza gravitacional</strong>, que son las más relevantes para describir el <strong>movimiento</strong> de los objetos.</p>
+
+                    <h3>Primera Ley de Newton (Inercia)</h3>
+                    <p>La <strong>Primera Ley de Newton</strong>, conocida como la <strong>Ley de la Inercia</strong>, establece que un objeto en <strong>reposo</strong> permanecerá en <strong>reposo</strong>, y un objeto en <strong>movimiento</strong> continuará en <strong>movimiento</strong> con la misma <strong>velocidad</strong> y en la misma <strong>dirección</strong>, a menos que una <strong>fuerza neta</strong> actúe sobre él.</p>
+
+                    <p>La <strong>inercia</strong> es la tendencia de un objeto a resistir cambios en su estado de <strong>movimiento</strong>. Cuanto mayor sea la <strong>masa</strong> de un objeto, mayor será su <strong>inercia</strong>.</p>
+
+                    <ul><strong>Ejemplos de la Primera Ley de Newton:</strong>
+                        <li>Una pelota que rueda sobre una superficie plana seguirá rodando hasta que la fricción u otra fuerza la detenga.</li>
+                        <li>Los pasajeros de un automóvil continúan moviéndose hacia adelante cuando el vehículo frena repentinamente.</li>
+                        <li>En el espacio, donde hay muy poca fricción, una herramienta que flota permanecerá en reposo o en movimiento con velocidad constante hasta que se aplique una fuerza.</li>
+                        <li>El truco de retirar rápidamente un mantel de debajo de los platos sin que estos se caigan ilustra la inercia de los objetos.</li>
+                        <img src="img/img23.png">
+                    </ul>
+
+                    <h3>Segunda Ley de Newton (F=ma)</h3>
+                    <p>La Segunda Ley de Newton establece que la aceleración de un objeto es directamente proporcional a la fuerza neta que actúa sobre él, tiene la misma dirección que la fuerza neta y es inversamente proporcional a la masa del objeto. Matemáticamente, se expresa como: <h3>F<sub>net</sub> = ma</h3></p>
+                    <ul>Donde:
+                        <li><strong>F<sub>net</sub>: </strong>es la fuerza neta que actúa sobre el objeto.</li>
+                        <li><strong>m: </strong>es la masa del objeto.</li>
+                        <li><strong>a: </strong>es la aceleración del objeto.</li>
+                    </ul>
+                    
+                    <p>Esta ley fundamental nos dice que una <strong>fuerza neta</strong> aplicada a un objeto causará que se <strong>acelere</strong>, es decir, que cambie su <strong>velocidad</strong>. La magnitud de la <strong>aceleración</strong> será mayor si la <strong>fuerza neta</strong> es mayor o si la <strong>masa</strong> del objeto es menor. Es importante recordar que <strong>F<sub>net</sub></strong> es la suma vectorial de todas las fuerzas que actúan sobre el objeto.</p>
+
+                    <p>Las <strong>aplicaciones prácticas</strong> de la <strong>Segunda Ley de Newton</strong> son numerosas. Por ejemplo, se requiere más <strong>fuerza</strong> para empujar un <strong>automóvil</strong> que para empujar un <strong>carrito de compras</strong> para lograr la misma <strong>aceleración</strong>, ya que el <strong>automóvil</strong> tiene una <strong>masa</strong> mucho mayor. La <strong>aceleración</strong> de un <strong>cohete</strong> depende de la <strong>fuerza de empuje</strong> generada por sus motores y de la <strong>masa</strong> del <strong>cohete</strong>. Un objeto más <strong>pesado</strong> requerirá una <strong>fuerza mayor</strong> para alcanzar la misma <strong>aceleración</strong> que un objeto más <strong>ligero</strong>. La <strong>fuerza</strong> experimentada en una <strong>colisión de automóviles</strong> está directamente relacionada con la <strong>masa</strong> y la <strong>aceleración</strong> de los vehículos involucrados.</p>
+
+                    <img src="img/img24.png" class="img__modificado">
+
+                    <h3>Tercera Ley de Newton (Acción-Reacción)</h3>
+                    <p>La <strong>Tercera Ley de Newton</strong> establece que por cada <strong>acción</strong>, hay una <strong>reacción</strong> igual y opuesta. Si un <strong>objeto A</strong> ejerce una <strong>fuerza</strong> sobre un <strong>objeto B</strong>, entonces el <strong>objeto B</strong> ejerce una <strong>fuerza</strong> de igual <strong>magnitud</strong> pero en <strong>dirección opuesta</strong> sobre el <strong>objeto A</strong>. Es importante notar que estas <strong>fuerzas</strong> actúan sobre <strong>objetos diferentes</strong>.</p>
+
+                    <ul><strong>Ejemplos de la Tercera Ley de Newton:</strong>
+                        <li>Un nadador empuja contra la pared de una piscina (acción), y la pared lo empuja hacia adelante (reacción).</li>
+                        <li>Un cohete expulsa gases hacia abajo (acción), y los gases ejercen una fuerza hacia arriba sobre el cohete (reacción), impulsándolo al espacio.</li>
+                        <li>Al caminar, el pie empuja el suelo hacia atrás (acción), y el suelo empuja hacia adelante con una fuerza igual y opuesta (reacción), permitiendo el movimiento.</li>
+                        <li>Una pelota que rebota contra el suelo ejerce una fuerza hacia abajo (acción), y el suelo la empuja hacia arriba con la misma fuerza pero en dirección opuesta (reacción).</li>
+                        <img src="img/img25.png">
+                    </ul>
+                </div>
+                <!------ Tema 5 ------>
+                <div id="Concepto 5.5" class="description">
+                    <h2>Fricción: Una Fuerza de Resistencia</h2>
+                    <p>La <strong>fricción</strong> es una <strong>fuerza</strong> que <strong>frena el movimiento</strong> cuando dos superficies están en contacto. Siempre actúa en la <strong>dirección opuesta</strong> al movimiento o al intento de moverse. Existen diferentes tipos de <strong>fricción</strong>:</p>
+
+                    <ul>
+                        <li><strong>Fricción estática:</strong> Es como cuando intentas empujar un mueble pesado y no se mueve. Esta fricción mantiene el objeto quieto hasta que empuja con suficiente fuerza.</li>
+                        <li><strong>Fricción cinética:</strong> Es como cuando ya lograste mover el mueble, pero sientes que sigue costando trabajo arrastrarlo. Aunque hay fricción, es menor que cuando estaba quieto.</li>
+                        <li><strong>Fricción de rodadura:</strong> Es como cuando mueves el mismo mueble, pero ahora con ruedas. Se siente mucho más fácil porque la fricción de rodadura es menor.</li>
+                        <li><strong>Fricción fluida (arrastre):</strong> Es como cuando nadas en el agua o sacas la mano por la ventana del carro en movimiento. El aire o el agua ejercen una resistencia que hace más difícil moverse.</li>
+                        <img src="img/img26.png">
+                        <p>En la mayoría de los casos, cuesta más trabajo empezar a mover algo (fricción estática) que seguir moviéndolo (fricción cinética).</p>
+                    </ul>
+
+                    <h3>Factores que Influyen en la Magnitud de la Fricción</h3>
+                    <p>La magnitud de la <strong>fuerza de fricción</strong> depende de varios factores. La naturaleza de las superficies en contacto es crucial; superficies más rugosas tienden a generar una mayor fricción que las superficies lisas. Las propiedades del material también juegan un papel importante. Además, la <strong>fuerza normal</strong>, que es la fuerza que presiona las dos superficies juntas, afecta directamente la magnitud de la fricción; cuanto mayor sea la fuerza normal, mayor será la fricción.</p>
+
+                    <p>La <strong>fricción</strong> entre dos superficies se puede cuantificar mediante el <strong>coeficiente de fricción</strong>, que es una cantidad adimensional que depende de los materiales en contacto. Se distingue entre el <strong>coeficiente de fricción estática</strong> (<em>μ <sub>s</sub></em>) y el <strong>coeficiente de fricción cinética</strong> (<em>μ <sub>k </sub></em>). La <strong>fuerza de fricción estática máxima</strong> es igual al producto del coeficiente de fricción estática y la fuerza normal (<em>f<sub>s,max </sub> = μ <sub>s </sub>N </em>), mientras que la <strong>fuerza de fricción cinética</strong> es igual al producto del coeficiente de fricción cinética y la fuerza normal (<em>f <sub>k </sub> = μ<sub> k </sub> N </em>).</p>
+
+                    <ul>
+                        <strong>Varios factores afectan la fricción:</strong>
+                        <li><strong>La textura de las superficies:</strong> Si frotas tus manos secas, apenas sientes resistencia, pero si pones arena entre ellas, cuesta más moverlas. Las superficies rugosas tienen más fricción que las lisas.</li>
+                        <li><strong>El tipo de material:</strong> No es lo mismo deslizar un zapato de goma en el piso que un bloque de hielo. Algunos materiales generan más fricción que otros.</li>
+                        <li><strong>La presión entre los objetos:</strong> Si presionas fuerte tu mano contra una mesa y tratas de moverla, notarás que cuesta más. Cuanto más se aprieten las superficies, mayor será la fricción.</li>
+                        <strong>La fricción se mide con un número llamado coeficiente de fricción. Hay dos tipos:</strong>
+                        <li><strong>Coeficiente de fricción estática</strong> (<em>μ<sub>s</sub>): Se usa para calcular la fricción antes de que algo comience a moverse.</li>
+                        <li><strong>Coeficiente de fricción cinética</strong> (<em>μ<sub>k</sub>): Se usa cuando el objeto ya está en movimiento.</li>
+                        <strong>Las fórmulas para calcular la fricción son:</strong>
+                        <li><strong>Fricción estática máxima:</strong> <em>f<sub>s,max</sub> = μ<sub>s</sub> N</em></li>
+                        <li><strong>Fricción cinética:</strong> <em>f<sub>k</sub> = μ<sub>k</sub> N</em></li>
+                        Donde <strong>N</strong> es la fuerza con la que las superficies se presionan entre sí.
+                        <img src="img/img27.png">
+
+                        <h3>Cosas curiosas sobre la fricción</h3>
+                        <li>Si te empujas con patines en el suelo, notarás que con el tiempo te detienes. Eso pasa porque la fricción siempre está presente.</li>
+                        <li>Para velocidades bajas, la fricción cinética no cambia mucho sin importar qué tan rápido vayas.</li>
+                        <li>Aunque un objeto sea más grande, si su peso es el mismo, el área de contacto no afecta la fricción. Por eso, un zapato grande y uno pequeño resbalan igual en un piso mojado.</li>
+
+                        <h3>Impacto de la fricción en la tecnología</h3>
+                        <p>La fricción juega un papel muy importante en muchas tecnologías. Puede ser útil en algunos casos y perjudicial en otros, dependiendo de cómo se use.</p>
+
+                        <h3>Aplicaciones Beneficiosas de la Fricción en la Tecnología</h3>
+                        <p>La fricción es esencial para el funcionamiento de muchas tecnologías que usamos a diario. Aquí te dejo algunos ejemplos de cómo ayudar:</p>
+                        <li><strong>Caminar y mover vehículos:</strong> La fricción entre tus zapatos y el suelo te permite caminar sin resbalar, y también ayuda a los vehículos a moverse y detenerse.</li>
+                        <li><strong>Frenado de vehículos:</strong> La fricción entre las pastillas de freno y los discos o tambores es lo que hace que los autos se detengan.</li>
+                        <li><strong>Rodamientos y ruedas:</strong> La fricción es clave para el movimiento de las ruedas de autos, bicicletas y en rodamientos, lo que facilita el transporte y hace funcionar la maquinaria.</li>
+                        <li><strong>Escribir y dibujar:</strong> La fricción entre el bolígrafo o lápiz y el papel es lo que permite que podamos escribir y dibujar.</li>
+                        <li><strong>Máquinas y herramientas:</strong> En sistemas como engranajes, poleas y cintas transportadoras, la fricción ayuda a transferir movimiento y energía.</li>
+                        <li><strong>Generar calor:</strong> La fricción se puede usar para generar calor, como al frotar dos palos para encender fuego o en procesos industriales como la soldadura por fricción.</li>
+                        <li><strong>Sujetar objetos:</strong> La fricción también ayuda a mantener los objetos en su lugar y evita que se deslicen por superficies inclinadas.</li>
+                        <li><strong>Tecnología avanzada:</strong> En la soldadura por fricción, se usa el calor generado por la fricción para unir materiales.</li>
+                        <li><strong>Tecnología háptica:</strong> Incluso en pantallas táctiles de dispositivos, la fricción controlada crea una sensación de retroalimentación para hacer la experiencia más realista.</li>
+                        <img src="img/img28.png">
+                    </ul>
+
+                    <h3>Efectos Perjudiciales de la Fricción y Cómo Reducirla</h3>
+                    <p>Aunque la <strong>fricción</strong> es útil en muchas situaciones, también puede ser un problema en la tecnología. Uno de sus efectos más negativos es que convierte parte de la <strong>energía</strong> en <strong>calor</strong>, lo que reduce la <strong>eficiencia</strong> de las máquinas y los motores. Además, provoca el <strong>desgaste</strong> de las partes móviles, lo que acorta la <strong>vida útil</strong> de los equipos. Por último, la fricción también hace que sea más difícil mover las cosas, ya que ofrece <strong>resistencia</strong> al movimiento, lo que requiere más <strong>energía</strong> para superarla.</p>
+
+                    <p>Para minimizar estos efectos, existen varias soluciones. Una de las más comunes es el uso de <strong>lubricantes</strong>, como aceite y grasa, que forman una capa entre las superficies en contacto y ayudan a reducir la <strong>fricción</strong>. Otra estrategia es <strong>pulir</strong> o alisar las superficies para que sean más suaves y disminuyan la fricción. También se utilizan elementos <strong>rodantes</strong>, como rodamientos de bolas o rodillos, en lugar de superficies que se deslizan, lo que reduce la fricción de manera significativa. En casos de fricción con <strong>fluidos</strong>, como el aire o el agua, se emplean formas <strong>aerodinámicas</strong> que disminuyen la resistencia al movimiento.</p>
+
+                    <h3>Control de la Fricción en la Tecnología Moderna</h3>
+                    <p>La tecnología moderna emplea diversas técnicas para controlar la <strong>fricción</strong> de manera eficiente. Por ejemplo, los vehículos utilizan sistemas <strong>antibloqueo de frenos (ABS)</strong> para mantener el control de la fricción entre los neumáticos y la carretera durante el frenado, evitando que las llantas se bloqueen. Los motores y las máquinas tienen sistemas de <strong>lubricación</strong> diseñados para reducir el desgaste de sus partes y minimizar la pérdida de energía.</p>
+
+                    <p>En el caso de los <strong>neumáticos</strong>, se diseñan con patrones específicos en la banda de rodadura para optimizar la fricción con la carretera en diferentes condiciones. En <strong>trenes de alta velocidad</strong> y otros equipos, se utilizan tecnologías como los <strong>cojinetes de aire</strong> o la <strong>levitación magnética</strong> para minimizar la fricción y mejorar la eficiencia. Además, en algunas aplicaciones, como el <strong>calzado</strong>, se está desarrollando tecnología que ajusta la fricción según las necesidades del momento.</p>
+
+                    <p>La <strong>inteligencia artificial</strong> también está siendo utilizada en sistemas avanzados para controlar la fricción en maquinaria dañada, mejorando su rendimiento. De hecho, en el mundo digital, se está investigando la <strong>"fricción digital"</strong> y cómo reducirla para optimizar los dispositivos y su interacción con los usuarios.</p>
+                </div>
+                <!------ Tema 6 ------>
+                <div id="Concepto 6.6" class="description">
+                    <h2>Integración de Cinemática y Dinámica: Análisis del Mundo Real</h2>
+                    <p>El análisis de situaciones físicas complejas a menudo requiere un enfoque que combine dos conceptos fundamentales: la cinemática y la dinámica. La cinemática se ocupa de describir cómo se mueve un objeto, es decir, su posición, velocidad y aceleración a lo largo del tiempo, sin necesidad de conocer las causas del movimiento. En cambio, la dinámica se enfoca en las fuerzas que causan ese movimiento, utilizando las Leyes de Newton para explicar cómo las fuerzas actúan sobre los cuerpos y cómo afectan su aceleración.</p>
+
+                    <p>En la mayoría de los escenarios reales, ambos conceptos se entrelazan para ofrecer una visión completa del fenómeno. Es importante tener en cuenta que, al resolver problemas de física en la vida cotidiana, tanto las fuerzas involucradas como el movimiento resultante deben ser analizados conjuntamente. La Ley de Newton proporciona las bases para entender las fuerzas que actúan sobre un cuerpo, mientras que las ecuaciones de la cinemática permiten describir cómo se mueve ese cuerpo. La combinación de estos principios es crucial para comprender fenómenos tan diversos como el movimiento de vehículos, los deportes y los fenómenos naturales, donde tanto las fuerzas como el movimiento desempeñan un papel fundamental.</p>
+                    <img src="img/img29.png">
+
+                    <h3>Ejemplos en Vehículos, Deportes y Fenómenos Naturales donde Ambos Conceptos se Combinan</h3>
+                    <p><strong>Vehículos</strong>: Imaginemos un automóvil acelerando en una carretera. La dinámica nos dice que la <strong>fuerza generada por el motor</strong> es la que causa la aceleración, tal como lo expresa la <strong>segunda ley de Newton</strong>, que establece que una <strong>fuerza</strong> sobre un objeto produce una <strong>aceleración</strong> proporcional a su masa. Por otro lado, la <strong>cinemática</strong> nos ayuda a describir cómo varía la velocidad del automóvil con el tiempo, así como la distancia recorrida. Si queremos analizar la distancia necesaria para que un automóvil se detenga, la <strong>dinámica</strong> considera la <strong>fuerza de fricción</strong> que actúa entre los frenos y las ruedas, mientras que la <strong>cinemática</strong> nos indica cómo cambia la <strong>velocidad</strong> del vehículo hasta detenerse, lo que nos permite calcular esa <strong>distancia de frenado</strong>.</p>
+
+                    <p><strong>Deportes</strong>: En deportes como el <strong>salto de altura</strong>, la <strong>dinámica</strong> estudia las <strong>fuerzas</strong> que el atleta ejerce al impulsarse hacia el aire, así como la <strong>fuerza de gravedad</strong> que lo atrae hacia el suelo. La <strong>cinemática</strong>, por su parte, se encarga de describir el trayecto que sigue el atleta, calculando la <strong>altura máxima</strong> alcanzada y el <strong>tiempo</strong> que pasa en el aire. En el caso de una <strong>pelota lanzada</strong>, la <strong>dinámica</strong> toma en cuenta la <strong>fuerza</strong> con la que se lanza la pelota, la <strong>resistencia del aire</strong> y la <strong>fuerza de gravedad</strong>, mientras que la <strong>cinemática</strong> describe la <strong>trayectoria</strong> que seguirá la pelota, incluyendo su <strong>velocidad</strong> en diferentes puntos y su <strong>distancia de alcance</strong> antes de caer al suelo.</p>
+
+                    <p><strong>Fenómenos Naturales</strong>: El movimiento de una <strong>hoja que cae</strong> es un claro ejemplo de cómo se combinan la <strong>dinámica</strong> y la <strong>cinemática</strong>. La <strong>dinámica</strong> nos explica que la <strong>fuerza de gravedad</strong> es la responsable de que la hoja caiga hacia el suelo, pero también interviene la <strong>resistencia del aire</strong>, que desacelera la caída. La <strong>cinemática</strong>, en este caso, describe cómo cambia la <strong>velocidad</strong> de la hoja mientras desciende y cómo su <strong>aceleración</strong> varía a medida que la resistencia del aire actúa sobre ella. Un ejemplo más complejo es el movimiento de un <strong>satélite en órbita</strong> alrededor de la Tierra. La <strong>dinámica</strong> explica que la <strong>gravedad de la Tierra</strong> mantiene al satélite en su órbita, mientras que la <strong>cinemática</strong> calcula su <strong>velocidad orbital</strong> y el <strong>tiempo</strong> que tarda en dar una vuelta completa alrededor de la Tierra.</p>
+
+                    <h2>Fórmulas Clave para el Movimiento Rectilíneo Uniformemente Acelerado (MRUA)</h2>
+                    <div class="table-container">
+                        <table>
+                            <thead>
+                            <tr>
+                                <th>Ecuación No.</th>
+                                <th>Fórmula</th>
+                                <th>Variables Involucradas</th>
+                                <th>Condiciones de Uso</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td>1</td>
+                                <td>v<sub>f</sub> = v<sub>o</sub> + at</td>
+                                <td>v<sub>f</sub>, v<sub>o</sub>, a, t</td>
+                                <td>Cuando se conoce o se busca el tiempo</td>
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td>Δx = v<sub>o</sub>t + ½ at<sup>2</sup></td>
+                                <td>Δx, v<sub>o</sub>, a, t</td>
+                                <td>Cuando se conoce o se busca el desplazamiento y no se conoce v<sub>f</sub></td>
+                            </tr>
+                            <tr>
+                                <td>3</td>
+                                <td>Δx = ½ (v<sub>f</sub> + v<sub>o</sub>)t</td>
+                                <td>Δx, v<sub>f</sub>, v<sub>o</sub>, t</td>
+                                <td>Cuando no se conoce o no se busca la aceleración</td>
+                            </tr>
+                            <tr>
+                                <td>4</td>
+                                <td>Δx = v<sub>f</sub>t – ½at<sup>2</sup></td>
+                                <td>Δx, v<sub>f</sub>, a, t</td>
+                                <td>Cuando se conoce o se busca el desplazamiento y no se conoce v<sub>o</sub></td>
+                            </tr>
+                            <tr>
+                                <td>5</td>
+                                <td>v<sub>f</sub><sup>2</sup> = v<sub>o</sub><sup>2</sup> + 2aΔx</td>
+                                <td>v<sub>f</sub>, v<sub>o</sub>, a, Δx</td>
+                                <td>Cuando no se conoce o no se busca el tiempo</td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <h2>Tipos de Fuerzas y Sus Características</h2>
+                    <div class="table-container">
+                        <table>
+                            <thead>
+                                <tr>
+                                <th>Tipo de Fuerza</th>
+                                <th>Fuerza Específica</th>
+                                <th>Descripción/Origen</th>
+                                <th>Símbolo</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                <td>Contacto</td>
+                                <td>Fricción</td>
+                                <td>Se opone al movimiento relativo entre superficies en contacto</td>
+                                <td>f</td>
+                                </tr>
+                                <tr>
+                                <td>Contacto</td>
+                                <td>Tensión</td>
+                                <td>Fuerza ejercida a través de una cuerda, cable, etc., cuando se estira</td>
+                                <td>T</td>
+                                </tr>
+                                <tr>
+                                <td>Contacto</td>
+                                <td>Normal</td>
+                                <td>Fuerza ejercida por una superficie sobre un objeto en contacto, perpendicular a la superficie</td>
+                                <td>N</td>
+                                </tr>
+                                <tr>
+                                <td>Contacto</td>
+                                <td>Aplicada</td>
+                                <td>Fuerza ejercida directamente sobre un objeto por otra fuente</td>
+                                <td>F<sub>app</sub></td>
+                                </tr>
+                                <tr>
+                                <td>No Contacto</td>
+                                <td>Gravitacional</td>
+                                <td>Fuerza de atracción entre objetos con masa</td>
+                                <td>F<sub>g</sub> o w</td>
+                                </tr>
+                                <tr>
+                                <td>No Contacto</td>
+                                <td>Electromagnética</td>
+                                <td>Fuerza entre cargas eléctricas o imanes</td>
+                                <td>F<sub>e</sub> o F<sub>m</sub></td>
+                                </tr>
+                                <tr>
+                                <td>No Contacto</td>
+                                <td>Nuclear Fuerte</td>
+                                <td>Fuerza que mantiene unidos a los nucleones en el núcleo atómico</td>
+                                <td></td>
+                                </tr>
+                                <tr>
+                                <td>No Contacto</td>
+                                <td>Nuclear Débil</td>
+                                <td>Fuerza responsable de ciertos tipos de desintegración radiactiva</td>
+                                <td></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <h2>Coeficientes de Fricción para Diferentes Materiales (Ejemplos)</h2>
+                    <div class="table-container">
+                        <table>
+                            <thead>
+                            <tr>
+                                <th>Materiales en Contacto</th>
+                                <th>Coeficiente de Fricción Estática (μ<sub>s</sub>)</th>
+                                <th>Coeficiente de Fricción Cinética (μ<sub>k</sub>)</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td>Acero sobre acero</td>
+                                <td>0.74</td>
+                                <td>0.57</td>
+                            </tr>
+                            <tr>
+                                <td>Aluminio sobre acero</td>
+                                <td>0.61</td>
+                                <td>0.47</td>
+                            </tr>
+                            <tr>
+                                <td>Cobre sobre acero</td>
+                                <td>0.53</td>
+                                <td>0.36</td>
+                            </tr>
+                            <tr>
+                                <td>Caucho sobre concreto (seco)</td>
+                                <td>0.8</td>
+                                <td>0.6</td>
+                            </tr>
+                            <tr>
+                                <td>Caucho sobre concreto (húmedo)</td>
+                                <td>0.6</td>
+                                <td>0.4</td>
+                            </tr>
+                            <tr>
+                                <td>Hielo sobre hielo</td>
+                                <td>0.1</td>
+                                <td>0.03</td>
+                            </tr>
+                            <tr>
+                                <td>Madera sobre madera</td>
+                                <td>0.25 - 0.5</td>
+                                <td>0.2 - 0.4</td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            <!------ Funciones para ocultar y mostras los temas ------>
+        <script>
+            function changeContent(concept) {
+                const descriptions = document.querySelectorAll('.description');
+                descriptions.forEach((desc) => {
+                    desc.style.display = 'none'; 
+                });
+
+                const selectedConcept = document.getElementById(concept);
+                if (selectedConcept) {
+                    selectedConcept.style.display = 'block'; 
+                }
+            }
+
+            // Mostrar el primer concepto por defecto
+            window.onload = function() {
+                changeContent('Concepto 1');
+            }
+        </script>
+        </section>
+    </main>
+        
+    <!------ Botón para ir a otro modulo ------>
+    <button class="styled-button"><a href="modulo3.html">Siguiente Modulo</a></button>
+    
+    <!------ Pie de página ------>
+    <footer class="site-footer">
+        <p>&copy; 2024 Física en Contexto. Todos los derechos reservados.</p>
+        <ul>
+            <li><strong>Autor:</strong> Miguel Angel Jimenez Pérez</li>
+            <li><strong>Escuela:</strong> CETiS núm. 141</li>
+            <li><strong>Redes sociales:</strong> <a href="https://www.instagram.com/miguel_jp1003?igsh=dzByMW1seXgxMm1j">miguel_jp1003</a> y <a href="https://www.instagram.com/fisica_en_contexto_/profilecard/?igsh=MWttdHBvZHJtc2huMw==">fisica_en_contexto_</a></li>
+        </ul>
+    </footer>
+</body>
+</html>
