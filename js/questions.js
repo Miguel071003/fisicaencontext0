@@ -2,57 +2,57 @@
 let questions = [
     {
         numb: 1,
-        question: "What does HTML stand for?",
-        answer: "Hyper Text Markup Language",
+        question: "¿Qué describe la ecuación de la cinemática? 𝑣 = 𝑣₀ + 𝑎𝑡",
+        answer: "La velocidad final de un objeto en movimiento rectilíneo uniformemente acelerado",
         options: [
-            "Hyper Text Preprocessor",
-            "Hyper Text Markup Language",
-            "Hyper Text Multiple Language",
-            "Hyper Text Multi Language"
+            "La distancia recorrida por un objeto",
+            "La velocidad final de un objeto en movimiento rectilíneo uniformemente acelerado",
+            "La aceleración de un objeto",
+            "El tiempo que tarda un objeto en alcanzar su velocidad final"
         ]
     },
     {
         numb: 2,
-        question: "What does CSS stand for?",
-        answer: "Cascading Style Sheet",
+        question: "¿Cuál es la unidad de trabajo en el Sistema Internacional de Unidades?",
+        answer: "Joule (J)",
         options: [
-            "Common Style Sheet",
-            "Colorful Style Sheet",
-            "Computer Style Sheet",
-            "Cascading Style Sheet"
+            "Julio (J)",
+            "Newton (N)",
+            "Vatio (W)",
+            "Metro (m)"
         ]
     },
     {
         numb: 3,
-        question: "What does PHP stand for?",
-        answer: "Hypertext Preprocessor",
+        question: "¿Qué fenómeno describe la ley de Hooke?",
+        answer: "La relación entre la fuerza y la deformación en materiales elásticos",
         options: [
-            "Hypertext Preprocessor",
-            "Hypertext Programming",
-            "Hypertext Preprogramming",
-            "Hometext Preprocessor"
+            "La propagación de ondas en un medio elástico",
+            "La relación entre la fuerza y la deformación en materiales elásticos",
+            "El comportamiento de un cuerpo en caída libre",
+            "La velocidad de propagación de una onda en un líquido"
         ]
     },
     {
         numb: 4,
-        question: "What does SQL stand for?",
-        answer: "Structured Query Language",
+        question:"¿Cuál es la fórmula de la energía cinética de un objeto?",
+        answer: "1/2 mv²",
         options: [
-            "Stylish Question Language",
-            "Stylesheet Query Language",
-            "Statement Question Language",
-            "Structured Query Language"
+            "1/2 mv²",
+            "mgh",
+            "F d",
+            "1/2 kx²"
         ]
     },
     {
         numb: 5,
-        question: "What does XML stand for?",
-        answer: "Extensible Markup Language",
+        question:"¿Qué tipo de onda es la luz visible?",
+        answer: "Ondas electromagnéticas",
         options: [
-            "Extensible Markup Language",
-            "Executable Multiple Language",
-            "Extra Multi-program Language",
-            "Examine Multiple Language"
+            "Ondas mecánicas",
+            "Ondas electromagnéticas",
+            "Ondas transversales",
+            "Ondas longitudinales"
         ]
     },
 ];
